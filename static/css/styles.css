@@ -6,3 +6,7 @@
   --neon-purple: #ab20fd;
   --primary-blue: #48abe0;
 }
+
+.text-purple {
+  color: var(--neon-purple);
+}
