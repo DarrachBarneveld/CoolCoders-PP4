@@ -10,3 +10,8 @@
 .text-purple {
   color: var(--neon-purple);
 }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #000000, #434343);
+}
