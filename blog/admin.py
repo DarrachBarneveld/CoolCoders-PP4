@@ -1,9 +1,20 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import Profile, Post
 
 
 # Register your models here.
+
+
+class PostInline(admin.TabularInline):
+    """
+    Inline representation of blog posts for the admin panel.
+
+    """
+
+    model = Post
+    fields = ("title", "approved", "excerpt")
+    extra = 0
 
 
 class ProfileInline(admin.StackedInline):
@@ -33,7 +44,7 @@ class UserAdmin(admin.ModelAdmin):
 
     model = User
     fields = ("username", "first_name", "last_name", "email")
-    inlines = [ProfileInline]
+    inlines = [ProfileInline, PostInline]
 
 
 admin.site.unregister(User)
