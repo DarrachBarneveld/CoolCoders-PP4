@@ -2,7 +2,7 @@
 
 # pylint: disable=E1101
 from django.shortcuts import render
-from django.views import generic, View
+from django.views import View
 from .models import Article
 
 
@@ -19,7 +19,8 @@ class HomePageView(View):
         and editors pick
 
         """
-        all_articles = Article.objects.filter(approved=True)
+        all_articles = Post.objects.filter(approved=True)
+        print(all_articles)
 
         return render(
             request,
