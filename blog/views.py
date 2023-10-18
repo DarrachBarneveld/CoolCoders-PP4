@@ -47,9 +47,9 @@ class HomePageView(View):
             "home.html",
             {
                 "all_posts": all_posts,
-                "popular_post": popular_post,
+                "popular_post": [popular_post],
                 "trending_posts": trending_posts,
-                "editors_pick": editors_pick,
+                "editors_pick": [editors_pick],
             },
         )
 

@@ -9,24 +9,24 @@
         width="100%"
       />
       {% else %}
-      <img class="card-img-sm" src=" {{ post.featured_image.url }}" />
+      <img class="card-img-sm" src="{{ post.featured_image.url }}" />
       {% endif %}
       <div class="ps-2">
         <h3 class="text-capitalize h6">
-          <a href="{% url 'post_detail' slug=post.slug %}"
+          <a href="#"
             ><strong>{{post.title}}</strong></a
           >
         </h3>
         <ul class="list-inline">
           <li class="list-inline-item">
             <i class="fa-solid fa-user text-info"></i>
-            <a href="{% url 'profile' slug=post.author.profile.slug %}">
+            <a href="#">
               <strong class="text-capitalize"> {{post.author}}</strong>
             </a>
           </li>
           <li class="list-inline-item">
             <small class="text-dark text-capitalize">
-              <i class="fa-solid fa-sitemap purple"></i>
+              <i class="fa-solid fa-sitemap text-purple"></i>
               {{ post.category }}</small
             >
           </li>
