@@ -7,6 +7,25 @@ from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
+
+
+class Category(models.Model):
+    """
+    Model to represent categories for blog posts.
+    """
+
+    title = models.CharField(max_length=100)
+    description = models.TextField(blank=True, null=True)
+
+    class Meta:
+        """To update the name shown in the plural form"""
+
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return f"{self.title}"
+
+
 class Article(models.Model):
     """
     Model to represent a blog article.
