@@ -4,23 +4,35 @@
 <!--  -->
 
 <div class="container pt-5 text-center">
-  <span>editors pick</span>
-  {% for post in editors_pick %}
-  {% include "includes/post-preview.html" %}
-  {% endfor %}</div>
+  <div class="row pt-md-5">
+    <div class="col-lg-4 mb-5">
+      <h2 class="text-purple">
+        <strong><em>Editors Pick</em></strong>
+      </h2>
+      {% for post in editors_pick %} 
+      {% include "includes/post-preview.html" %}
+      {% endfor %}
+    </div>
 
-<div class="container pt-5 text-center">
-  <span>trending posts</span>
-  {% for post in trending_posts %}
-  {% include "includes/post-snippet.html" %}
+    <div class="col-lg-4 mb-5">
+      <h2 class="text-purple">
+        <strong><em>Trending Posts</em></strong>
+      </h2>
+      {% for post in trending_posts %} 
+      {% include "includes/post-snippet.html" %}
+      {% endfor %}
+    </div>
 
-  {% endfor %}
-</div>
-<div class="container pt-5 text-center">
-  <span>popular post</span>
-  {% for post in popular_post %}
-  {% include "includes/post-preview.html" %}
-  {% endfor %}</div>
+
+    <div class="col-lg-4 mb-5">
+      <h2 class="article-title">
+        <strong><em>Popular Post</em></strong>
+      </h2>
+      {% for post in popular_post %} 
+      {% include "includes/post-preview.html" %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {%endblock%}
