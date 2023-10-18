@@ -9,6 +9,20 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 
 
+class Profile(models.Model):
+    """
+    Model to represent extend auth User Class to add addition profile information.
+
+    """
+
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField(blank=True)
+    slug = models.SlugField(unique=True, max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.user)
+
+
 class Category(models.Model):
     """
     Model to represent categories for blog posts.
