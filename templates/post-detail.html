@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div id="main-content" class="container">
+      <article class="card">
+          <div class="mt-2 mb-2">{{ post.content | safe }}</div>
+      </article>
+</div>
+
+{% endblock content %}

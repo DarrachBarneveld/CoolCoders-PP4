@@ -7,6 +7,14 @@
   --primary-blue: #48abe0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* GLOBAL CSS */
 
 body {
@@ -26,4 +34,8 @@ img {
 
 .text-purple {
   color: var(--neon-purple);
+}
+
+.text-green {
+  color: var(--neon-green);
 }

@@ -3,7 +3,7 @@
 # pylint: disable=E1101
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
-from django.views.generic import View, ListView
+from django.views.generic import View, ListView, DetailView
 from .models import Post, Comment, Category
 
 
@@ -79,3 +79,26 @@ class CategoryPage(ListView):
         print(queryset)
 
         return queryset
+
+
+class PostDetailPage(DetailView):
+    model = Post
+    template_name = "post-detail.html"
+    context_object_name = "post"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["comments"] = self.object.comments.filter(approved=True).order_by(
+            "-created_on"
+        )
+        context["commented"] = False  # You can set this value as needed
+        context["liked"] = self.object.likes.filter(id=self.request.user.id).exists()
+        context["popular_posts"] = self.get_popular_posts()
+        return context
+
+    def get_popular_posts(self):
+        return (
+            Post.objects.filter(category=self.object.category, approved=True)
+            .exclude(pk=self.object.id)
+            .annotate(comment_count=Count("comments"))
+        )

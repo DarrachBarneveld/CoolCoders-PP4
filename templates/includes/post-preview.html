@@ -18,7 +18,7 @@
         ></strong
       >
     </h3>
-    <ul class="list-inline">
+    <ul class="list-inline mb-1">
       <li class="list-inline-item">
         <i class="fa-solid fa-user text-info"></i>
         <a href="#">
@@ -26,13 +26,13 @@
         </a>
       </li>
       <li class="list-inline-item">
-        <time class="m-2 text-muted">
+        <time class="m-1 text-muted">
           <i class="fas fa-calendar-alt"></i>
           {{ post.created_on|date:"M d, Y" }}
         </time>
       </li>
     </ul>
-    <ul class="list-inline border-bottom">
+    <ul class="list-inline border-bottom mb-1">
       <li class="list-inline-item">
         <i class="fa-solid fa-sitemap text-purple"></i>
         <span class="text-capitalize">{{ post.category }}</span>
