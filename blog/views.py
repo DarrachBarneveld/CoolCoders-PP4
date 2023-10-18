@@ -3,8 +3,8 @@
 # pylint: disable=E1101
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
-from django.views.generic import View
-from .models import Post, Comment
+from django.views.generic import View, ListView
+from .models import Post, Comment, Category
 
 
 class HomePageView(View):
@@ -52,3 +52,30 @@ class HomePageView(View):
                 "editors_pick": editors_pick,
             },
         )
+
+
+class CategoryPage(ListView):
+    """
+    A view class for displaying a list of posts based on a specific category.
+
+    """
+
+    template_name = "category.html"
+    paginate_by = 3
+    model = Category
+    context_object_name = "posts"
+
+    def get_queryset(self, **kwargs):
+        """
+        Queries the posts related to a category from the database
+        """
+        # Get the slug parameter from the URL
+        slug = self.kwargs["slug"]
+
+        # Filter the queryset based on the slug
+        category = get_object_or_404(Category, title=slug)
+        queryset = Post.objects.filter(category=category, approved=True)
+
+        print(queryset)
+
+        return queryset
