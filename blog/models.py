@@ -70,6 +70,7 @@ class Post(models.Model):
     excerpt = models.CharField(
         max_length=200,
     )
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=None)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
