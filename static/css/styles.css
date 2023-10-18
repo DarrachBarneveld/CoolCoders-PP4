@@ -7,11 +7,23 @@
   --primary-blue: #48abe0;
 }
 
-.text-purple {
-  color: var(--neon-purple);
-}
+/* GLOBAL CSS */
 
 body {
   min-height: 100vh;
   background: linear-gradient(270deg, #000000, #434343);
+}
+
+img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.card-img-sm {
+  width: 100px;
+  height: 100px;
+}
+
+.text-purple {
+  color: var(--neon-purple);
 }
