@@ -1,11 +1,15 @@
 {% load static %}
 
 <article class="card">
+  {% if "placeholder" in post.featured_image.url %}
   <img
-    src="{{ post.featured_image.url }}"
     class="card-img-top"
-    aria-hidden="false"
+    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+    width="100%"
   />
+  {% else %}
+  <img class="card-img-top" src=" {{ post.featured_image.url }}" />
+  {% endif %}
   <div class="card-body p-1">
     <h3 class="h4 mb-3">
       <strong class="text-uppercase"
