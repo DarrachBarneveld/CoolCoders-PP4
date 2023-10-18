@@ -4,11 +4,21 @@
 <!--  -->
 
 <div class="container pt-5 text-center">
-  {% for post in all_posts %}
+  <span>trending posts</span>
+
+  {% for post in trending_posts %}
 
   <p class="text-black">{{post.title}}</p>
 
   {% endfor %}
 </div>
+<div class="container pt-5 text-center">
+  <span>popular post</span>
+  <p class="text-black">{{popular_post.title}}</p>
+</div>
 
+<div class="container pt-5 text-center">
+  <span>editors pick</span>
+  <p class="text-black">{{editors_pick.title}}</p>
+</div>
 {%endblock%}
