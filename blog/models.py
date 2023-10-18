@@ -23,6 +23,20 @@ class Profile(models.Model):
         return str(self.user)
 
 
+def create_user_profile(sender, instance, created, **kwargs):
+    """
+    Signal handler function to create a user profile when a new user is created.
+
+    This function is connected to the User model's post_save signal.
+    It creates a user profile with a slug based on the user's username when a new user is created.
+    """
+    if created:
+        Profile.objects.create(user=instance, slug=slugify(instance.username))
+
+
+models.signals.post_save.connect(create_user_profile, sender=User)
+
+
 class Category(models.Model):
     """
     Model to represent categories for blog posts.
