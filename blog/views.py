@@ -1,7 +1,6 @@
 """Views"""
 
 # pylint: disable=E1101
-
 from django.shortcuts import render
 from django.views import generic, View
 from .models import Article

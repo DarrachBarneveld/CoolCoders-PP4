@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+<!--  -->
+{% block content %}
+<!--  -->
+
+<div class="container pt-5 text-center">
+  {% for post in all_posts %}
+
+  <p>{{post.title}}</p>
+
+  {% endfor %}
+</div>
+
+{%endblock%}
