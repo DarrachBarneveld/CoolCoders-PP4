@@ -3,7 +3,7 @@
 # pylint: disable=E1101
 from django.shortcuts import render
 from django.views import View
-from .models import Article
+from .models import Post
 
 
 # Create your views here.
@@ -19,13 +19,13 @@ class HomePageView(View):
         and editors pick
 
         """
-        all_articles = Post.objects.filter(approved=True)
-        print(all_articles)
+        all_posts = Post.objects.filter(approved=True)
+        print(all_posts)
 
         return render(
             request,
             "home.html",
             {
-                "all_articles": all_articles,
+                "all_posts": all_posts,
             },
         )
