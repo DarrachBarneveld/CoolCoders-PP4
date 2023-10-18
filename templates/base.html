@@ -63,15 +63,11 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href=""
-                      >Tech</a
-                    >
+                    <a class="dropdown-item" href="">Tech</a>
                   </li>
                 </ul>
               </div>
             </li>
-
-         
           </ul>
 
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -92,6 +88,25 @@
         </div>
       </nav>
     </header>
+
+    <!-- Message Notifications -->
+    <div class="flex container-sm my-2">
+      {% for message in messages %}
+      <div
+        class="alert {{ message.tags }} alert-info alert-dismissible fade show"
+        id="msg"
+        role="alert"
+      >
+        {{ message | safe }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %}
+    </div>
 
     <main class="flex-grow-1 container">
       {% block content %}
