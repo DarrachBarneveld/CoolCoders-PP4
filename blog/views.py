@@ -7,7 +7,7 @@ from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.views.generic import View, ListView, DetailView, CreateView
-from .models import Post, Comment, Category, Profile
+from .models import Post, Comment, Category
 from .forms import PostForm
 
 
@@ -131,9 +131,8 @@ class ProfilePageView(DetailView):
     template_name = "profile.html"
     context_object_name = "profile"
 
-    def get_object(self):
-        slug = self.kwargs.get("slug")
-        return get_object_or_404(User, username=slug)
+    def get_object(self, queryset=None):
+        return get_object_or_404(User, username=self.kwargs.get("username"))
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

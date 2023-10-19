@@ -21,7 +21,7 @@
     <ul class="list-inline mb-1">
       <li class="list-inline-item">
         <i class="fa-solid fa-user text-info"></i>
-        <a href="{% url 'profile' slug=post.author.profile.slug %}">
+        <a href="{% url 'profile' post.author.username %}">
           <strong class="text-capitalize">{{post.author}}</strong>
         </a>
       </li>
