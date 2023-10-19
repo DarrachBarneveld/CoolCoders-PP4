@@ -63,7 +63,24 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="">Tech</a>
+                    <a class="dropdown-item" href="{% url 'index' 'tech'   %}"
+                      >Tech</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'index' 'coding'  %}"
+                      >Coding</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'index' 'gadgets'  %}"
+                      >Gadgets</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'index' 'events'  %}"
+                      >Events</a
+                    >
                   </li>
                 </ul>
               </div>
