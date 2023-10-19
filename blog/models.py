@@ -87,8 +87,11 @@ class Post(models.Model):
 
     def number_of_likes(self):
         """To calculate the amount of likes on a post"""
-        # pylint: disable=no-member
         return self.likes.count()
+
+    def total_comments(self):
+        """To calculate the total comments on a post"""
+        return self.comments.filter(approved=True).count()
 
     def save(self, *args, **kwargs):
         if not self.slug:

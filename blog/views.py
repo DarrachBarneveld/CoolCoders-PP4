@@ -30,10 +30,6 @@ class HomePageView(View):
             .first()
         )
 
-        popular_post.comment_count = Comment.objects.filter(
-            post=popular_post, approved=True
-        ).count()
-
         trending_posts = all_posts.annotate(like_count=Count("likes")).order_by(
             "-like_count"
         )[:3]
@@ -41,10 +37,6 @@ class HomePageView(View):
         editors_pick = get_object_or_404(
             Post, slug="ais-influence-on-tech-shaping-the-future"
         )
-
-        editors_pick.comment_count = Comment.objects.filter(
-            post=editors_pick, approved=True
-        ).count()
 
         return render(
             request,
@@ -80,8 +72,6 @@ class CategoryPage(ListView):
         category = get_object_or_404(Category, title=slug)
         queryset = Post.objects.filter(category=category, approved=True)
 
-        print(queryset)
-
         return queryset
 
 
@@ -97,17 +87,14 @@ class PostDetailPage(DetailView):
         )
         context["commented"] = False
         context["liked"] = self.object.likes.filter(id=self.request.user.id).exists()
-        context["popular_posts"] = self.get_popular_posts()
-        popular_posts = self.get_popular_posts()
-
-        print(f"popular posts = {popular_posts}")
+        context["top_related_posts"] = self.get_top_related_posts()
         return context
 
-    def get_popular_posts(self):
+    def get_top_related_posts(self):
         return (
             Post.objects.filter(category=self.object.category, approved=True)
             .exclude(pk=self.object.id)
-            .annotate(comment_count=Count("comments"))
+            .annotate(comment_count=Count("comments"))[:3]
         )
 
 
@@ -144,7 +131,7 @@ class ProfilePageView(DetailView):
     template_name = "profile.html"
     context_object_name = "profile"
 
-    def get_object(self, queryset=None):
+    def get_object(self):
         slug = self.kwargs.get("slug")
         return get_object_or_404(User, username=slug)
 
