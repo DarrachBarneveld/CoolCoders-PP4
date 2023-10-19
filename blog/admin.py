@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
+from django_summernote.admin import SummernoteModelAdmin
 from .models import Profile, Post, Category, Comment
 
 
@@ -60,3 +61,27 @@ class CategoryAdmin(admin.ModelAdmin):
 
     list_display = ("title",)
     inlines = [PostInline]
+
+
+@admin.register(Post)
+class PostAdmin(SummernoteModelAdmin):
+    """
+    Admin model configuration for posts.
+
+    """
+
+    list_display = ("title", "slug", "created_on", "approved")
+    search_fields = ["title", "content"]
+    list_filter = ("created_on", "category")
+    actions = ["approve_posts"]
+    prepopulated_fields = {"slug": ("title",)}
+    summernote_fields = ("content",)
+
+    def approve_posts(self, request, queryset):
+        """
+        Approve selected posts.
+
+        This method is a custom action that allows administrators to approve selected
+        posts by updating their "approved" field to True.
+        """
+        queryset.update(approved=True)
