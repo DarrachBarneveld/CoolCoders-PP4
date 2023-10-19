@@ -91,9 +91,12 @@ class PostDetailPage(DetailView):
         context["comments"] = self.object.comments.filter(approved=True).order_by(
             "-created_on"
         )
-        context["commented"] = False  # You can set this value as needed
+        context["commented"] = False
         context["liked"] = self.object.likes.filter(id=self.request.user.id).exists()
         context["popular_posts"] = self.get_popular_posts()
+        popular_posts = self.get_popular_posts()
+
+        print(f"popular posts = {popular_posts}")
         return context
 
     def get_popular_posts(self):

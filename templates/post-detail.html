@@ -2,10 +2,69 @@
 
 {% block content %}
 
-<div id="main-content" class="container">
-      <article class="card">
-          <div class="mt-2 mb-2">{{ post.content | safe }}</div>
-      </article>
+<div class="row clearfix">
+  <section id="main-post" class="col-lg-8 col-md-12 left-box">
+    <article class="card single_post">
+      <div class="body p-3">
+        <div class="img-post border rounded">
+          {% if "placeholder" in post.featured_image.url %}
+          <img
+            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+            class="img-fluid"
+          />
+          {% else %}
+          <img class="img-fluid" src=" {{ post.featured_image.url }}" />
+          {% endif %}
+        </div>
+        <h6
+          class="text-uppercase text-primary fw-bolder mt-1 text-decoration-underline text-capitalize"
+        >
+          {{post.category}}
+        </h6>
+
+        <h1>{{post.title}}</h1>
+        <div class="d-flex justify-content-between">
+          <div class="author">
+            <div class="avatar bg-primary">
+              <i class="fa-solid fa-trophy gold"></i>
+            </div>
+            <div class="author-body">
+              <label class="text-capitalize">
+                <a href="#"
+                  ><strong>{{post.author}}</strong></a
+                >
+              </label>
+              <span class="text-secondary">{{post.created_on}}</span>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="mt-2 mb-2">{{ post.content | safe }}</div>
+      </div>
+    </article>
+  </section>
+  <section id="popular-posts" class="col-lg-4 col-md-12 right-box">
+    <div class="card p-3">
+      <div class="header">
+        <h2 class="text-capitalize">Popular Posts in {{ post.category }}</h2>
+        <hr />
+      </div>
+      <div class="body">
+        <div class="row">
+          <div class="col-lg-12">
+            {% for post in popular_posts %}
+            <a
+              class="text-decoration-none text-dark"
+              href="#"
+            >
+            {% include "includes/post-preview.html" %}
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 {% endblock content %}
