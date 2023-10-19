@@ -3,8 +3,10 @@
 # pylint: disable=E1101
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
-from django.views.generic import View, ListView, DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import View, ListView, DetailView, CreateView
 from .models import Post, Comment, Category
+from .forms import PostForm
 
 
 class HomePageView(View):
@@ -105,3 +107,25 @@ class PostDetailPage(DetailView):
             .exclude(pk=self.object.id)
             .annotate(comment_count=Count("comments"))
         )
+
+
+class AddPostPage(LoginRequiredMixin, CreateView):
+    """
+    Allows a logged-in user to create a new blog post.
+
+    Methods:
+    - form_valid: Overrides the base method to set the post author to the
+      currently logged-in user before saving the form.
+
+    Mixins:
+    - LoginRequiredMixin: Ensures that only authenticated users can access
+      this view.
+    """
+
+    form_class = PostForm
+    template_name = "add_post.html"
+    success_url = "/"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
