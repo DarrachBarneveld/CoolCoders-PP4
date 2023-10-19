@@ -1,0 +1,79 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="p-lg-4">
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-column align-items-center text-center">
+            <i class="fa-solid fa-trophy profile-icon gold"></i>
+            <div class="mt-3">
+              <h4 class="text-capitalize">{{profile.username}}</h4>
+              <p class="text-secondary mb-1">
+                Joined: {{profile.date_joined|date:"F d, Y" }}
+              </p>
+              <p class="text-secondary mb-1">
+                Last Online: {{profile.last_login|date:"F d, Y" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">First Name</h6>
+            </div>
+            <div class="col-sm-9 text-secondary text-capitalize">
+              {{profile.first_name}}
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Last Name</h6>
+            </div>
+            <div class="col-sm-9 text-secondary text-capitalize">
+              {{profile.last_name}}
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Email</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">{{profile.email}}</div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Bio</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">{{profile.profile.bio}}</div>
+          </div>
+          <hr />
+
+          {% if user.is_authenticated and user.id == profile.id %}
+
+          <div class="row">
+            <div class="col-sm-12">
+              <a
+                class="btn-lg btn-info text-decoration-none"
+                href="{% url 'update_profile' %}"
+                ><i class="fa-solid fa-gears"></i>Settings</a
+              >
+            </div>
+          </div>
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

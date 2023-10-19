@@ -1,12 +1,13 @@
 """Views"""
 
 # pylint: disable=E1101
+from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.views.generic import View, ListView, DetailView, CreateView
-from .models import Post, Comment, Category
+from .models import Post, Comment, Category, Profile
 from .forms import PostForm
 
 
@@ -137,3 +138,12 @@ class AddPostPage(LoginRequiredMixin, CreateView):
         response = super().form_invalid(form)
         messages.error(self.request, "Post creation failed. Please check your input.")
         return response
+
+
+class ProfilePageView(DetailView):
+    template_name = "profile.html"
+    context_object_name = "profile"
+
+    def get_object(self, **kwargs):
+        slug = self.kwargs.get("slug")
+        return get_object_or_404(User, username=slug)
