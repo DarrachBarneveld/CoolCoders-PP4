@@ -4,6 +4,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 from django.views.generic import View, ListView, DetailView, CreateView
 from .models import Post, Comment, Category
 from .forms import PostForm
@@ -128,4 +129,11 @@ class AddPostPage(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        messages.success(self.request, "Post created successfully! Review in progress!")
+        return response
+
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        messages.error(self.request, "Post creation failed. Please check your input.")
+        return response
