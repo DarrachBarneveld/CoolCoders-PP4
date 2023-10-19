@@ -1,6 +1,6 @@
 {% load static %}
 
-<article class="card m-1">
+<article class="card m-1 text-dark">
   {% if "placeholder" in post.featured_image.url %}
   <img
     class="card-img-top"
@@ -11,9 +11,9 @@
   <img class="card-img-top" src=" {{ post.featured_image.url }}" />
   {% endif %}
   <div class="card-body p-2">
-    <h3 class="h4 mb-3">
+    <h3 class="h5 mb-3">
       <strong class="text-uppercase"
-        ><a href="{% url 'post-detail' slug=post.slug %}"
+        ><a  class='text-decoration-none' href="{% url 'post-detail' slug=post.slug %}"
           >{{post.title}}</a
         ></strong
       >
