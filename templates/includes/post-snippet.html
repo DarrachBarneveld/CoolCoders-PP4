@@ -20,7 +20,7 @@
         <ul class="list-inline">
           <li class="list-inline-item mb-1">
             <i class="fa-solid fa-user text-info"></i>
-            <a href="#">
+            <a href="{% url 'profile' slug=post.author.profile.slug %}">
               <strong class="text-capitalize"> {{post.author}}</strong>
             </a>
           </li>

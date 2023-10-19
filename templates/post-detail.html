@@ -30,7 +30,7 @@
             </div>
             <div class="author-body">
               <label class="text-capitalize">
-                <a href="#"
+                <a href="{% url 'profile' slug=post.author.profile.slug %}"
                   ><strong>{{post.author}}</strong></a
                 >
               </label>
