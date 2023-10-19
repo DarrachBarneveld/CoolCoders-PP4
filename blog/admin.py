@@ -85,3 +85,25 @@ class PostAdmin(SummernoteModelAdmin):
         posts by updating their "approved" field to True.
         """
         queryset.update(approved=True)
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    """
+    Admin model configuration for comments.
+
+    """
+
+    list_display = ("name", "body", "post", "created_on", "approved")
+    list_filter = ("approved", "created_on")
+    search_fields = ("name", "email", "body")
+    actions = ["approve_comments"]
+
+    def approve_comments(self, request, queryset):
+        """
+        Approve selected comments.
+
+        This method is a custom action that allows administrators to approve selected
+        comments by updating their "approved" field to True.
+        """
+        queryset.update(approved=True)
