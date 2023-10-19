@@ -1,7 +1,7 @@
 """Forms"""
 from django import forms
-from .models import Post
 from django_summernote.widgets import SummernoteWidget
+from .models import Post
 
 
 class PostForm(forms.ModelForm):
