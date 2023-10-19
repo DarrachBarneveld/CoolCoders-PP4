@@ -144,6 +144,35 @@ class ProfilePageView(DetailView):
     template_name = "profile.html"
     context_object_name = "profile"
 
-    def get_object(self, **kwargs):
+    def get_object(self, queryset=None):
         slug = self.kwargs.get("slug")
         return get_object_or_404(User, username=slug)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.get_object()
+
+        posts = Post.objects.filter(author=user, approved=True)
+        total_posts = posts.count()
+
+        # Filter by posts the user likes
+        favourites = user.blogpost_like.filter(approved=True)
+
+        # Generate total number of comments on authors posts
+        total_comments = Comment.objects.filter(post__in=posts, approved=True).count()
+
+        # Generate total number of likes of all posts
+        total_likes = sum(post.number_of_likes() for post in posts)
+
+        posts_with_comment_count = []
+        for post in posts:
+            comment_count = Comment.objects.filter(post=post, approved=True).count()
+            posts_with_comment_count.append((post, comment_count))
+
+        context["total_posts"] = total_posts
+        context["total_comments"] = total_comments
+        context["total_likes"] = total_likes
+        context["posts_with_comment_count"] = posts_with_comment_count
+        context["favourites"] = favourites
+
+        return context
