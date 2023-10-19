@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import Profile, Post
+from .models import Profile, Post, Category, Comment
 
 
 # Register your models here.
@@ -49,3 +49,14 @@ class UserAdmin(admin.ModelAdmin):
 
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    """
+    Admin model configuration for post categories.
+
+    """
+
+    list_display = ("title",)
+    inlines = [PostInline]
