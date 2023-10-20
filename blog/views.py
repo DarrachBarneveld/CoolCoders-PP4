@@ -7,6 +7,7 @@ from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.urls import reverse_lazy
+from django.contrib.auth.forms import PasswordChangeForm
 from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
 from .models import Post, Comment, Category
 from .forms import PostForm, UpdateUserForm, UpdateBioForm
@@ -176,6 +177,7 @@ class UpdateProfileView(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy("update_profile")
     form_class = UpdateUserForm
     bio_form = UpdateBioForm
+    password_form = PasswordChangeForm
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -183,6 +185,8 @@ class UpdateProfileView(LoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["bio_form"] = UpdateBioForm(instance=self.request.user.profile)
+        context["password_form"] = PasswordChangeForm(self.request.user)
+
         return context
 
     def form_valid(self, form):
