@@ -18,6 +18,14 @@
       </form>
 
       <hr />
+
+      <form method="post" class="mb-5">
+        {% csrf_token %}
+        {{ bio_form | crispy }}
+        <button class="btn btn-info" type="submit">
+          <i class="fa-solid fa-unlock"></i>Update Bio
+        </button>
+      </form>
       {% endblock content %}
     </div>
   </div>

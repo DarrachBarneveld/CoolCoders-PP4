@@ -6,9 +6,10 @@ from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
+from django.urls import reverse_lazy
 from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
 from .models import Post, Comment, Category
-from .forms import PostForm, UpdateUserForm
+from .forms import PostForm, UpdateUserForm, UpdateBioForm
 
 
 class HomePageView(View):
@@ -172,19 +173,20 @@ class UpdateProfileView(LoginRequiredMixin, UpdateView):
 
     template_name = "update_profile.html"
     model = User
-    success_url = "/"
+    success_url = reverse_lazy("update_profile")
     form_class = UpdateUserForm
+    bio_form = UpdateBioForm
 
     def get_object(self, queryset=None):
         return self.request.user
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context["bio_form"] = UpdateBioForm(instance=self.request.user.profile)
         return context
 
     def form_valid(self, form):
-        # user = form.save()
-
+        print("valid")
         return super().form_valid(form)
 
     def form_invalid(self, form):

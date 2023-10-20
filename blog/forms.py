@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django_summernote.widgets import SummernoteWidget
 from django.contrib.auth.forms import UserChangeForm
-from .models import Post
+from .models import Post, Profile
 
 
 class PostForm(forms.ModelForm):
@@ -38,3 +38,19 @@ class UpdateUserForm(UserChangeForm):
         model = User
         fields = ["username", "email", "first_name", "last_name"]
         help_texts = {"username": None}
+
+
+class UpdateBioForm(forms.ModelForm):
+    """
+    A form for editing user biography information.
+
+    """
+
+    class Meta:
+        """Get Profile model, choose fields to display"""
+
+        model = Profile
+        fields = ["bio"]
+        widgets = {
+            "bio": forms.TextInput(),
+        }
