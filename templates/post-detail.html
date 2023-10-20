@@ -1,5 +1,7 @@
 {% extends 'base.html' %} 
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <div class="row clearfix">
@@ -42,6 +44,7 @@
         <div class="mt-2 mb-2">{{ post.content | safe }}</div>
       </div>
     </article>
+
     <section id="comments" class="card p-3 mt-3">
       <div class="header">
         <h2>
@@ -62,6 +65,26 @@
       </div>
     </section>
 
+    <section id="add-comment" class="card p-3 mt-3 mb-3">
+      <h2>Like what you read? Leave a comment!</h2>
+      <hr />
+      <div class="card-body p-1">
+        {% if commented %}
+        <div class="alert alert-success" role="alert">
+          Your comment is awaiting approval
+        </div>
+        {% else %} {% if user.is_authenticated %}
+
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post">
+
+          {{ comment_form | crispy }} 
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+        {% endif %} {% endif %}
+      </div>
+    </section>
     
   </section>
 
