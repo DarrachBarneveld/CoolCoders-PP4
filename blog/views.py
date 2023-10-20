@@ -2,12 +2,11 @@
 
 # pylint: disable=E1101
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
-from django.urls import reverse_lazy
 from django.contrib.auth.forms import PasswordChangeForm
 from django.views.generic import View, ListView, DetailView, CreateView
 from .models import Post, Comment, Category
@@ -207,10 +206,15 @@ class UpdateProfileView(LoginRequiredMixin, View):
         return render(request, self.template_name, context)
 
     def process_form(self, request, form, form_name):
+        context = self.get_context_data()
+
         if form.is_valid():
             form.save()
+            messages.success(self.request, f"{form_name} updated")
         else:
-            context = self.get_context_data()
+            messages.error(
+                self.request, "Profile update failed, please check your input"
+            )
 
         if form_name == "bio_form":
             context["bio_form"] = form
