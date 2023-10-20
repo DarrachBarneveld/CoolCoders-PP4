@@ -6,9 +6,9 @@ from django.shortcuts import get_object_or_404, render
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
-from django.views.generic import View, ListView, DetailView, CreateView
+from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
 from .models import Post, Comment, Category
-from .forms import PostForm
+from .forms import PostForm, UpdateUserForm
 
 
 class HomePageView(View):
@@ -162,3 +162,30 @@ class ProfilePageView(DetailView):
         context["favourites"] = favourites
 
         return context
+
+
+class UpdateProfileView(LoginRequiredMixin, UpdateView):
+    """
+    Allows a user to update their profile information, including username,
+    password, and bio.
+    """
+
+    template_name = "update_profile.html"
+    model = User
+    success_url = "/"
+    form_class = UpdateUserForm
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def form_valid(self, form):
+        # user = form.save()
+
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        return self.render_to_response(self.get_context_data())
