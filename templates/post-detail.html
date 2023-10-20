@@ -30,7 +30,7 @@
             </div>
             <div class="author-body">
               <label class="text-capitalize">
-                <a href="{% url 'profile' slug=post.author.profile.slug %}"
+                <a href="{% url 'profile' post.author.username %}"
                   ><strong>{{post.author}}</strong></a
                 >
               </label>
@@ -42,7 +42,29 @@
         <div class="mt-2 mb-2">{{ post.content | safe }}</div>
       </div>
     </article>
+    <section id="comments" class="card p-3 mt-3">
+      <div class="header">
+        <h2>
+          <strong>
+            <i class="fas fa-comments text-success"></i>
+            {{ comments.count }}
+          </strong>
+        </h2>
+      </div>
+      <hr />
+      <div class="body">
+        <ul class="comment-reply list-unstyled">
+          {% for comment in comments %}
+          <!--  -->
+          {% include "includes/comment.html" %}
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
   </section>
+
+
+
   <section id="popular-posts" class="col-lg-4 col-md-12 right-box">
     <div class="card p-3">
       <div class="header">

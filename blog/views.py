@@ -87,6 +87,9 @@ class PostDetailPage(DetailView):
         context["comments"] = self.object.comments.filter(approved=True).order_by(
             "-created_on"
         )
+        context["comments"] = self.object.comments.filter(approved=True).order_by(
+            "-created_on"
+        )
         context["commented"] = False
         context["liked"] = self.object.likes.filter(id=self.request.user.id).exists()
         context["top_related_posts"] = self.get_top_related_posts()
