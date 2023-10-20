@@ -3,7 +3,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django_summernote.widgets import SummernoteWidget
 from django.contrib.auth.forms import UserChangeForm
-from .models import Post, Profile
+from .models import Post, Profile, Comment
 
 
 class PostForm(forms.ModelForm):
@@ -54,3 +54,16 @@ class UpdateBioForm(forms.ModelForm):
         widgets = {
             "bio": forms.TextInput(),
         }
+
+
+class CommentForm(forms.ModelForm):
+    """
+    A form for creating comments on blog posts.
+
+    """
+
+    class Meta:
+        """Get Comment model, choose fields to display"""
+
+        model = Comment
+        fields = ("body",)
