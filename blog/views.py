@@ -2,7 +2,7 @@
 
 # pylint: disable=E1101
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import update_session_auth_hash
@@ -77,31 +77,44 @@ class CategoryPage(ListView):
         return queryset
 
 
-class PostDetailPage(DetailView):
-    model = Post
+class PostDetailPage(View):
     template_name = "post-detail.html"
-    context_object_name = "post"
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["comments"] = self.object.comments.filter(approved=True).order_by(
-            "-created_on"
-        )
-        context["comments"] = self.object.comments.filter(approved=True).order_by(
-            "-created_on"
-        )
-        context["comment_form"] = CommentForm()
-        context["commented"] = False
-        context["liked"] = self.object.likes.filter(id=self.request.user.id).exists()
-        context["top_related_posts"] = self.get_top_related_posts()
+        slug = kwargs.get("slug")
+        post = get_object_or_404(Post, slug=slug)
+        context = {
+            "post": post,
+            "comments": post.comments.filter(approved=True).order_by("-created_on"),
+            "comment_form": CommentForm(),
+            "commented": False,
+            "liked": post.likes.filter(id=self.request.user.id).exists(),
+            "top_related_posts": self.get_top_related_posts(post),
+        }
         return context
 
-    def get_top_related_posts(self):
-        return (
-            Post.objects.filter(category=self.object.category, approved=True)
-            .exclude(pk=self.object.id)
-            .annotate(comment_count=Count("comments"))[:3]
-        )
+    def get_top_related_posts(self, post):
+        return Post.objects.filter(category=post.category, approved=True).exclude(
+            pk=post.id
+        )[:3]
+
+    def get(self, request, slug, *args, **kwargs):
+        context = self.get_context_data(slug=slug)
+        return render(request, self.template_name, context)
+
+    def post(self, request, slug):
+        comment_form = CommentForm(data=request.POST)
+        post = get_object_or_404(Post, slug=slug)
+        context = self.get_context_data(slug=slug)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+
+        return render(request, self.template_name, context)
 
 
 class AddPostPage(LoginRequiredMixin, CreateView):
