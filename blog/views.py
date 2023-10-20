@@ -178,18 +178,19 @@ class UpdateProfileView(LoginRequiredMixin, View):
     password_form_class = PasswordChangeForm
     bio_form_class = UpdateBioForm
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, user_form=None, password_form=None, bio_form=None):
+        """
+        Retrieves context data for rendering the profile update page.
+        Returns:
+        - dict: A dictionary containing context data for rendering the page.
+        """
         user = self.request.user
-        user_form = self.user_form_class(instance=user)
-        bio_form = self.bio_form_class(instance=user.profile)
-
-        password_form = self.password_form_class(user)
-
-        return {
-            "user_form": user_form,
-            "bio_form": bio_form,
-            "password_form": password_form,
+        context = {
+            "user_form": user_form or self.user_form_class(instance=user),
+            "password_form": password_form or self.password_form_class(user),
+            "bio_form": bio_form or self.bio_form_class(instance=user.profile),
         }
+        return context
 
     def get(self, request, *args, **kwargs):
         """
@@ -204,20 +205,38 @@ class UpdateProfileView(LoginRequiredMixin, View):
     def post(self, request, *args, **kwargs):
         context = self.get_context_data()
         user_form = self.user_form_class(request.POST, instance=request.user)
-        password_form = self.password_form_class(request.user, request.POST)
         bio_form = self.bio_form_class(request.POST, instance=request.user.profile)
+        password_form = self.password_form_class(request.user, request.POST)
 
-        print(request.POST)
-        if "bio_form" in request.POST and bio_form.is_valid():
-            print("bio change")
-            # bio_form.save()
-        elif "password_form" in request.POST and password_form.is_valid():
-            print("password")
+        if "bio_form" in request.POST:
+            if bio_form.is_valid():
+                bio_form.save()
+                context = self.get_context_data(bio_form=bio_form)
+                return render(request, self.template_name, context)
 
-            # password_form.save()
-            # update_session_auth_hash(request, request.user)
-        elif "user_form" in request.POST and user_form.is_valid():
-            print("user")
-            # user_form.save()
+            else:
+                context = self.get_context_data(user_form=bio_form)
+                return render(request, self.template_name, context)
+
+        if "password_form" in request.POST:
+            if password_form.is_valid():
+                password_form.save()
+                update_session_auth_hash(self.request, self.request.user)
+                context = self.get_context_data(password_form=password_form)
+                return render(request, self.template_name, context)
+            else:
+                context = self.get_context_data(password_form=password_form)
+                return render(request, self.template_name, context)
+
+        if "user_form" in request.POST:
+            if user_form.is_valid():
+                user_form.save()
+                context = self.get_context_data(user_form=user_form)
+                return render(request, self.template_name, context)
+
+            else:
+                print("invalid")
+                context = self.get_context_data(user_form=user_form)
+                return render(request, self.template_name, context)
 
         return render(request, self.template_name, context)
