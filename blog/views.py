@@ -113,6 +113,11 @@ class PostDetailPage(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(
+                self.request, "Comment created successfully! Review in progress!"
+            )
+        else:
+            messages.error(self.request, "There was an error. Comment not registered")
 
         return render(request, self.template_name, context)
 
