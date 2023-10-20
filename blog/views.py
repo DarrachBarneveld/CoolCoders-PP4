@@ -10,7 +10,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
 from django.views.generic import View, ListView, DetailView, CreateView
 from .models import Post, Comment, Category
-from .forms import PostForm, UpdateUserForm, UpdateBioForm
+from .forms import PostForm, UpdateUserForm, UpdateBioForm, CommentForm
 
 
 class HomePageView(View):
@@ -90,6 +90,7 @@ class PostDetailPage(DetailView):
         context["comments"] = self.object.comments.filter(approved=True).order_by(
             "-created_on"
         )
+        context["comment_form"] = CommentForm()
         context["commented"] = False
         context["liked"] = self.object.likes.filter(id=self.request.user.id).exists()
         context["top_related_posts"] = self.get_top_related_posts()
