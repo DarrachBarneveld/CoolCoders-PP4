@@ -2,13 +2,14 @@
 
 # pylint: disable=E1101
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import PasswordChangeForm
-from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
+from django.views.generic import View, ListView, DetailView, CreateView
 from .models import Post, Comment, Category
 from .forms import PostForm, UpdateUserForm, UpdateBioForm
 
@@ -166,32 +167,57 @@ class ProfilePageView(DetailView):
         return context
 
 
-class UpdateProfileView(LoginRequiredMixin, UpdateView):
+class UpdateProfileView(LoginRequiredMixin, View):
     """
     Allows a user to update their profile information, including username,
     password, and bio.
     """
 
     template_name = "update_profile.html"
-    model = User
-    success_url = reverse_lazy("update_profile")
-    form_class = UpdateUserForm
-    bio_form = UpdateBioForm
-    password_form = PasswordChangeForm
-
-    def get_object(self, queryset=None):
-        return self.request.user
+    user_form_class = UpdateUserForm
+    password_form_class = PasswordChangeForm
+    bio_form_class = UpdateBioForm
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["bio_form"] = UpdateBioForm(instance=self.request.user.profile)
-        context["password_form"] = PasswordChangeForm(self.request.user)
+        user = self.request.user
+        user_form = self.user_form_class(instance=user)
+        bio_form = self.bio_form_class(instance=user.profile)
 
-        return context
+        password_form = self.password_form_class(user)
 
-    def form_valid(self, form):
-        print("valid")
-        return super().form_valid(form)
+        return {
+            "user_form": user_form,
+            "bio_form": bio_form,
+            "password_form": password_form,
+        }
 
-    def form_invalid(self, form):
-        return self.render_to_response(self.get_context_data())
+    def get(self, request, *args, **kwargs):
+        """
+        Handles HTTP GET requests for rendering the profile update page.
+
+        Returns:
+        - HttpResponse: Renders the profile update page with context data.
+        """
+        context = self.get_context_data()
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        context = self.get_context_data()
+        user_form = self.user_form_class(request.POST, instance=request.user)
+        password_form = self.password_form_class(request.user, request.POST)
+        bio_form = self.bio_form_class(request.POST, instance=request.user.profile)
+
+        print(request.POST)
+        if "bio_form" in request.POST and bio_form.is_valid():
+            print("bio change")
+            # bio_form.save()
+        elif "password_form" in request.POST and password_form.is_valid():
+            print("password")
+
+            # password_form.save()
+            # update_session_auth_hash(request, request.user)
+        elif "user_form" in request.POST and user_form.is_valid():
+            print("user")
+            # user_form.save()
+
+        return render(request, self.template_name, context)

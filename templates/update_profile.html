@@ -10,9 +10,9 @@
       <hr />
       <form method="post" class="mb-5">
         {% csrf_token %}
-        {{ form | crispy }}
+        {{ user_form | crispy }}
 
-        <button class="btn btn-info" type="submit">
+        <button class="btn btn-info" type="submit" name='user_form'>
           <i class="fa-solid fa-user"></i>Update User Information
         </button>
       </form>
@@ -22,7 +22,7 @@
       <form method="post" class="mb-5">
         {% csrf_token %}
         {{ bio_form | crispy }}
-        <button class="btn btn-info" type="submit">
+        <button class="btn btn-info" type="submit" name='bio_form'>
           <i class="fa-solid fa-unlock"></i>Update Bio
         </button>
       </form>
@@ -30,7 +30,7 @@
       <h2>Change Your Password</h2>
       <form method="post" class="mb-5">
         {% csrf_token %} {{ password_form | crispy}}
-        <button class="btn btn-info" type="submit">
+        <button class="btn btn-info" type="submit" name='password_form'>
           <i class="fa-solid fa-unlock"></i>Change Password
         </button>
       </form>
