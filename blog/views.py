@@ -78,9 +78,24 @@ class CategoryPage(ListView):
 
 
 class PostDetailPage(View):
+     """
+    A view class for displaying the detail page of a blog post, including its
+    comments, comment submission, and related posts.
+
+    """
     template_name = "post-detail.html"
 
     def get_context_data(self, **kwargs):
+        """
+        Retrieve context data for rendering the post detail page.
+
+        Args:
+        - **kwargs: Additional keyword arguments passed to the view.
+
+        Returns:
+        - dict: A dictionary containing context data for rendering the page.
+        """
+
         slug = kwargs.get("slug")
         post = get_object_or_404(Post, slug=slug)
         context = {
@@ -94,15 +109,47 @@ class PostDetailPage(View):
         return context
 
     def get_top_related_posts(self, post):
+        """
+        Get a list of top-related posts within the same category as the given post.
+
+        Args:
+        - post: The Post object for which to find related posts.
+
+        Returns:
+        - QuerySet: A queryset of related Post objects.
+        """
         return Post.objects.filter(category=post.category, approved=True).exclude(
             pk=post.id
         )[:3]
 
     def get(self, request, slug, *args, **kwargs):
+        """
+        Handle HTTP GET requests for rendering the post detail page.
+
+        Args:
+        - request: The HTTP request object.
+        - slug: The slug of the requested post.
+        - *args: Additional positional arguments.
+        - **kwargs: Additional keyword arguments.
+
+        Returns:
+        - HttpResponse: Renders the post detail page with context data.
+        """
+
         context = self.get_context_data(slug=slug)
         return render(request, self.template_name, context)
 
     def post(self, request, slug):
+        """
+        Handle HTTP POST requests for submitting a comment on the post.
+
+        Args:
+        - request: The HTTP request object.
+        - slug: The slug of the post on which the comment is being submitted.
+
+        Returns:
+        - HttpResponse: Renders the post detail page with context data.
+        """
         comment_form = CommentForm(data=request.POST)
         post = get_object_or_404(Post, slug=slug)
         context = self.get_context_data(slug=slug)
