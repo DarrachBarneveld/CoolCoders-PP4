@@ -188,8 +188,15 @@ class PostLike(View):
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.error(
+                self.request, "Post unliked successfully! Removed from your favourites!"
+            )
+
         else:
             post.likes.add(request.user)
+            messages.success(
+                self.request, "Post liked successfully! Added to your favourites!"
+            )
 
         return HttpResponseRedirect(reverse("post-detail", args=[slug]))
 
