@@ -2,7 +2,8 @@
 
 # pylint: disable=E1101
 from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404, render, redirect, reverse
+from django.http import HttpResponseRedirect
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import update_session_auth_hash
@@ -78,11 +79,12 @@ class CategoryPage(ListView):
 
 
 class PostDetailPage(View):
-     """
+    """
     A view class for displaying the detail page of a blog post, including its
     comments, comment submission, and related posts.
 
     """
+
     template_name = "post-detail.html"
 
     def get_context_data(self, **kwargs):
@@ -167,6 +169,29 @@ class PostDetailPage(View):
             messages.error(self.request, "There was an error. Comment not registered")
 
         return render(request, self.template_name, context)
+
+
+class PostLike(View):
+    """
+    Handles the liking/unliking of a post.
+
+    Methods:
+    - post: Handles the POST request to like or unlike a post and redirects the
+      user to the post's detail page.
+    """
+
+    def post(self, request, slug):
+        """
+        Handles the liking/unliking of a post and redirects to the post's detail page.
+        """
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse("post-detail", args=[slug]))
 
 
 class AddPostPage(LoginRequiredMixin, CreateView):
