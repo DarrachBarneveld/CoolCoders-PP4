@@ -4,16 +4,16 @@
 
 {% load crispy_forms_tags %}
 <section id="profile" class="container text-center text-white p-4">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-6 p-5 bg-custom rounded-3">
-      <h1>Edit Your User Information</h1>
+
+    <h1 class='display-5 text-green fw-bolder'>Edit Your User Information</h1>
+    <div class="add-post p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-light text-center my-3">
       <hr />
       <form method="post" class="mb-5">
         {% csrf_token %}
         {{ user_form | crispy }}
 
         <button class="btn btn-info" type="submit" name='user_form'>
-          <i class="fa-solid fa-user"></i>Update User Information
+          <i class="fa-solid fa-user"></i> Update User Information
         </button>
       </form>
 
@@ -23,7 +23,7 @@
         {% csrf_token %}
         {{ bio_form | crispy }}
         <button class="btn btn-info" type="submit" name='bio_form'>
-          <i class="fa-solid fa-unlock"></i>Update Bio
+          <i class="fa-solid fa-pen"></i> Update Bio
         </button>
       </form>
 
@@ -31,10 +31,8 @@
       <form method="post" class="mb-5">
         {% csrf_token %} {{ password_form | crispy}}
         <button class="btn btn-info" type="submit" name='password_form'>
-          <i class="fa-solid fa-unlock"></i>Change Password
+          <i class="fa-solid fa-unlock"></i> Change Password
         </button>
       </form>
       {% endblock content %}
-    </div>
-  </div>
 </section>
