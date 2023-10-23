@@ -167,8 +167,14 @@ class PostDetailPage(View):
             messages.success(
                 self.request, "Comment created successfully! Review in progress!"
             )
+
+        elif "delete_item" in request.POST:
+            comment_id = request.POST.get("item_id")
+            comment = Comment.objects.get(id=comment_id)
+            comment.delete()
+            messages.success(self.request, "Comment deleted successfully!")
         else:
-            messages.error(self.request, "There was an error. Comment not registered")
+            messages.error(self.request, "There was an error. Action not registered!")
 
         return render(request, self.template_name, context)
 
