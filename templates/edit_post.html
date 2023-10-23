@@ -4,20 +4,21 @@
 <!--  -->
 {% block content %}
 
-<div class="row justify-content-center py-4">
+<h1 class='pt-3 display-6 fw-bolder text-center'>
+  <strong class='text-uppercase text-green'>Add Post</strong>
+</h1>
   <form
-    class="add-post bg-white rounded-2 p-2"
     method="post"
     enctype="multipart/form-data"
+    class='add-post p-4 rounded-2 shadow-lg bg-light'
   >
     {{ form | crispy }}
-    <!--  -->
+    
     {% csrf_token %}
+
     <button type="submit" class="btn btn-primary">Submit</button>
-
     {% include "includes/modal.html" %}
-</form>
-</div>
 
-<!--  -->
+  </form>
+
 {%endblock%}
