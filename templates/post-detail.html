@@ -26,18 +26,14 @@
 
         <h1>{{post.title}}</h1>
         <div class="d-flex justify-content-between">
-          <div class="author">
-            <div class="avatar bg-primary">
-              <i class="fa-solid fa-trophy gold"></i>
-            </div>
-            <div class="author-body">
-              <label class="text-capitalize">
+          <div class="d-flex justify-content-center align-items-center gap-1">
+              {% include 'includes/level.html' with level=post.author.profile.get_level %}
+              <label>
                 <a href="{% url 'profile' post.author.username %}"
-                  ><strong>{{post.author}}</strong></a
+                  ><strong class='text-capitalize'>{{post.author}}</strong></a
                 >
               </label>
               <span class="text-secondary">{{post.created_on}}</span>
-            </div>
             
           </div>
 
