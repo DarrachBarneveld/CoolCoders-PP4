@@ -25,7 +25,7 @@ class Profile(models.Model):
 
     def get_level(self):
         post_count = self.user.blog_posts.count()
-        new_level = (post_count // 5) + 1
+        new_level = (post_count // 3) + 1
 
         self.level = new_level
         self.save()
