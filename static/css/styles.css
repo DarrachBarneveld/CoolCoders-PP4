@@ -39,3 +39,13 @@ img {
 .text-green {
   color: var(--neon-green);
 }
+
+/* BANNER */
+.banner-border {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 100%;
+  stroke: var(--neon-green);
+  z-index: -1;
+}
