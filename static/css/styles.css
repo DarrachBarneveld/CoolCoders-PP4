@@ -60,6 +60,10 @@ img {
   color: var(--platinum);
 }
 
+.bg-purple {
+  background: var(--neon-purple);
+}
+
 /* NAVIGATION */
 .nav-link {
   position: relative;
@@ -89,6 +93,27 @@ img {
 
 .nav-link:hover::after {
   opacity: 1;
+}
+
+.widget-list-inline li a {
+  padding: 2px 15px;
+  border: 1px solid var(--neon-green);
+  border-radius: 30px;
+  display: block;
+  color: #434343;
+  background-color: var(--primary-light);
+  transition: 300ms;
+  text-decoration: none;
+}
+
+.widget-list-inline li a:hover {
+  background: var(--neon-green);
+  color: white;
+}
+
+.tag {
+  width: fit-content;
+  border-radius: 10px;
 }
 
 /* BANNER */
