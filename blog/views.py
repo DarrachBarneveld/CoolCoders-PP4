@@ -79,6 +79,16 @@ class CategoryPage(ListView):
 
         return queryset
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        slug = self.kwargs["slug"]
+        category = get_object_or_404(Category, title=slug)
+
+        context["category"] = category
+
+        return context
+
 
 class PostDetailPage(View):
     """
