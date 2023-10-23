@@ -97,7 +97,7 @@
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link text-capitalize"
                 href="{% url 'profile' user.username %}"
                 ><i class="fa-solid fa-user"></i> {{ user.username }}</a
               >
