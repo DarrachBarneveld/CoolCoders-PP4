@@ -18,9 +18,19 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
+    level = models.IntegerField(default=1)
 
     def __str__(self):
         return str(self.user)
+
+    def get_level(self):
+        post_count = self.user.blog_posts.count()
+        new_level = (post_count // 5) + 1
+
+        self.level = new_level
+        self.save()
+
+        return self.level
 
 
 def create_user_profile(sender, instance, created, **kwargs):
@@ -58,7 +68,8 @@ class Post(models.Model):
     """
     Model to represent a blog article.
 
-    This model represents a blog article with various attributes such as title, author, content, and likes.
+    This model represents a blog article with various attributes such as title, author,
+    content, and likes.
     """
 
     title = models.CharField(max_length=200, unique=True)

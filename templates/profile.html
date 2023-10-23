@@ -10,6 +10,9 @@
             <div class="mt-3">
               <h4 class="text-capitalize">{{profile.username}}</h4>
               <p class="text-secondary mb-1">
+                Level: {{profile.profile.get_level }}
+              </p>
+              <p class="text-secondary mb-1">
                 Joined: {{profile.date_joined|date:"F d, Y" }}
               </p>
               <p class="text-secondary mb-1">
@@ -202,6 +205,5 @@
     </ul>
   </nav>
 
-  <!-- ... Other content ... -->
 </section>
 {% endblock content %}
