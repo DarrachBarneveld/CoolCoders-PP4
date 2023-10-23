@@ -11,6 +11,10 @@
   <div class="text-box col-md-10 col-8">
     <h5 class="m-b-0 text-capitalize">{{post.name}}</h5>
     <p>{{post.body | linebreaks}}</p>
-    <label class="list-inline text-primary"> {{post.created_on}} </label>
+    <label class="list-inline text-primary"> {{post.created_on}} </label> 
+    {% if user.is_authenticated and user.id == post.name.id %}
+    {% include "includes/modal.html" %}
+    {% endif %} 
   </div>
+
 </li>
