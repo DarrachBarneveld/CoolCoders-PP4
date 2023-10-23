@@ -3,14 +3,15 @@
 # pylint: disable=E1101
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect, reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.core.paginator import Paginator
 from django.db.models import Count
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.template.response import TemplateResponse
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
-from django.views.generic import View, ListView, DetailView, CreateView
+from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
 from .models import Post, Comment, Category
 from .forms import PostForm, UpdateUserForm, UpdateBioForm, CommentForm
 
@@ -229,6 +230,50 @@ class AddPostPage(LoginRequiredMixin, CreateView):
         response = super().form_invalid(form)
         messages.error(self.request, "Post creation failed. Please check your input.")
         return response
+
+
+class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    Allows a logged-in user to edit an existing blog post.
+
+    - get_queryset: Filters the queryset to only include posts authored by
+      the currently logged-in user.
+    - dispatch: Overrides the base method to handle the case where the post
+      is not found and returns a custom template response.
+    - post: Handles HTTP POST requests, allowing the user to delete their post.
+    - form_valid: Overrides the base method to set the post as unapproved after
+      editing.
+    - get_form_kwargs: Overrides the base method to provide the instance to the
+      form.
+
+    Mixins:
+    - LoginRequiredMixin: Ensures that only authenticated users can access
+      this view, and they must be the author of the post.
+    """
+
+    model = Post
+    form_class = PostForm
+    template_name = "edit_post.html"
+    success_url = "/"
+
+    def test_func(self):
+        """
+        UserPassesTestMixin function to prevent another user from updating
+        other's recipes
+        """
+
+        post = self.get_object()
+        return post.author == self.request.user
+
+    def form_valid(self, form):
+        """
+        Handles a valid form submission and sets the post as unapproved.
+
+        Returns:
+        - HttpResponse: Redirects to the success URL after saving the post.
+        """
+        form.instance.approved = False
+        return super().form_valid(form)
 
 
 class ProfilePageView(DetailView):

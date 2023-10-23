@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!--  -->
+{% load crispy_forms_tags %}
+<!--  -->
+{% block content %}
+
+<div class="row justify-content-center py-4">
+  <form
+    class="add-post bg-white rounded-2 p-2"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    {{ form | crispy }}
+    <!--  -->
+    {% csrf_token %}
+
+    <!-- Modal -->
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!--  -->
+{%endblock%}
