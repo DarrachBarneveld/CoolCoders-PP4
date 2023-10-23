@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
+from django.urls import reverse
 
 
 # Create your models here.
@@ -91,6 +92,9 @@ class Post(models.Model):
     def total_comments(self):
         """To calculate the total comments on a post"""
         return self.comments.filter(approved=True).count()
+
+    def get_absolute_url(self):
+        return reverse("edit_post", args=[str(self.pk)])
 
     def save(self, *args, **kwargs):
         if not self.slug:
