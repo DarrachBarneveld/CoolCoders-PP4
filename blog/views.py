@@ -168,7 +168,7 @@ class PostDetailPage(View):
                 self.request, "Comment created successfully! Review in progress!"
             )
 
-        elif "delete_item" in request.POST:
+        if "delete_item" in request.POST:
             comment_id = request.POST.get("item_id")
             comment = Comment.objects.get(id=comment_id)
             comment.delete()
@@ -279,7 +279,12 @@ class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         - HttpResponse: Redirects to the success URL after saving the post.
         """
         form.instance.approved = False
+        messages.success(self.request, "Post edited successfully! Review in progress!")
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "Post editing failed. Please check your input.")
+        return super().form_invalid(form)
 
 
 class ProfilePageView(DetailView):
