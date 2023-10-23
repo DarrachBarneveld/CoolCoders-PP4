@@ -150,7 +150,7 @@ img {
 /* ADD/EDIT POST FORM */
 
 .add-post {
-  max-width: fit-content;
+  max-width: 900px;
   margin: auto;
 }
 

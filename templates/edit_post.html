@@ -5,15 +5,15 @@
 {% block content %}
 
 <h1 class='pt-3 display-6 fw-bolder text-center'>
-  <strong class='text-uppercase text-green'>Add Post</strong>
+  <strong class='text-uppercase text-green'>Edit Post</strong>
 </h1>
   <form
     method="post"
     enctype="multipart/form-data"
-    class='add-post p-4 rounded-2 shadow-lg bg-light'
+    class='add-post p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-light text-center text-uppercase my-3'
   >
     {{ form | crispy }}
-    
+
     {% csrf_token %}
 
     <button type="submit" class="btn btn-primary">Submit</button>

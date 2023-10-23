@@ -78,6 +78,12 @@ MESSAGE_TAGS = {
     messages.ERROR: "alert-danger",
 }
 
+SUMMERNOTE_CONFIG = {
+    "width": "100%",
+    "height": "350",
+}
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
