@@ -164,3 +164,20 @@ img {
   color: var(--primary-black);
   font-weight: bold;
 }
+
+/* ANIMATIONS */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-duration: 500ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
