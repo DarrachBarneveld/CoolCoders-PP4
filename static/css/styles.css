@@ -5,6 +5,10 @@
   --neon-green: #3bc20e;
   --neon-purple: #ab20fd;
   --primary-blue: #48abe0;
+  --bronze: #cd7f32;
+  --silver: #c0c0c0;
+  --gold: #ffd700;
+  --platinum: #5bd2fc;
 }
 
 *,
@@ -38,6 +42,22 @@ img {
 
 .text-green {
   color: var(--neon-green);
+}
+
+.bronze {
+  color: var(--bronze);
+}
+
+.silver {
+  color: var(--silver);
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.platinum {
+  color: var(--platinum);
 }
 
 /* NAVIGATION */

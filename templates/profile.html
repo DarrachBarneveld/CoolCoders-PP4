@@ -6,7 +6,15 @@
       <div class="card">
         <div class="card-body">
           <div class="d-flex flex-column align-items-center text-center">
-            <i class="fa-solid fa-trophy profile-icon gold"></i>
+            {% if profile.profile.get_level == 1 %}
+                <i class="fa-solid fa-trophy profile-icon bronze"></i>
+            {% elif profile.profile.get_level == 2 %}
+                <i class="fa-solid fa-trophy profile-icon silver"></i>
+            {% elif profile.profile.get_level == 3 %}
+                <i class="fa-solid fa-trophy profile-icon gold"></i>
+            {% elif profile.profile.get_level >= 4 %}
+                <i class="fa-solid fa-trophy profile-icon platinum"></i>
+            {% endif %}
             <div class="mt-3">
               <h4 class="text-capitalize">{{profile.username}}</h4>
               <p class="text-secondary mb-1">
