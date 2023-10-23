@@ -149,18 +149,18 @@ img {
 
 /* ADD/EDIT POST FORM */
 
-.add-post {
+.custom-form {
   max-width: 900px;
   margin: auto;
 }
 
-.add-post input,
-.add-post textarea,
-.add-post select {
+.custom-form input,
+.custom-form textarea,
+.custom-form select {
   border: 1px solid var(--primary-black);
 }
 
-.add-post label {
+.custom-form label {
   color: var(--primary-black);
   font-weight: bold;
 }
