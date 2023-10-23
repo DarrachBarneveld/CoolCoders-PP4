@@ -53,5 +53,10 @@
       class="btn btn-outline-primary"
       >Read More</a
     >
+    {% if user.is_authenticated and user.id == post.author.id %}
+    <a href="{% url 'edit_post' pk=post.pk %}" class="btn btn-primary"
+      ><i class="fa-solid fa-pen-to-square"></i>Edit</a
+    >
+    {% endif %}
   </div>
 </article>
