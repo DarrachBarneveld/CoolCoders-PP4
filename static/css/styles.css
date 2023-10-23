@@ -64,6 +64,10 @@ img {
   background: var(--neon-purple);
 }
 
+.bg-green {
+  background: var(--neon-green);
+}
+
 /* NAVIGATION */
 .nav-link {
   position: relative;
