@@ -146,3 +146,21 @@ img {
   height: 100%;
   background: linear-gradient(270deg, #000000, #434343);
 }
+
+/* ADD/EDIT POST FORM */
+
+.add-post {
+  max-width: fit-content;
+  margin: auto;
+}
+
+.add-post input,
+.add-post textarea,
+.add-post select {
+  border: 1px solid var(--primary-black);
+}
+
+.add-post label {
+  color: var(--primary-black);
+  font-weight: bold;
+}
