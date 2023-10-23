@@ -2,14 +2,13 @@
 <!--  -->
 {% block content %}
 
-<div class="container pt-5 text-center">
-  <h1 class="article-title">
+<div class="pt-3 text-center">
+  <h1 class='display-2 fw-bolder'>
     <strong class='text-uppercase text-green'>{{category.title}}</strong>
   </h1>
-  <h2 class="mt-5 text-light border-bottom">
+  <h2 class="mt-2 text-light border-bottom">
     <em>Uncover the latest {{category.title}} updates!</em>
   </h2>
-  <div class="container pt-5">
     <div class="row p-3">
       {% for post in posts %}
       <div class="col-md-4 g-3 mt-3 mb-3">
@@ -54,7 +53,6 @@
           {% endif %}
         </ul>
       </nav>
-  </div>
 </div>
 
 {%endblock%}
