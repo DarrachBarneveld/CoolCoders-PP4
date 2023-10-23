@@ -4,6 +4,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.http import HttpResponseRedirect
+from django.core.paginator import Paginator
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import update_session_auth_hash
@@ -240,6 +241,7 @@ class ProfilePageView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.get_object()
+        posts_per_page = 4
 
         posts = Post.objects.filter(author=user, approved=True)
         total_posts = posts.count()
@@ -253,16 +255,21 @@ class ProfilePageView(DetailView):
         # Generate total number of likes of all posts
         total_likes = sum(post.number_of_likes() for post in posts)
 
-        posts_with_comment_count = []
-        for post in posts:
-            comment_count = Comment.objects.filter(post=post, approved=True).count()
-            posts_with_comment_count.append((post, comment_count))
+        posts_paginator = Paginator(posts, posts_per_page)
+        favourites_paginator = Paginator(favourites, posts_per_page)
+
+        posts_page_number = self.request.GET.get("posts_page")
+        favourites_page_number = self.request.GET.get("favourites_page")
+
+        posts_page = posts_paginator.get_page(posts_page_number)
+        favourites_page = favourites_paginator.get_page(favourites_page_number)
 
         context["total_posts"] = total_posts
         context["total_comments"] = total_comments
         context["total_likes"] = total_likes
-        context["posts_with_comment_count"] = posts_with_comment_count
         context["favourites"] = favourites
+        context["posts_page"] = posts_page
+        context["favourites_page"] = favourites_page
 
         return context
 

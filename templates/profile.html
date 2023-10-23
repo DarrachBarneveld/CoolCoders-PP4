@@ -110,53 +110,61 @@
   </div>
 </section>
 
+<!-- User Posts Section -->
 <section id="user-posts" class="p-4 text-center text-light">
-  <h2 class="text-capitalize">{{profile.username}}s Posts</h2>
-  <hr />
-
-  {% if posts_with_comment_count|length == 0 %}
-  <!--  -->
-
-  <p class="text-capitalize h4">
-    {{profile.username}} has no posts!
-    <i class="fa-solid fa-face-sad-tear"></i>
-  </p>
-  {% endif %}
-
   <div class="row p-3">
-    <!--  -->
-    {% for post, comment_count in posts_with_comment_count %}
-    <div class="col-lg-3 col-md-6 g-3 mt-3 mb-3">
-      {% include "includes/post-preview.html" %}
-    </div>
-
-    {% endfor %}
+      {% for post in posts_page %}
+          <div class="col-lg-3 col-md-6 g-3 mt-3 mb-3">
+              {% include "includes/post-preview.html" %}
+          </div>
+      {% endfor %}
+  </div>
+  <div class="pagination">
+      <span class="step-links">
+          {% if posts_page.has_previous %}
+              <a href="?posts_page=1">&laquo; first</a>
+              <a href="?posts_page={{ posts_page.previous_page_number }}">previous</a>
+          {% endif %}
+          
+          <span class="current-page">
+              Page {{ posts_page.number }} of {{ posts_page.paginator.num_pages }}.
+          </span>
+          
+          {% if posts_page.has_next %}
+              <a href="?posts_page={{ posts_page.next_page_number }}">next</a>
+              <a href="?posts_page={{ posts_page.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
   </div>
 </section>
 
 <section id="favourites" class="p-4 text-center text-light">
-  <h2 class="text-capitalize">Favourites</h2>
-  <hr />
-
+  <!-- ... Existing content ... -->
   <div class="row p-3">
-    <!--  -->
-
-    {% if favourites|length == 0 %}
-    <!--  -->
-
-    <p class="text-capitalize h4">
-      {{profile.username}} has no favourites!
-      <i class="fa-solid fa-face-sad-tear"></i>
-    </p>
-    {% endif %}
-    <!--  -->
-
-    {% for post in favourites %}
-    <div class="col-lg-3 col-md-6 g-3 mt-3 mb-3">
-      {% include "includes/post-preview.html" %}
-    </div>
-
-    {% endfor %}
+      {% for post in favourites_page %}
+          <div class="col-lg-3 col-md-6 g-3 mt-3 mb-3">
+              {% include "includes/post-preview.html" %}
+          </div>
+      {% endfor %}
   </div>
+  <!-- Pagination controls for favorite posts -->
+  <div class="pagination">
+      <span class="step-links">
+          {% if favourites_page.has_previous %}
+              <a href="?favourites_page=1">&laquo; first</a>
+              <a href="?favourites_page={{ favourites_page.previous_page_number }}">previous</a>
+          {% endif %}
+          
+          <span class="current-page">
+              Page {{ favourites_page.number }} of {{ favourites_page.paginator.num_pages }}.
+          </span>
+          
+          {% if favourites_page.has_next %}
+              <a href="?favourites_page={{ favourites_page.next_page_number }}">next</a>
+              <a href="?favourites_page={{ favourites_page.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
+  </div>
+  <!-- ... Other content ... -->
 </section>
 {% endblock content %}
