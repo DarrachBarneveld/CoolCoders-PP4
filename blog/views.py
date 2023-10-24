@@ -3,11 +3,10 @@
 # pylint: disable=E1101
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect, reverse
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
 from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.template.response import TemplateResponse
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
@@ -347,6 +346,7 @@ class ProfilePageView(DetailView):
 
         context["total_posts"] = total_posts
         context["total_comments"] = total_comments
+        context["favourites"] = favourites
         context["total_likes"] = total_likes
         context["posts_page"] = posts_page
         context["favourites_page"] = favourites_page
@@ -436,7 +436,7 @@ class UpdateProfileView(LoginRequiredMixin, View):
                 user.delete()
                 messages.success(request, "Account Deleted.")
                 return redirect("home")
-            except: # pylint: disable=bare-except
+            except:  # pylint: disable=bare-except
                 messages.error(request, "There was an error deleting your account.")
 
             return redirect("home")
