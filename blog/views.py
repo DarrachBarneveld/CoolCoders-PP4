@@ -338,7 +338,7 @@ class ProfilePageView(DetailView):
         posts_paginator = Paginator(posts, posts_per_page)
         favourites_paginator = Paginator(favourites, posts_per_page)
 
-        posts_page_number = self.request.GET.get("page")
+        posts_page_number = self.request.GET.get("posts_page")
         favourites_page_number = self.request.GET.get("favourites_page")
 
         posts_page = posts_paginator.get_page(posts_page_number)
