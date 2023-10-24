@@ -429,4 +429,16 @@ class UpdateProfileView(LoginRequiredMixin, View):
         if "user_form" in request.POST:
             return self.process_form(request, user_form, "user_form")
 
+        # Delete user from database
+        if "delete_item" in request.POST:
+            try:
+                user = request.user
+                user.delete()
+                messages.success(request, "Account Deleted.")
+                return redirect("home")
+            except: # pylint: disable=bare-except
+                messages.error(request, "There was an error deleting your account.")
+
+            return redirect("home")
+
         return render(request, self.template_name, context)
