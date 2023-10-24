@@ -32,7 +32,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("IS_DEVELOPMENT", True)
+
+is_development = os.getenv("IS_DEVELOPMENT", "False")
+
+# Convert the string to a boolean
+IS_DEVELOPMENT = is_development.lower() == "true"
+
+# Set DEBUG based on the IS_DEVELOPMENT value
+DEBUG = IS_DEVELOPMENT
 
 ALLOWED_HOSTS = [
     "coolcoders-b69260c4617a.herokuapp.com",
