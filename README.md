@@ -10,6 +10,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 # Table Of Content
 
 - [User Experience](#user-experience)
+- [User Stories](#user-stories)
 - [Site Goals](#site-goals)
 
 ## User Experience

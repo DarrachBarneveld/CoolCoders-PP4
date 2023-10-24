@@ -2,10 +2,15 @@
 <!--  -->
 {% block content %}
 
+
+
 <div class="pt-3 text-center">
   <h1 class='display-2 fw-bolder'>
     <strong class='text-uppercase text-green'>{{category.title}}</strong>
   </h1>
+
+  {% include "includes/widgets.html" %}
+
   <h2 class="mt-2 text-light border-bottom">
     <em>Uncover the latest {{category.title}} updates!</em>
   </h2>

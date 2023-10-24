@@ -10,20 +10,8 @@
     What Would You <br />
     Like To Read Today?
   </h1>
-  <ul class="list-inline widget-list-inline">
-    <li class="list-inline-item m-1">
-      <a href="{% url 'index' 'tech'   %}">Tech</a>
-    </li>
-    <li class="list-inline-item m-1">
-      <a href="{% url 'index' 'coding'  %}">Coding</a>
-    </li>
-    <li class="list-inline-item m-1">
-      <a href="{% url 'index' 'gadgets'  %}">Gadgets</a>
-    </li>
-    <li class="list-inline-item m-1">
-      <a href="{% url 'index' 'events'  %}">Events</a>
-    </li>
-  </ul>
+
+  {% include "includes/widgets.html" %}
 
 
   <div class="row pt-md-5">
