@@ -79,7 +79,7 @@
   </div>
 </section>
 
-<section id="statistics" class="p-4">
+<section id="statistics">
   <div class="card p-2">
     <div class="row">
       <div class="col-6 col-lg-3 text-center">
@@ -114,8 +114,11 @@
 </section>
 
 <!-- User Posts Section -->
-<section id="user-posts" class="p-4 text-center text-light">
+<section id="user-posts" class="text-center">
   <div class="row p-3">
+    <h2 class='text-green fw-bolder display-6'>
+      <strong class='text-uppercase text-green'> {{profile.username}}'s Posts</strong>
+    </h2>
       {% for post in posts_page %}
           <div class="col-lg-3 col-md-6 g-1 mt-3 mb-3">
               {% include "includes/post-preview.html" %}
@@ -160,9 +163,12 @@
       </nav>
 </section>
 
-<section id="favourites" class="p-4 text-center text-light">
-  <!-- ... Existing content ... -->
+<section id="favourites" class="text-center">
   <div class="row p-3">
+    <h2 class='text-green fw-bolder display-6'>
+      <strong class='text-uppercase text-green'> {{profile.username}}'s Favourites</strong>
+    </h2>
+
       {% for post in favourites_page %}
           <div class="col-lg-3 col-md-6 g-1 mt-3 mb-3">
               {% include "includes/post-preview.html" %}
