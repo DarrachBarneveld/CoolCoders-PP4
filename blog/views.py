@@ -322,7 +322,7 @@ class ProfilePageView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.get_object()
-        posts_per_page = 4
+        posts_per_page = 2
 
         posts = Post.objects.filter(author=user, approved=True)
         total_posts = posts.count()
@@ -339,7 +339,7 @@ class ProfilePageView(DetailView):
         posts_paginator = Paginator(posts, posts_per_page)
         favourites_paginator = Paginator(favourites, posts_per_page)
 
-        posts_page_number = self.request.GET.get("posts_page")
+        posts_page_number = self.request.GET.get("page")
         favourites_page_number = self.request.GET.get("favourites_page")
 
         posts_page = posts_paginator.get_page(posts_page_number)
@@ -348,7 +348,6 @@ class ProfilePageView(DetailView):
         context["total_posts"] = total_posts
         context["total_comments"] = total_comments
         context["total_likes"] = total_likes
-        context["favourites"] = favourites
         context["posts_page"] = posts_page
         context["favourites_page"] = favourites_page
 
