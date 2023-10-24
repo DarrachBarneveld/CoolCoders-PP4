@@ -272,6 +272,21 @@ class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = "edit_post.html"
     success_url = "/"
 
+    def post(self, request, *args, **kwargs):
+        # Check if the "delete_item" field is present in the POST data
+        if "delete_item" in request.POST:
+            post = self.get_object()
+            if post:
+                post.delete()
+                messages.success(request, "Post deleted successfully.")
+                return redirect("/")
+
+            messages.error(
+                request, "There was an error with your request, please try again."
+            )
+
+        return super().post(request, *args, **kwargs)
+
     def test_func(self):
         """
         UserPassesTestMixin function to prevent another user from updating
