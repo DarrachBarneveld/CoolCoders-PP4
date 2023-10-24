@@ -120,6 +120,12 @@ img {
   border-radius: 10px;
 }
 
+/* POST DETAIL */
+.btn-like {
+  border: none;
+  background: transparent;
+}
+
 /* BANNER */
 .banner-border {
   position: absolute;
