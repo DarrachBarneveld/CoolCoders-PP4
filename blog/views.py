@@ -322,7 +322,7 @@ class ProfilePageView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.get_object()
-        posts_per_page = 2
+        posts_per_page = 4
 
         posts = Post.objects.filter(author=user, approved=True)
         total_posts = posts.count()

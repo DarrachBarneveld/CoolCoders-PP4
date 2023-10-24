@@ -27,7 +27,7 @@
         <h1>{{post.title}}</h1>
         <div class="d-flex justify-content-between">
           <div class="d-flex justify-content-center align-items-center gap-1">
-              {% include 'includes/level.html' with level=post.author.profile.get_level %}
+              {% include 'includes/trophy.html' with level=post.author.profile.get_level %}
               <label>
                 <a href="{% url 'profile' post.author.username %}"
                   ><strong class='text-capitalize'>{{post.author}}</strong></a
