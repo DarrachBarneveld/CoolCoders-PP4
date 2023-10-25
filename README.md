@@ -10,8 +10,20 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 # Table Of Content
 
 - [User Experience](#user-experience)
-- [User Stories](#user-stories)
-- [Site Goals](#site-goals)
+  - [User Stories](#user-stories)
+  - [Site Goals](#site-goals)
+  - [Scope](#scope)
+- [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Database Schema](#database-schema)
+  - [Fonts](#fonts)
+  - [Wireframes](#wireframes)
+  - [Agile Methodology](#agile-methodology)
+    - [Overview](#overview)
+    - [EPICS(Milestones)](#epics---milestones)
+    - [User Stories Issues](#user-stories---issues)
+    - [MoSCoW prioritization](#moscow-prioritization)
+    - [GitHub Projects](#github-projectskanban)
 
 ## User Experience
 
@@ -210,3 +222,32 @@ The font used in this project is Segoe UI Roboto, which compliments the techical
   ![Modal](./documentation/images/wireframes/modal.png)
 - Article Preview Card
   ![Preview-Card](./documentation/images/wireframes/articlepreviewcard.png)
+
+### Agile Methodology
+
+#### Overview
+
+This project was developed following agile principles. Employing the agile methodology enabled me to meticulously map out the website's features by crafting user stories, each of which came with defined acceptance criteria and tasks. Grouping each of these stories into EPIC milestones allowed me to focus on the key elements of the site one by one. These elements served to distinctly delineate the necessary prerequisites for the successful implementation of each feature.
+
+#### EPICS - Milestones
+
+Within the Agile methodology framework, user stories are organized into eight EPICS or Milestones. Additionally, there is also additional Milestones known as Error Handling that was created for the sole purpose of handling any errors that came up during testing, development or tweaking site elements with more refactored coded or enchancements.
+
+![Milestones](./documentation/epicmilestones.png)
+
+#### User Stories - Issues
+
+The user story issue format consists of the user story itself, as well as acceptance criteria and tasks that outline the essential steps for addressing the issue. When possible, during the development process, commit messages are associated with their corresponding issues. This practice ensures the relevance of each commit and also provides a visual representation of the progress made on each project issue. These issues are monitored using milestones, Kanban boards, and other Agile tools.
+
+![User Story](./documentation/userstories.png)
+
+#### MoSCoW Prioritization
+
+The project employed the "MoSCoW" technique to effectively categorize and prioritize its features and requirements based on their importance. "MoSCoW" stands for "Must have, Should have, Could have, and Won't have," with each category contributing to the organization and prioritization of features. This approach acts as a guiding principle for the development process, ensuring that the most crucial elements are addressed as a top priority.
+
+![MoSCoW](./documentation/moscow.png)
+
+#### GitHub Projects/Kanban
+
+The project adopted a basic Kanban Board structure, which was divided into columns such as Todo, In Progress and Done. This setup provided a clear and organized way to track the progress of tasks, making it easier to visualize and manage the workflow throughout the development process. The GitHub project Kanban was linked to the repo for consistant reference.
+![Kanban](./documentation/kanban.png)
