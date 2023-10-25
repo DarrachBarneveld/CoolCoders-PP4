@@ -233,21 +233,135 @@ This project was developed following agile principles. Employing the agile metho
 
 Within the Agile methodology framework, user stories are organized into eight EPICS or Milestones. Additionally, there is also additional Milestones known as Error Handling that was created for the sole purpose of handling any errors that came up during testing, development or tweaking site elements with more refactored coded or enchancements.
 
-![Milestones](./documentation/epicmilestones.png)
+![Milestones](./documentation/images/epicmilestones.png)
 
 #### User Stories - Issues
 
 The user story issue format consists of the user story itself, as well as acceptance criteria and tasks that outline the essential steps for addressing the issue. When possible, during the development process, commit messages are associated with their corresponding issues. This practice ensures the relevance of each commit and also provides a visual representation of the progress made on each project issue. These issues are monitored using milestones, Kanban boards, and other Agile tools.
 
-![User Story](./documentation/userstories.png)
+![User Story](./documentation/images/userstories.png)
 
 #### MoSCoW Prioritization
 
 The project employed the "MoSCoW" technique to effectively categorize and prioritize its features and requirements based on their importance. "MoSCoW" stands for "Must have, Should have, Could have, and Won't have," with each category contributing to the organization and prioritization of features. This approach acts as a guiding principle for the development process, ensuring that the most crucial elements are addressed as a top priority.
 
-![MoSCoW](./documentation/moscow.png)
+![MoSCoW](./documentation/images/moscow.png)
 
 #### GitHub Projects/Kanban
 
 The project adopted a basic Kanban Board structure, which was divided into columns such as Todo, In Progress and Done. This setup provided a clear and organized way to track the progress of tasks, making it easier to visualize and manage the workflow throughout the development process. The GitHub project Kanban was linked to the repo for consistant reference.
-![Kanban](./documentation/kanban.png)
+![Kanban](./documentation/images/kanban.png)
+
+## Features
+
+### Navigation Header
+
+The navigation bar is a consistent element across all pages, designed using Bootstrap and optimized for full responsiveness. The left is centered around navigation of content while the right hand side is related to user authentication. Authenticated users can also see create posts and view profile links while unauthenticated users only see a prompt to login/register.
+
+The mobile version of the navbar has all the content rendered when a hamburger icon is clicked. When clicked a dropdown display is rendered showing all navigation links.
+
+### Footer
+
+The footer is a miniinmalist footer designed to link users to cool coders social links. The link are only for educational purposes as just link to the social platforms base url.
+
+### Home Page
+
+The Home Hero Section on Cool Coders features carefully curated tech-related content with three components: Popular Posts, highlighting articles with active user comments; Trending Posts, showcasing popular content based on user likes; and Editor's Choice, handpicked by the editorial team. Each post is displayed as a card with a link to the full article, accompanied by engagement metrics like comments and likes. Users can also access the author's profile, promoting community interaction and enhancing the user experience. Additionally, tag links are displayed to showcase posts from various categories, further enhancing content discovery.
+
+### Categories Page
+
+The Category Page on Cool Coders is a dedicated space where users can explore a comprehensive collection of articles grouped by specific tech-related categories. Each category page is thoughtfully organized, presenting users with a wealth of content tailored to their interests. The articles are neatly paginated, with up to six articles displayed per page for easy navigation and efficient content browsing. This design allows users to delve deeply into the topics that intrigue them most, making it a valuable resource for in-depth exploration of various tech-related subjects within the Cool Coders community.
+
+### Post Detail Page
+
+The Post Detail Page on Cool Coders is an immersive experience designed to provide users with in-depth access to an article's content and foster engagement. Here's what users can expect on this page:
+
+1. Article Content: The central focus of the page is the article itself. Users can read the full content of the post, gaining insights into the topic, industry trends, or tech-related experiences shared by the author.
+2. Comments Section: A dedicated comments section accompanies the article, displaying all user-generated comments related to the post. Users can participate in discussions, share their thoughts, and engage with the Cool Coders community by leaving comments or replies.
+3. Comment Form: Below the comments section, a user-friendly comment form is readily available. Users can easily contribute to the conversation by typing and submitting their comments, which will appear alongside existing discussions.
+4. Popular Posts in Category: To encourage further exploration within the same category, the page also showcases a selection of popular posts from the related category. This feature helps users discover additional relevant content, offering a seamless navigation experience.
+
+The Post Detail Page serves as a hub for knowledge sharing and community interaction, ensuring that users not only have access to insightful content but can also actively engage, discuss, and explore more related posts within the category.
+
+### Profile Page
+
+The Profile Page on Cool Coders is an essential space for users to showcase their tech passions and contributions while also gaining insights into their own engagement within the community. Here's what you'll find on a user's profile:
+
+#### Profile Info
+
+1. Username, First Name and Last Name: Users' first and last names, adding a personal touch to their profiles.
+2. Bio: A brief bio or description, allowing users to share more about themselves, their interests, or their professional background.
+3. Email Address: The user's contact information, enabling communication with other community members.
+4. Member Since:The date the user joined Cool Coders, providing a sense of their tenure within the community.
+
+#### Post Info
+
+1. Total Posts: The cumulative number of posts by the user.
+2. Total Likes: The cumulative number of likes received by the user across all their posts, reflecting their content's popularity.
+3. Total Comments: The overall count of comments made on the user's posts, indicating engagement and interaction with their content.
+4. Total Favourites: The cumulative number of favourited posts of the user.
+5. Posts: A paginated list of all the users posts
+6. Favourites: A paginated list of all the users favourite posts
+
+If the user is viewing their own profile, they have the ability to edit their posts and profile information, ensuring their profile remains up-to-date and their posts are well-maintained.
+Users can also access their list of favorited posts, making it convenient to revisit their favorite content.
+
+The Profile Page serves as an information-rich hub, where users can introduce themselves, showcase their contributions, and gain insights into their impact within the Cool Coders community. It fosters a sense of belonging and encourages active participation while enabling users to manage their own content and profile details.
+
+### Add/Edit Post Page
+
+The Add/Edit Post Page on Cool Coders is a versatile platform that empowers users to craft and refine their tech-related articles with ease. Here's what this feature offers:
+
+1. Create and Edit Articles: Users can compose new articles or edit existing ones, maintaining control over their content and insights.
+2. Title: A clear and captivating title helps users convey the article's main theme, attracting readers and providing a structured entry point.
+3. Content: The page provides a dedicated space for users to input the full content of their articles, allowing for in-depth exploration of tech topics.
+4. Excerpt: Users can include a concise and engaging excerpt that provides a preview of the article's key points, enticing readers to delve further.
+5. Image: The option to upload an image enhances visual appeal and adds context to the article, creating a more engaging reading experience.
+   6.Category: Users can assign their articles to specific tech-related categories, ensuring they are appropriately classified and easily discoverable by others.
+6. Delete Post Button (Edit Mode): In edit mode, users have the ability to delete their posts using a dedicated "Delete Post" button, granting full control over their content's management.
+
+The Add/Edit Post Page is a user-friendly tool designed to facilitate content creation and refinement, enabling users to share their tech insights and knowledge within the Cool Coders community.
+
+### Edit Profile Page
+
+The Edit User Profile Page on Cool Coders is a user-centric feature that empowers users to manage and customize their personal information seamlessly. Here's what this page offers:
+
+1. Edit User Profile Information: Users can conveniently update their First Name, Last Name, Username, Email, and Bio, ensuring that their profile accurately reflects their identity and interests.
+   2.Password Change: This feature allows users to modify their password, enhancing account security and ensuring they maintain control over their login credentials.
+2. Account Deletion: For those who choose to do so, the option to delete their account is available, allowing users to exercise control over their Cool Coders membership. Users will be prompted to confirm their action with a modal popup.
+
+The Edit User Profile Page ensures a personalized and adaptable user experience, enabling individuals to make changes to their profile and account settings as needed while prioritizing their data security and personalization options.
+
+### Sign Up page
+
+This page comprises a form with fields for entering a username and password. Beneath the form is the sign up button which submits the form. Below the form is a redirect to the register page if the user does not have an account. Click the remember me checkbox to remain logged in as a session.
+
+### Sign In page
+
+It features a form with fields for inputting name, email, username, password, and password confirmation. Underneath the form, there is a link to log in for users with existing accounts, followed by the signup button. After signup, users receive a welcome email at the provided email address and are then directed to the profile page update form, where they can personalize their profiles.
+
+### Sign out page
+
+Upon clicking the "log out" link in the navigation, users are directed to a confirmation page. This page includes a cautionary message and two buttons: one for returning and one for logging out.
+
+#### Article Preview Card
+
+The Article Card on Cool Coders is a concise yet informative snapshot of a user's post within a specific tech-related category. It includes the following key elements:
+
+1. Author Profile: A visual representation of the author's profile picture and username, providing a quick way to identify the content creator.
+2. Likes: The number of likes the post has received, offering a sense of its popularity and engagement.
+3. Comments: The count of comments on the post, indicating the level of community discussion and interaction.
+4. Category: Clearly indicating the tech category to which the post belongs, helping users quickly identify the content's subject matter.
+5. Post Date: The date when the article was published, offering a reference for the recency of the content.
+6. Title: The headline of the post, serving as a captivating entry point to the article's content.
+7. Excerpt: A brief summary or excerpt from the article, providing users with a glimpse of the post's key points and enticing them to read further.
+
+Together, these elements create a Category Card that is both visually appealing and informative, allowing users to make informed choices about which posts to explore further within a specific category.
+
+### Notification Messages
+
+Notification messages were user every time the user performs CRUD operation, sign in, and sign out.
+
+### Confirmation Modal
+
+This modal appears whenever a users is performing a delete CRUD operation. It ensures the user must confirm their action before the permanent deletion of an item/account
