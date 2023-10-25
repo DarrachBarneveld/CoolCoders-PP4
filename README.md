@@ -134,3 +134,34 @@ Benefits of key features and the EPIC Milestone Approach:
 The website adopts a soothing and polished color scheme, mirroring the iconic colors of the MacBook Pro. These are black, light gray and white. This palette creates an overall professional and user-friendly ambiance, utilizing subtle variations in shade and transparency to direct user attention and elevate the website's visual allure. A hint of glassmorphism can be scene on article cards to futher the illusion of browsing on a tech item.
 
 ![Colour Scheme](./documentation/images/theme/colour-theme.png)
+
+### Database Schema
+
+![Database schema](./documentation/images/database-schema.png)
+
+### Models
+
+#### Allauth User Model
+
+The User model is an integral component of Django Allauth, featuring pre-established fields as part of its standard configuration. Among these fields are username, email, name, password, and others. This model primarily serves the purpose of user authentication, which is why it is not recommended to make direct alterations to it. Furthermore, the User model is linked to the Profile model through a one-to-one relationship, facilitating the management of user-specific data and interactions.
+
+#### Profile Model
+
+Profile Model: The Profile Model provides a snapshot of each user's presence on the platform, encapsulating their information, activities, and preferences. It often includes fields for user-specific data such as name, bio and slug. It is has a one to one relationship with the auth User Model
+
+#### Category Model
+
+The Category Model categorizes and organizes posts, ensuring users can easily discover and explore tech topics. It typically includes fields for category name, description, and associations with posts to facilitate content organization and navigation within the platform.
+
+#### Post Model
+
+The Post Model is the core of the content creation process, where users share their tech-related knowledge, experiences, and insights. This model includes fields for post content, author, publication date, category association, and engagement metrics such as likes.
+
+#### Comment Model
+
+The Comment Model serves as the foundation for user engagement on the platform, allowing users to interact with posts by sharing their thoughts and feedback. It includes fields for the comment content, author, timestamp, and a foreign key relationship to associated posts.
+
+### Fonts
+
+The font used in this project is Segoe UI Roboto, which compliments the techical design of the website. <br>
+![Font](./documentation/images/theme/font-family.png)
