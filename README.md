@@ -380,7 +380,7 @@ The Add/Edit Post Page on Cool Coders is a versatile platform that empowers user
 The Add/Edit Post Page is a user-friendly tool designed to facilitate content creation and refinement, enabling users to share their tech insights and knowledge within the Cool Coders community.
 
 <details><summary>Add/Edit Post</summary>
-<img src="./documentation/images/features/add:editpost.png>">
+<img src="./documentation/images/features/addeditpost.png">
 </details>
 
 ### Edit Profile Page
