@@ -454,3 +454,27 @@ This modal appears whenever a users is performing a delete CRUD operation. It en
 <details><summary>Confirmation Modal</summary>
 <img src="./documentation/images/features/confirmationmodal.png">
 </details>
+
+#### Toggle Favourites
+
+The "Toggle Favorites" button allows authenticated users to quickly add or remove articles from their favorites, tailoring their content preferences with ease.
+
+<details><summary>Confirmation Modal</summary>
+<img src="./documentation/images/features/confirmationmodal.png">
+</details>
+
+#### Comment Card
+
+The comment card elegantly showcases the user's comment, the author's identity, and the date, encapsulating a meaningful exchange of ideas and perspectives on the article.
+
+<details><summary>Comment Card</summary>
+<img src="./documentation/images/features/commentcard.png">
+</details>
+
+#### Comment Form
+
+The "Toggle Favorites" button allows authenticated users to quickly add or remove articles from their favorites, tailoring their content preferences with ease.
+
+<details><summary>Comment Form</summary>
+<img src="./documentation/images/features/commentform.png">
+</details>
