@@ -63,3 +63,74 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 4. Encourage collaboration and knowledge exchange
 5. Connect tech enthusiasts from all backgrounds and expertise levels
 6. Promote a love for coding and technology exploration
+
+### Scope
+
+The project's scope is to create and maintain "Cool Coders," an online platform dedicated to tech enthusiasts. Cool Coders will serve as a user-friendly and responsive space for individuals to explore, share, and interact with tech-related content. Development will be assisted by following a number of EPIC stories which will focus on different aspects of the site. The platform will encompass the following key features:
+
+1. EPIC - Initial Set Up:
+
+- Developers can set up a new Django project to create the project's structure.
+- Database and media storage will be connected to ensure data storage and retrieval.
+- An early deployment of the application will be carried out to confirm the initial setup's functionality.
+
+2. EPIC - UX Design Planning:
+
+- The website will be responsive, allowing users to access it on both desktop and mobile devices.
+- The website will have a consistant theming throughout
+- The websites navigation will be inituitve and allow multiple methods of accessing content
+
+3. User Authentication:
+
+- Account registration is available for users, granting them full access to coolcoders features.
+- Once registered, users can log in to access their profiles, posts, comments, and favourited items.
+
+4. EPIC - Content Creation:
+
+- Users can create, update, read and delete their posts.
+- Users can view all their posts from the profile page and by using the navigation functionalities.
+- Posts will provide an image and a short excerpt description of the content.
+- Users can view all other users posts from their profile pages.
+- Users are notified of all CRUD actions taken
+
+5. EPIC - Viewing Content:
+
+- Users can view comments on articles
+- Users can visit an article detail page which shows all the relevent information
+- Users see a article card which lists the key aspects of an article and its engagement
+- Users see a home page and catgory page listing the most popular articles
+
+6. EPIC - Profile Content:
+
+- Users can view their profile and all associated content they have created.
+- Users can see engagement metrics
+- Users can easily navigated to their favourites, post and visit the editor
+- Authenticated users can update their username, fullname and biography
+- Users can update their passwords when logged in
+- Users can delete their profiles and all associated comments/posts.
+
+7. EPIC - Documentation:
+
+- A comprehensive documentation lists the key aspects/reasons for the applications
+- A testing manual is written along side the documentation
+- Code documentation of each function/class and module is written for easy legibility/understanding
+
+8. EPIC - Administration:
+
+- Admins can perform all CRUD operations on site content from an admin portal
+- Admins must approve user created content before it is live
+- Admins can delete and modify users accounts from the administration portal
+
+Benefits of key features and the EPIC Milestone Approach:
+
+1. Prioritizing User Needs: The platform places the user's requirements at the forefront, streamlining the browsing experience, available posts creation and user communication on such posts.
+2. Streamlined and Easy Navigation: Users can effortlessly move through various website sections, ensuring convenient and hassle-free access. This is performed by using the category selector, related posts sidebar and browsing user profiles.
+3. User Analytics: Users gain valuable insights, allowing them to track and monitor metrics like the number of posts created, comments made, likes received, and favorites accumulated, enhancing their understanding of their contributions and interactions on Cool Coders.
+
+## Design
+
+### Colour Scheme
+
+The website adopts a soothing and polished color scheme, mirroring the iconic colors of the MacBook Pro. These are black, light gray and white. This palette creates an overall professional and user-friendly ambiance, utilizing subtle variations in shade and transparency to direct user attention and elevate the website's visual allure. A hint of glassmorphism can be scene on article cards to futher the illusion of browsing on a tech item.
+
+![Colour Scheme](./documentation/images/theme/colour-theme.png)
