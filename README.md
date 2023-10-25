@@ -182,46 +182,64 @@ The font used in this project is Segoe UI Roboto, which compliments the techical
 
 #### Desktop
 
-- Home
-  ![Home](./documentation/images/wireframes/desktop/homepage-desktop.png)
-- Category
-  ![Category](./documentation/images/wireframes/desktop/categorypage-desktop.png)
-- Post Detail
-  ![Post-Detail](./documentation/images/wireframes/desktop/postdetailpage-desktop.png)
-- Add Post
-  ![Add-Post](./documentation/images/wireframes/desktop/addpostpage-desktop.png)
-- Edit Post
-  ![Edit-Post](./documentation/images/wireframes/desktop/editpostpage-desktop.png)
-- Profile
-  ![Profile](./documentation/images/wireframes/desktop/profilepage-desktop.png)
-- Edit Profile
-  ![Edit-Profile](./documentation/images/wireframes/desktop/editprofilepage-desktop.png)
-- Login/Register
-  ![Edit-Profile](./documentation/images/wireframes/desktop/login-register-desktop.png)
+<details><summary>Home</summary>
+<img src="./documentation/images/wireframes/desktop/homepage-desktop.png">
+</details>
+<details><summary>Category</summary>
+<img src="./documentation/images/wireframes/desktop/categorypage-desktop.png">
+</details>
+<details><summary>Post Detail</summary>
+<img src="./documentation/images/wireframes/desktop/postdetailpage-desktop.png">
+</details>
+<details><summary>Add Post</summary>
+<img src="./documentation/images/wireframes/desktop/addpostpage-desktop.png">
+</details>
+<details><summary>Edit Post</summary>
+<img src="./documentation/images/wireframes/desktop/editpostpage-desktop.png">
+</details>
+<details><summary>Profile</summary>
+<img src="./documentation/images/wireframes/desktop/profilepage-desktop.png">
+</details>
+<details><summary>Edit Profile</summary>
+<img src="./documentation/images/wireframes/desktop/editprofilepage-desktop.png">
+</details>
+<details><summary>Login/Register</summary>
+<img src="./documentation/images/wireframes/desktop/login-register-desktop.png">
+</details>
 
-  #### Mobile
+#### Mobile
 
-- Home
-  ![Home](./documentation/images/wireframes/mobile/homepage-mobile.png)
-- Category
-  ![Category](./documentation/images/wireframes/mobile/categorypage-mobile.png)
-- Post Detail
-  ![Post-Detail](./documentation/images/wireframes/mobile/profiledetalpage-mobile.png)
-- Add/Edit Post
-  ![Add-Post](./documentation/images/wireframes/mobile/add-editpostpage-mobile.png)
-- Profile
-  ![Profile](./documentation/images/wireframes/desktop/profilepage-desktop.png)
-- Edit Profile
-  ![Edit-Profile](./documentation/images/wireframes/desktop/editprofilepage-desktop.png)
-- Navbar
-  ![Navbar](./documentation/images/wireframes/mobile/navbar-mobile.png)
+<details><summary>Home</summary>
+<img src="./documentation/images/wireframes/mobile/homepage-mobile.png">
+</details>
+<details><summary>Category</summary>
+<img src="./documentation/images/wireframes/mobile/categorypage-mobile.png">
+</details>
+<details><summary>Post Detail</summary>
+<img src="./documentation/images/wireframes/mobile/profiledetalpage-mobile.png">
+</details>
+<details><summary>Add Post</summary>
+<img src="./documentation/images/wireframes/mobile/add-editpostpage-mobile.png">
+</details>
+<details><summary>Profile</summary>
+<img src="./documentation/images/wireframes/mobile/profilepage-mobile.png">
+</details>
+<details><summary>Edit Profile</summary>
+<img src="./documentation/images/wireframes/mobile/editprofilepage-mobile.png">
+</details>
+<details><summary>Navbar</summary>
+<img src="./documentation/images/wireframes/mobile/navbar-mobile.png">
+</details>
 
-  #### Components/UI
+#### Components/UI
 
-- Confirm Modal
-  ![Modal](./documentation/images/wireframes/modal.png)
-- Article Preview Card
-  ![Preview-Card](./documentation/images/wireframes/articlepreviewcard.png)
+<details><summary>Confirm Modal</summary>
+<img src="./documentation/images/wireframes/modal.png">
+</details>
+
+<details><summary>Article Preview Card</summary>
+<img src="./documentation/images/wireframes/articlepreviewcard.png">
+</details>
 
 ### Agile Methodology
 
@@ -233,24 +251,33 @@ This project was developed following agile principles. Employing the agile metho
 
 Within the Agile methodology framework, user stories are organized into eight EPICS or Milestones. Additionally, there is also additional Milestones known as Error Handling that was created for the sole purpose of handling any errors that came up during testing, development or tweaking site elements with more refactored coded or enchancements.
 
-![Milestones](./documentation/images/epicmilestones.png)
+<details><summary>Milestones</summary>
+<img src="./documentation/images/epicmilestones.png">
+</details>
 
 #### User Stories - Issues
 
 The user story issue format consists of the user story itself, as well as acceptance criteria and tasks that outline the essential steps for addressing the issue. When possible, during the development process, commit messages are associated with their corresponding issues. This practice ensures the relevance of each commit and also provides a visual representation of the progress made on each project issue. These issues are monitored using milestones, Kanban boards, and other Agile tools.
 
-![User Story](./documentation/images/userstories.png)
+<details><summary>User Story</summary>
+<img src="./documentation/images/userstories.png">
+</details>
 
 #### MoSCoW Prioritization
 
 The project employed the "MoSCoW" technique to effectively categorize and prioritize its features and requirements based on their importance. "MoSCoW" stands for "Must have, Should have, Could have, and Won't have," with each category contributing to the organization and prioritization of features. This approach acts as a guiding principle for the development process, ensuring that the most crucial elements are addressed as a top priority.
 
-![MoSCoW](./documentation/images/moscow.png)
+<details><summary>MoSCoW</summary>
+<img src="./documentation/images/moscow.png">
+</details>
 
 #### GitHub Projects/Kanban
 
 The project adopted a basic Kanban Board structure, which was divided into columns such as Todo, In Progress and Done. This setup provided a clear and organized way to track the progress of tasks, making it easier to visualize and manage the workflow throughout the development process. The GitHub project Kanban was linked to the repo for consistant reference.
-![Kanban](./documentation/images/kanban.png)
+
+<details><summary>Kanban</summary>
+<img src="./documentation/images/kanban.png">
+</details>
 
 ## Features
 
@@ -260,17 +287,39 @@ The navigation bar is a consistent element across all pages, designed using Boot
 
 The mobile version of the navbar has all the content rendered when a hamburger icon is clicked. When clicked a dropdown display is rendered showing all navigation links.
 
+<details><summary>Mobile</summary>
+<img src="./documentation/images/features/mobilenav.png">
+</details>
+<details><summary>Auth</summary>
+<img src="./documentation/images/features/navauth.png">
+</details>
+<details><summary>UnAuth</summary>
+<img src="./documentation/images/features/navunauth.png">
+</details>
+
 ### Footer
 
 The footer is a miniinmalist footer designed to link users to cool coders social links. The link are only for educational purposes as just link to the social platforms base url.
+
+<details><summary>Footer</summary>
+<img src="./documentation/images/features/footer.png">
+</details>
 
 ### Home Page
 
 The Home Hero Section on Cool Coders features carefully curated tech-related content with three components: Popular Posts, highlighting articles with active user comments; Trending Posts, showcasing popular content based on user likes; and Editor's Choice, handpicked by the editorial team. Each post is displayed as a card with a link to the full article, accompanied by engagement metrics like comments and likes. Users can also access the author's profile, promoting community interaction and enhancing the user experience. Additionally, tag links are displayed to showcase posts from various categories, further enhancing content discovery.
 
+<details><summary>Home</summary>
+<img src="./documentation/images/features/homepage.png">
+</details>
+
 ### Categories Page
 
 The Category Page on Cool Coders is a dedicated space where users can explore a comprehensive collection of articles grouped by specific tech-related categories. Each category page is thoughtfully organized, presenting users with a wealth of content tailored to their interests. The articles are neatly paginated, with up to six articles displayed per page for easy navigation and efficient content browsing. This design allows users to delve deeply into the topics that intrigue them most, making it a valuable resource for in-depth exploration of various tech-related subjects within the Cool Coders community.
+
+<details><summary>Categories</summary>
+<img src="./documentation/images/features/categories.png">
+</details>
 
 ### Post Detail Page
 
@@ -283,9 +332,17 @@ The Post Detail Page on Cool Coders is an immersive experience designed to provi
 
 The Post Detail Page serves as a hub for knowledge sharing and community interaction, ensuring that users not only have access to insightful content but can also actively engage, discuss, and explore more related posts within the category.
 
+<details><summary>Post Detail</summary>
+<img src="./documentation/images/features/postdetail.png">
+</details>
+
 ### Profile Page
 
 The Profile Page on Cool Coders is an essential space for users to showcase their tech passions and contributions while also gaining insights into their own engagement within the community. Here's what you'll find on a user's profile:
+
+<details><summary>Profile</summary>
+<img src="./documentation/images/features/profile.png">
+</details>
 
 #### Profile Info
 
@@ -322,6 +379,10 @@ The Add/Edit Post Page on Cool Coders is a versatile platform that empowers user
 
 The Add/Edit Post Page is a user-friendly tool designed to facilitate content creation and refinement, enabling users to share their tech insights and knowledge within the Cool Coders community.
 
+<details><summary>Add/Edit Post</summary>
+<img src="./documentation/images/features/add:editpost.png>">
+</details>
+
 ### Edit Profile Page
 
 The Edit User Profile Page on Cool Coders is a user-centric feature that empowers users to manage and customize their personal information seamlessly. Here's what this page offers:
@@ -332,17 +393,33 @@ The Edit User Profile Page on Cool Coders is a user-centric feature that empower
 
 The Edit User Profile Page ensures a personalized and adaptable user experience, enabling individuals to make changes to their profile and account settings as needed while prioritizing their data security and personalization options.
 
+<details><summary>Edit Profile</summary>
+<img src="./documentation/images/features/editprofile.png">
+</details>
+
 ### Sign Up page
 
 This page comprises a form with fields for entering a username and password. Beneath the form is the sign up button which submits the form. Below the form is a redirect to the register page if the user does not have an account. Click the remember me checkbox to remain logged in as a session.
+
+<details><summary>Sign Up</summary>
+<img src="./documentation/images/features/signup.png">
+</details>
 
 ### Sign In page
 
 It features a form with fields for inputting name, email, username, password, and password confirmation. Underneath the form, there is a link to log in for users with existing accounts, followed by the signup button. After signup, users receive a welcome email at the provided email address and are then directed to the profile page update form, where they can personalize their profiles.
 
+<details><summary>Sign In</summary>
+<img src="./documentation/images/features/signin.png">
+</details>
+
 ### Sign out page
 
 Upon clicking the "log out" link in the navigation, users are directed to a confirmation page. This page includes a cautionary message and two buttons: one for returning and one for logging out.
+
+<details><summary>Sign Out</summary>
+<img src="./documentation/images/features/signout.png">
+</details>
 
 #### Article Preview Card
 
@@ -358,10 +435,22 @@ The Article Card on Cool Coders is a concise yet informative snapshot of a user'
 
 Together, these elements create a Category Card that is both visually appealing and informative, allowing users to make informed choices about which posts to explore further within a specific category.
 
+<details><summary>Article Card</summary>
+<img src="./documentation/images/features/articlecard.png">
+</details>
+
 ### Notification Messages
 
 Notification messages were user every time the user performs CRUD operation, sign in, and sign out.
 
+<details><summary>Notifications</summary>
+<img src="./documentation/images/features/notifications.png">
+</details>
+
 ### Confirmation Modal
 
 This modal appears whenever a users is performing a delete CRUD operation. It ensures the user must confirm their action before the permanent deletion of an item/account
+
+<details><summary>Confirmation Modal</summary>
+<img src="./documentation/images/features/confirmationmodal.png">
+</details>
