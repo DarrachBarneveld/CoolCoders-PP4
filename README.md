@@ -165,3 +165,48 @@ The Comment Model serves as the foundation for user engagement on the platform, 
 
 The font used in this project is Segoe UI Roboto, which compliments the techical design of the website. <br>
 ![Font](./documentation/images/theme/font-family.png)
+
+### Wireframes
+
+#### Desktop
+
+- Home
+  ![Home](./documentation/images/wireframes/desktop/homepage-desktop.png)
+- Category
+  ![Category](./documentation/images/wireframes/desktop/categorypage-desktop.png)
+- Post Detail
+  ![Post-Detail](./documentation/images/wireframes/desktop/postdetailpage-desktop.png)
+- Add Post
+  ![Add-Post](./documentation/images/wireframes/desktop/addpostpage-desktop.png)
+- Edit Post
+  ![Edit-Post](./documentation/images/wireframes/desktop/editpostpage-desktop.png)
+- Profile
+  ![Profile](./documentation/images/wireframes/desktop/profilepage-desktop.png)
+- Edit Profile
+  ![Edit-Profile](./documentation/images/wireframes/desktop/editprofilepage-desktop.png)
+- Login/Register
+  ![Edit-Profile](./documentation/images/wireframes/desktop/login-register-desktop.png)
+
+  #### Mobile
+
+- Home
+  ![Home](./documentation/images/wireframes/mobile/homepage-mobile.png)
+- Category
+  ![Category](./documentation/images/wireframes/mobile/categorypage-mobile.png)
+- Post Detail
+  ![Post-Detail](./documentation/images/wireframes/mobile/profiledetalpage-mobile.png)
+- Add/Edit Post
+  ![Add-Post](./documentation/images/wireframes/mobile/add-editpostpage-mobile.png)
+- Profile
+  ![Profile](./documentation/images/wireframes/desktop/profilepage-desktop.png)
+- Edit Profile
+  ![Edit-Profile](./documentation/images/wireframes/desktop/editprofilepage-desktop.png)
+- Navbar
+  ![Navbar](./documentation/images/wireframes/mobile/navbar-mobile.png)
+
+  #### Components/UI
+
+- Confirm Modal
+  ![Modal](./documentation/images/wireframes/modal.png)
+- Article Preview Card
+  ![Preview-Card](./documentation/images/wireframes/articlepreviewcard.png)
