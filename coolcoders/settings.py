@@ -39,7 +39,7 @@ is_development = os.getenv("IS_DEVELOPMENT", "False")
 IS_DEVELOPMENT = is_development.lower() == "true"
 
 # Set DEBUG based on the IS_DEVELOPMENT value
-DEBUG = IS_DEVELOPMENT
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "coolcoders-b69260c4617a.herokuapp.com",

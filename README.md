@@ -421,7 +421,7 @@ Upon clicking the "log out" link in the navigation, users are directed to a conf
 <img src="./documentation/images/features/signout.png">
 </details>
 
-#### Article Preview Card
+### Article Preview Card
 
 The Article Card on Cool Coders is a concise yet informative snapshot of a user's post within a specific tech-related category. It includes the following key elements:
 
@@ -455,15 +455,15 @@ This modal appears whenever a users is performing a delete CRUD operation. It en
 <img src="./documentation/images/features/confirmationmodal.png">
 </details>
 
-#### Toggle Favourites
+### Toggle Favourites
 
 The "Toggle Favorites" button allows authenticated users to quickly add or remove articles from their favorites, tailoring their content preferences with ease.
 
-<details><summary>Confirmation Modal</summary>
-<img src="./documentation/images/features/confirmationmodal.png">
+<details><summary>Toggle Favourites</summary>
+<img src="./documentation/images/features/togglefavourites.png">
 </details>
 
-#### Comment Card
+### Comment Card
 
 The comment card elegantly showcases the user's comment, the author's identity, and the date, encapsulating a meaningful exchange of ideas and perspectives on the article.
 
@@ -471,10 +471,141 @@ The comment card elegantly showcases the user's comment, the author's identity, 
 <img src="./documentation/images/features/commentcard.png">
 </details>
 
-#### Comment Form
+### Comment Form
 
 The "Toggle Favorites" button allows authenticated users to quickly add or remove articles from their favorites, tailoring their content preferences with ease.
 
 <details><summary>Comment Form</summary>
 <img src="./documentation/images/features/commentform.png">
 </details>
+
+## Future Features
+
+1. I would like to include an API that can check the reg plate of a vehicle and get all the data for that vehicle. This way the users won't have to fill a very long form and it will improve the overall user experience.
+2. I would like to update the database with car models for the Irish market. The models currently loaded are for the USA market.
+3. I would like to expand the application by adding inbox feature and the option for the users to send and reply to messages.
+4.
+
+## Testing
+
+In depth testing documentation can be found [here.](./TESTING.md)
+
+## Bugs
+
+| Bug                                                                                                                        | Status |
+| -------------------------------------------------------------------------------------------------------------------------- | ------ |
+| [Profile routing based on slug errors #31](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/31)                   | Closed |
+| [UpdateView Profile throwing errors with multiple forms #32](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/32) | Closed |
+| [Content creating widget not responsive #37](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/37)                 | Closed |
+| [Pagination on profile page renders only first results #38](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/38)  | Closed |
+
+## Technologies And Languages
+
+### Languages Used
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Python
+- Django
+
+### Python Modules Imported
+
+- django-allauth - Django Allauth is a versatile authentication and account management package for Django, providing a comprehensive set of features for user registration, authentication, account management, and social account integration.
+
+- dj-database-url - This library is used to parse the database URL specified in the DATABASE_URL environment variable, which is commonly used for configuring database connections in Django projects.
+
+- gunicorn - Gunicorn is a popular WSGI (Web Server Gateway Interface) HTTP server for running Python web applications, including Django applications, in a production environment.
+
+- psycopg2 - Psycopg2 is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
+
+- django-summernote - Django Summernote is a rich text editor and WYSIWYG plugin for Django that simplifies the process of incorporating and editing formatted content within web applications.
+
+- django-crispy-forms - Crispy Forms is a Django application that enhances the presentation and customization of Django forms, making it easier to create aesthetically pleasing and responsive forms for web applications.
+
+- dj3-cloudinary-storage - Dj3-cloudinary-storage is a Django storage backend that simplifies the integration of Cloudinary with Django, allowing for seamless and efficient storage and retrieval of media and static files in web applications.
+
+- cloudinary - Cloudinary is a cloud-based media management platform that offers a comprehensive set of tools and services for storing, optimizing, transforming, and delivering images, videos, and other media assets, making it a valuable asset for web and app developers.
+
+### Technologies and programs
+
+- [Bootstrap](https://getbootstrap.com/) was used to quickly layout the responsive structure of the website
+- [VS Code](https://code.visualstudio.com/) was used to code the website locally
+- [Balsamiq - Wireframe](https://balsamiq.com/wireframes/) was used to create quick and precise wireframes
+- [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate Favicon
+- [GitHub](https://github.com/) is the hosting site used to store the code for the website.
+- [Git](https://git-scm.com/) was used as a version control software to commit and push the code to the GitHub repository.
+- [Google Fonts](https://fonts.google.com/) was used to import fonts.
+- [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) was used for scoring the website during the testing phase
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/) was used during testing, debugging and making the website responsive.
+- [W3C HTML Validator](https://validator.w3.org/) was used to check for errors in the HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check for errors in the CSS code
+- [Wave Accessibility Tool](https://wave.webaim.org/) was used during testing to check accessibility
+- [Pylance Validator](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) was used as a linter to enhance best practice in the Python code.
+- [CI Python Pep8 Checker](https://pep8ci.herokuapp.com/) was used to validate the Python code.
+- [Cloudinary](https://cloudinary.com/) was used to store static files and images.
+- [Coolors.co](https://coolors.co/) was used to display the colour scheme.
+- [DBDiagram](https://dbdiagram.io/) was used to visually create the database structure and schemas
+- [PostGresSQl](https://www.postgresql.org/) was used in development to store the database information locally
+- [ElephantSQL](https://www.elephantsql.com/) was the database hosting provider for the production app
+- [Heroku](https://heroku.com/) was the hosting provider used.
+
+## Deployment
+
+### Pre Deployment
+
+To guarantee the proper deployment of the application on Heroku, it's essential to make sure that the requirements.txt file is kept up to date so as all imported python modules are configured correctly.
+
+Secondly a Procfile is required to allow Heroku deployment to be properly configured to a gunicorn web app.
+
+Finally all environment variables on the env.py which gitignored on the repo must be configured correctly with the database url, storage url and secret key.
+
+The hidden variables are as follows
+
+- SECRET_KEY
+- DATABASE_URL
+- CLOUDINARY_URL
+
+### Deploying on Heroku
+
+1. Create a Heroku account.
+2. Sign up with a student account for credits. (optional)
+3. Once logged in, select create a new app.
+4. Select an app name and region.
+5. Select deployment method as connect to github.
+6. Find the desired repo. Coolcoders PP4 in this instance.
+7. Enable automatic deploys and select the main branch
+8. In the settings tab select reveal config vars. Input the required hidden variables.
+9. Select nodejs and python as the buildpack.
+10. Deploy.
+
+### Fork The Repository
+
+1. Go to the GitHub repository
+2. Click on Fork button in the upper right-hand corner
+3. Edit the repository name and description if desired
+4. Click the green create fork button
+
+### Clone The Repository
+
+1. Go to the GitHub repository
+2. Locate the green Code button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone.
+
+### Run The Repository Locally
+
+1. Go to the GitHub repository
+2. Locate the green Code button above the list of files and click it
+3. From the dropdown menu select download Zip.
+4. Download and open the zip file to run in an editor
+5. Create an env.py file and input the environment variables
+6. Ensure [PostgreSQL](https://www.postgresql.org/) is install on your computer and ports are open
+7. Create a virtual environment for installing the python modules in the pip file.
+8. Run python3 makemigrations, migrate and runserver
+
+## Credits
