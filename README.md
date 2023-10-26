@@ -33,39 +33,38 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 
 1. As a user I want the website to be responsive so I can view it on multiple devices [#6](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/6)
 2. As a User I can intuitively navigate through the website so that I can view all content with ease. [#7](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/7)
-3. As a User, I can create an account so that I can post, save and edit content
-4. As a User, I can log out so that I can secure my account from potential hacks
-5. As a User, I can post an article so that I can share my insights with the community.
-6. As a User, I can create comments on articles, so that I can engage with the content and share my thoughts.
-7. As a User, I can delete my own comments, so that I can remove unwanted opinions.
-8. As a User, I can view content on the home page so that I can stay informed and explore engaging topics.
-9. As a User, I can view a selected article with its comments, as well as related articles, so that I can explore in-depth content and engage with the community.
-10. As a User, I can filter articles to a specific category, so that I can explore content that interests me.
-11. As a User, I can view a user's profile page, displaying their posts, favourites and basic information so that I can learn more about the user and their contributions.
-12. As a User, I can add articles to my favourites so that I can save my most enjoyed articles for future reference.
-13. As a User I can see notification messages when performing CRUD operations or login/logout, signup so that informed about the outcome of the action taken.
-14. As a User, I want to view comments on an article so that I can see the discussions going on a particular topic.
+3. As a User, I can create an account so that I can post, save and edit content [#8](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/8)
+4. As a User, I can log out so that I can secure my account from potential hacks [#10](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/10)
+5. As a User, I can post an article so that I can share my insights with the community. [#12](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/12)
+6. As a User, I can create comments on articles, so that I can engage with the content and share my thoughts. [#14](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/14)
+7. As a User, I can delete my own comments, so that I can remove unwanted opinions. [#15](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/15)
+8. As a User, I can view content on the home page so that I can stay informed and explore engaging topics. [#16](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/16)
+9. As a User, I can view a selected article with its comments, as well as related articles, so that I can explore in-depth content and engage with the community. [#17](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/17)
+10. As a User, I can filter articles to a specific category, so that I can explore content that interests me. [#18](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/18)
+11. As a User, I can view a user's profile page, displaying their posts, favourites and basic information so that I can learn more about the user and their contributions. [#19](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/19)
+12. As a User, I can add articles to my favourites so that I can save my most enjoyed articles for future reference. [#20](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/20)
+13. As a User I can see notification messages when performing CRUD operations or login/logout, signup so that informed about the outcome of the action taken. [#29](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/29)
+14. As a User, I want to view comments on an article so that I can see the discussions going on a particular topic. [#33](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/33)
 
 #### Existing User
 
-1. As a User, I can access my account so that I can create and edit content and view my saved information
-2. As a User, I can view my profile page so that I can update my information
-3. As a User, I can edit my articles as the author, so that I can keep my content up to date.
-4. As a User, I can create comments on articles, so that I can engage with the content and share my thoughts.
-5. As a User, I can view my favourites on my profile detail page so that I can reread my favourite articles
-6. As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community.
-7. As a User, I can delete my account so that I can remove myself, details and all content from the live website
+1. As a User, I can access my account so that I can create and edit content and view my saved information [#9](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/9)
+2. As a User, I can view my profile page so that I can update my information [#19](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/19)
+3. As a User, I can edit my articles as the author, so that I can keep my content up to date. [#11](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/11)
+4. As a User, I can view my favourites on my profile detail page so that I can reread my favourite articles [#20](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/20)
+5. As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community. [#36](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/36)
+6. As a User, I can delete my account so that I can remove myself, details and all content from the live website [#39](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/39)
 
 #### Website Owner/Developer
 
 1. As a developer I can layout wireframes so that I have a clear idea of the sites structure and theme [#4](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/4)
 2. As a Developer I can choose a colour theme so that all pages have a consistent feel and style [#5](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/5)
 3. As a Developer, I can created a standardised article preview card for each article, providing key information at a glance so that users can quickly understand the context of an article [#21](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/21)
-4. As a Site Owner, I can have the capability to perform all CRUD (Create, Read, Update, Delete) functionality within the website's admin interface so that I can manually create and edit content.
-5. As the Site Owner, I can approve user created content so that I can manually oversee and manage content creation and edits.
-6. As a Site Owner, I can delete user profiles and all associated content from the platform so I can minimise harmful users.
-7. As the Site Owner, I can view users and their profiles/content through the website's admin interface, allowing me to manage site users.
-8. As a Developer, I want to ensure the styling and theme of the website are consistent, free from CSS errors, and provide an intuitive and easy-to-use UI/UX so that users easily digest content and perform all actions with ease.
+4. As a Site Owner, I can have the capability to perform all CRUD (Create, Read, Update, Delete) functionality within the website's admin interface so that I can manually create and edit content. [#26](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/26)
+5. As the Site Owner, I can approve user created content so that I can manually oversee and manage content creation and edits. [#27](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/27)
+6. As a Site Owner, I can delete user profiles and all associated content from the platform so I can minimise harmful users. [#28](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/28)
+7. As the Site Owner, I can view users and their profiles/content through the website's admin interface, allowing me to manage site users. [#29](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/29)
+8. As a Developer, I want to ensure the styling and theme of the website are consistent, free from CSS errors, and provide an intuitive and easy-to-use UI/UX so that users easily digest content and perform all actions with ease. [#34](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/34)
 
 ### Site Goals
 
@@ -80,24 +79,24 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 
 The project's scope is to create and maintain "Cool Coders," an online platform dedicated to tech enthusiasts. Cool Coders will serve as a user-friendly and responsive space for individuals to explore, share, and interact with tech-related content. Development will be assisted by following a number of EPIC stories which will focus on different aspects of the site. The platform will encompass the following key features:
 
-1. EPIC - Initial Set Up:
+1. [EPIC - Initial Set Up:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/1)
 
 - Developers can set up a new Django project to create the project's structure.
 - Database and media storage will be connected to ensure data storage and retrieval.
 - An early deployment of the application will be carried out to confirm the initial setup's functionality.
 
-2. EPIC - UX Design Planning:
+2. [EPIC - UX Design Planning:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/2)
 
 - The website will be responsive, allowing users to access it on both desktop and mobile devices.
 - The website will have a consistant theming throughout
 - The websites navigation will be inituitve and allow multiple methods of accessing content
 
-3. User Authentication:
+3. [User Authentication:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/3)
 
 - Account registration is available for users, granting them full access to coolcoders features.
 - Once registered, users can log in to access their profiles, posts, comments, and favourited items.
 
-4. EPIC - Content Creation:
+4. [EPIC - Content Creation:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/4)
 
 - Users can create, update, read and delete their posts.
 - Users can view all their posts from the profile page and by using the navigation functionalities.
@@ -105,14 +104,14 @@ The project's scope is to create and maintain "Cool Coders," an online platform 
 - Users can view all other users posts from their profile pages.
 - Users are notified of all CRUD actions taken
 
-5. EPIC - Viewing Content:
+5. [EPIC - Viewing Content:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/5)
 
 - Users can view comments on articles
 - Users can visit an article detail page which shows all the relevent information
 - Users see a article card which lists the key aspects of an article and its engagement
 - Users see a home page and catgory page listing the most popular articles
 
-6. EPIC - Profile Content:
+6. [EPIC - Profile Content:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/6)
 
 - Users can view their profile and all associated content they have created.
 - Users can see engagement metrics
@@ -121,13 +120,13 @@ The project's scope is to create and maintain "Cool Coders," an online platform 
 - Users can update their passwords when logged in
 - Users can delete their profiles and all associated comments/posts.
 
-7. EPIC - Documentation:
+7. [EPIC - Documentation:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/7)
 
 - A comprehensive documentation lists the key aspects/reasons for the applications
 - A testing manual is written along side the documentation
 - Code documentation of each function/class and module is written for easy legibility/understanding
 
-8. EPIC - Administration:
+8. [EPIC - Administration:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/8)
 
 - Admins can perform all CRUD operations on site content from an admin portal
 - Admins must approve user created content before it is live
