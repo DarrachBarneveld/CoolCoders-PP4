@@ -512,28 +512,30 @@ In depth testing documentation can be found [here.](./TESTING.md)
 
 ### Python Modules Imported
 
-- django-allauth - Django Allauth is a versatile authentication and account management package for Django, providing a comprehensive set of features for user registration, authentication, account management, and social account integration.
+[Django-allauth](https://pypi.org/project/django-allauth/) is a versatile authentication and account management package for Django, providing a comprehensive set of features for user registration, authentication, account management, and social account integration.
 
-- dj-database-url - This library is used to parse the database URL specified in the DATABASE_URL environment variable, which is commonly used for configuring database connections in Django projects.
+[Dj-database-url](https://pypi.org/project/dj-database-url/) is used to parse the database URL specified in the DATABASE_URL environment variable, which is commonly used for configuring database connections in Django projects.
 
-- gunicorn - Gunicorn is a popular WSGI (Web Server Gateway Interface) HTTP server for running Python web applications, including Django applications, in a production environment.
+[Gunicorn](https://pypi.org/project/gunicorn/) is a popular WSGI (Web Server Gateway Interface) HTTP server for running Python web applications, including Django applications, in a production environment.
 
-- psycopg2 - Psycopg2 is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
+[Psycopg2](https://pypi.org/project/psycopg2/) is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
 
-- django-summernote - Django Summernote is a rich text editor and WYSIWYG plugin for Django that simplifies the process of incorporating and editing formatted content within web applications.
+[Django Summernote](https://pypi.org/project/django-summernote/) is a rich text editor and WYSIWYG plugin for Django that simplifies the process of incorporating and editing formatted content within web applications.
 
-- django-crispy-forms - Crispy Forms is a Django application that enhances the presentation and customization of Django forms, making it easier to create aesthetically pleasing and responsive forms for web applications.
+[Django Crispy Forms](https://pypi.org/project/django-crispy-forms/) is a Django application that enhances the presentation and customization of Django forms, making it easier to create aesthetically pleasing and responsive forms for web applications.
 
-- dj3-cloudinary-storage - Dj3-cloudinary-storage is a Django storage backend that simplifies the integration of Cloudinary with Django, allowing for seamless and efficient storage and retrieval of media and static files in web applications.
+[Dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) is a Django storage backend that simplifies the integration of Cloudinary with Django, allowing for seamless and efficient storage and retrieval of media and static files in web applications.
 
-- cloudinary - Cloudinary is a cloud-based media management platform that offers a comprehensive set of tools and services for storing, optimizing, transforming, and delivering images, videos, and other media assets, making it a valuable asset for web and app developers.
+[Cloudinary](https://pypi.org/project/cloudinary/1.27.0/) is a cloud-based media management platform that offers a comprehensive set of tools and services for storing, optimizing, transforming, and delivering images, videos, and other media assets, making it a valuable asset for web and app developers.
 
 ### Technologies and programs
 
 - [Bootstrap](https://getbootstrap.com/) was used to quickly layout the responsive structure of the website
+- [Chat-GPT](https://chat.openai.com/) was used to create all written content and copy of the website
 - [VS Code](https://code.visualstudio.com/) was used to code the website locally
 - [Balsamiq - Wireframe](https://balsamiq.com/wireframes/) was used to create quick and precise wireframes
 - [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate Favicon
+- [Font Awesome](https://fontawesome.com/) was used for all icons on the website
 - [GitHub](https://github.com/) is the hosting site used to store the code for the website.
 - [Git](https://git-scm.com/) was used as a version control software to commit and push the code to the GitHub repository.
 - [Google Fonts](https://fonts.google.com/) was used to import fonts.
@@ -609,3 +611,33 @@ The hidden variables are as follows
 8. Run python3 makemigrations, migrate and runserver
 
 ## Credits
+
+### Media
+
+- [Placeholder](https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg)
+- [AI Image](https://www.risknet.de/en/topics/news-details/if-chat-gpt-becomes-superintelligent/)
+- [Abacus](https://www.wnyc.org/story/tools-of-the-trade-the-abacus/)
+
+### Code
+
+Credit to [Dayana-N](https://github.com/Dayana-N/AutoMarket-PP4) for the well structured and coherent README which was used as a template to create my own.
+
+Credit to [b0uh](https://b0uh.github.io/django-multiple-forms-in-one-class-based-view.html) for helping me understand how to have multiple forms rendering context on a single view class.
+
+Credit to [Codemy.com](https://www.youtube.com/watch?v=H8MmNqDyra8&t=556s) for helping create profile classes directly linked to User instances.
+
+Credit to [Maximilian Schwarzmüller](https://www.udemy.com/course/python-django-the-practical-guide/) for helping me understand django based view classes to a much higher degree.
+
+Credit to [Dr Angela Yu](https://www.udemy.com/course/python-django-the-practical-guide/) for assisting my knowledge in python basics such as list comprehension
+
+Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for providing the modal component
+
+Credit to [Stackoverflow](https://stackoverflow.com/questions/10511873/can-django-pagination-do-multiple-paginations-per-page) for understand the correct approach for implementing multiple pagination on a single view class.
+
+Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for providing the modal component
+
+### Acknowledgements
+
+- A huge thanks to my mentor AntonioRodriguez who really helped me understand the MVC architechture seen in this project and giving me support above and beyond what was expected.
+- Stef Cruz, Shane Donlon, Tanguy L'Alexandre and Alan Bushell for manually testing and finding any potential errors before submission
+- The Codu community for providing inspiration and motivation to continue my learning.
