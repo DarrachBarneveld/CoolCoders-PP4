@@ -31,8 +31,8 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 
 #### New User
 
-1. As a user I want the website to be responsive so I can view it on multiple devices
-2. As a User I can intuitively navigate through the website so that I can view all content with ease.
+1. As a user I want the website to be responsive so I can view it on multiple devices [#6](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/6)
+2. As a User I can intuitively navigate through the website so that I can view all content with ease. [#7](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/7)
 3. As a User, I can create an account so that I can post, save and edit content
 4. As a User, I can log out so that I can secure my account from potential hacks
 5. As a User, I can post an article so that I can share my insights with the community.
@@ -58,9 +58,9 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 
 #### Website Owner/Developer
 
-1. As a developer I can layout wireframes so that I have a clear idea of the sites structure and theme
-2. As a Developer I can choose a colour theme so that all pages have a consistent feel and style.
-3. As a Developer, I can created a standardised article preview card for each article, providing key information at a glance so that users can quickly understand the context of an article
+1. As a developer I can layout wireframes so that I have a clear idea of the sites structure and theme [#4](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/4)
+2. As a Developer I can choose a colour theme so that all pages have a consistent feel and style [#5](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/5)
+3. As a Developer, I can created a standardised article preview card for each article, providing key information at a glance so that users can quickly understand the context of an article [#21](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/21)
 4. As a Site Owner, I can have the capability to perform all CRUD (Create, Read, Update, Delete) functionality within the website's admin interface so that I can manually create and edit content.
 5. As the Site Owner, I can approve user created content so that I can manually oversee and manage content creation and edits.
 6. As a Site Owner, I can delete user profiles and all associated content from the platform so I can minimise harmful users.
