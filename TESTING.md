@@ -104,6 +104,10 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ### Site Navigation
 
+| Element               | Action | Expected Result   | Pass/Fail |
+| --------------------- | ------ | ----------------- | --------- |
+| Hero 'Sign Up' Button | Click  | Open Sign up page | Pass      |
+
 ### Home Page
 
 | Element               | Action | Expected Result   | Pass/Fail |

@@ -27,7 +27,7 @@
       </li>
       <li class="list-inline-item text-muted">
         <i class="fas fa-calendar-alt"></i>
-        <time class="m-1" datetime="{{ post.created_on }}">
+        <time class="m-1" datetime="{{ post.created_on|date:"Y-m-d\TH:i:s" }}">
           {{ post.created_on|date:"M d, Y" }}
         </time>
       </li>

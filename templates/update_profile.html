@@ -7,7 +7,7 @@
 
     <h1 class='display-5 text-green fw-bolder'>Edit Your User Information</h1>
     <div class="custom-form p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-light text-center my-3">
-      <hr />
+      <h>
       <form method="post" class="mb-5">
         {% csrf_token %}
         {{ user_form | crispy }}
@@ -17,7 +17,7 @@
         </button>
       </form>
 
-      <hr />
+      <hr>
 
       <form method="post" class="mb-5">
         {% csrf_token %}
