@@ -13,11 +13,13 @@
           <img
             src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
             class="img-fluid"
-            alt="Placeholder article image"
+            alt="Code Institutes placeholder article image"
 
           />
           {% else %}
-          <img class="img-fluid" src="{{ post.featured_image.url }}" alt="Article hero image" />
+          <img class="img-fluid" src="{{ post.featured_image.url }}"  alt="{{post.title}} 
+          article image"
+          />
           {% endif %}
         </div>
         <span
@@ -30,12 +32,13 @@
         <div class="d-flex justify-content-between">
           <div class="d-flex justify-content-center align-items-center gap-1">
               {% include 'includes/trophy.html' with level=post.author.profile.get_level %}
-              <label>
                 <a href="{% url 'profile' post.author.username %}"
-                  ><strong class='text-capitalize'>{{post.author}}</strong></a
-                >
-              </label>
-              <span class="text-secondary">{{post.created_on}}</span>
+                  ><strong class='text-capitalize'>{{post.author}}</strong>
+                </a>
+
+              <time class="m-1 text-secondary" datetime="{{ post.created_on|date:"Y-m-d\TH:i:s" }}">
+                {{post.created_on}}             
+              </time>
             
           </div>
 
@@ -79,7 +82,7 @@
               </form>
 
               {% else %}
-              <a style="text-decoration: none;" href="{% url 'account_login' %}">
+              <a style="text-decoration: none;" href="{% url 'account_login' %}" aria-label="Link to the login page">
                 <i class="far fa-heart text-secondary"></i>
               </a>
               {% endif %}
