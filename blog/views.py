@@ -10,21 +10,22 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
-from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
+from django.views import generic
 from .models import Post, Comment, Category
 from .forms import PostForm, UpdateUserForm, UpdateBioForm, CommentForm
 
 
-class HomePageView(View):
+class HomePageView(generic.View):
     """
-    A view class for displaying a list of categories and featured posts on the homepage.
+    A view class for displaying a list of categories and featured posts on the
+    homepage.
 
     """
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         """
-        Retrieves the posts from the database and returns the most popular, trending by likes
-        and editors pick
+        Retrieves the posts from the database and returns the most popular,
+        trending by likes and editors pick
 
         """
         all_posts = Post.objects.filter(approved=True)
@@ -54,7 +55,7 @@ class HomePageView(View):
         )
 
 
-class CategoryPage(ListView):
+class CategoryPage(generic.ListView):
     """
     A view class for displaying a list of posts based on a specific category.
 
@@ -65,7 +66,7 @@ class CategoryPage(ListView):
     model = Category
     context_object_name = "posts"
 
-    def get_queryset(self, **kwargs):
+    def get_queryset(self):
         """
         Queries the posts related to a category from the database
         """
@@ -80,7 +81,6 @@ class CategoryPage(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         slug = self.kwargs["slug"]
         category = get_object_or_404(Category, title=slug)
 
@@ -89,7 +89,7 @@ class CategoryPage(ListView):
         return context
 
 
-class PostDetailPage(View):
+class PostDetailPage(generic.View):
     """
     A view class for displaying the detail page of a blog post, including its
     comments, comment submission, and related posts.
@@ -111,9 +111,10 @@ class PostDetailPage(View):
 
         slug = kwargs.get("slug")
         post = get_object_or_404(Post, slug=slug)
+        comments = post.comments.filter(approved=True)
         context = {
             "post": post,
-            "comments": post.comments.filter(approved=True).order_by("-created_on"),
+            "comments": comments.order_by("-created_on"),
             "comment_form": CommentForm(),
             "commented": False,
             "liked": post.likes.filter(id=self.request.user.id).exists(),
@@ -123,7 +124,8 @@ class PostDetailPage(View):
 
     def get_top_related_posts(self, post):
         """
-        Get a list of top-related posts within the same category as the given post.
+        Get a list of top-related posts within the same category as the
+        given post.
 
         Args:
         - post: The Post object for which to find related posts.
@@ -131,11 +133,12 @@ class PostDetailPage(View):
         Returns:
         - QuerySet: A queryset of related Post objects.
         """
-        return Post.objects.filter(category=post.category, approved=True).exclude(
+        posts = Post.objects.filter(category=post.category, approved=True).exclude(
             pk=post.id
         )[:3]
+        return posts
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, slug):
         """
         Handle HTTP GET requests for rendering the post detail page.
 
@@ -188,7 +191,7 @@ class PostDetailPage(View):
         return render(request, self.template_name, context)
 
 
-class PostLike(View):
+class PostLike(generic.View):
     """
     Handles the liking/unliking of a post.
 
@@ -199,7 +202,8 @@ class PostLike(View):
 
     def post(self, request, slug):
         """
-        Handles the liking/unliking of a post and redirects to the post's detail page.
+        Handles the liking/unliking of a post and redirects to the post's
+        detail page.
         """
         post = get_object_or_404(Post, slug=slug)
 
@@ -218,7 +222,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse("post-detail", args=[slug]))
 
 
-class AddPostPage(LoginRequiredMixin, CreateView):
+class AddPostPage(LoginRequiredMixin, generic.CreateView):
     """
     Allows a logged-in user to create a new blog post.
 
@@ -247,7 +251,7 @@ class AddPostPage(LoginRequiredMixin, CreateView):
         return response
 
 
-class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     """
     Allows a logged-in user to edit an existing blog post.
 
@@ -289,7 +293,7 @@ class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def test_func(self):
         """
         UserPassesTestMixin function to prevent another user from updating
-        other's recipes
+        other's post
         """
 
         post = self.get_object()
@@ -311,14 +315,32 @@ class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return super().form_invalid(form)
 
 
-class ProfilePageView(DetailView):
+class ProfilePageView(generic.DetailView):
+    """
+    A view for displaying a user's profile page, including their posts,
+    liked posts, and statistics.
+
+    """
+
     template_name = "profile.html"
     context_object_name = "profile"
 
     def get_object(self, queryset=None):
+        """
+        Retrieve the user object based on the provided username.
+
+        """
         return get_object_or_404(User, username=self.kwargs.get("username"))
 
     def get_context_data(self, **kwargs):
+        """
+        Prepares and adds additional context data for rendering
+        the profile page.
+
+        Returns:
+            dict: A dictionary containing the context data to be
+            used in the template.
+        """
         context = super().get_context_data(**kwargs)
         user = self.get_object()
         posts_per_page = 4
@@ -354,7 +376,7 @@ class ProfilePageView(DetailView):
         return context
 
 
-class UpdateProfileView(LoginRequiredMixin, View):
+class UpdateProfileView(LoginRequiredMixin, generic.View):
     """
     Allows a user to update their profile information, including username,
     password, and bio.
@@ -383,7 +405,7 @@ class UpdateProfileView(LoginRequiredMixin, View):
         }
         return context
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         """
         Handles HTTP GET requests for rendering the profile update page.
 
@@ -394,6 +416,16 @@ class UpdateProfileView(LoginRequiredMixin, View):
         return render(request, self.template_name, context)
 
     def process_form(self, request, form, form_name):
+        """
+        Process and handle form submission within a view.
+
+        This method is responsible for processing a form
+        submission within a view. It saves the form data if the form is valid,
+        displays success or error messages, and updates the context
+        to include the form for rendering in the template.
+
+
+        """
         context = self.get_context_data()
 
         if form.is_valid():
@@ -414,7 +446,17 @@ class UpdateProfileView(LoginRequiredMixin, View):
 
         return render(request, self.template_name, context)
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
+        """
+        Handle POST requests and form submissions within a view.
+
+        This method is responsible for handling HTTP POST requests,
+        including form submissions, within a view. It processes
+        various forms (user_form, bio_form, password_form), displays
+        appropriate success or error messages, and performs
+        actions like updating user data or deleting the user's account.
+
+        """
         context = self.get_context_data()
         user_form = self.user_form_class(request.POST, instance=request.user)
         bio_form = self.bio_form_class(request.POST, instance=request.user.profile)
@@ -436,8 +478,8 @@ class UpdateProfileView(LoginRequiredMixin, View):
                 user.delete()
                 messages.success(request, "Account Deleted.")
                 return redirect("home")
-            except:  # pylint: disable=bare-except
-                messages.error(request, "There was an error deleting your account.")
+            except Exception as e: # pylint: disable=broad-except
+                messages.error(request, f"There was an error deleting your account.{e}")
 
             return redirect("home")
 

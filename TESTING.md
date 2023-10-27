@@ -56,9 +56,9 @@
 
 All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
 
-| Page | Logged Out | Logged In |
-| ---- | ---------- | --------- |
-| Home | No errors  | No errors |
+| Page | Validator                                                                                                   | Result            |
+| ---- | ----------------------------------------------------------------------------------------------------------- | ----------------- |
+| Home | <details><summary>Navigation Bar</summary><img src="./documentation/images/features/navauth.png"></details> | <mark>PASS</mark> |
 
 ### CSS
 
