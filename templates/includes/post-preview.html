@@ -5,10 +5,10 @@
   <img
     class="card-img-top"
     src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
-    width="100%"
-  />
+    alt="Placeholder article image"
+  >
   {% else %}
-  <img class="card-img-top" src=" {{ post.featured_image.url }}" />
+  <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Article hero image" >
   {% endif %}
   <div class="card-body p-2">
     <h3 class="h5 mb-3">
@@ -25,9 +25,9 @@
           <strong class="text-capitalize">{{post.author}}</strong>
         </a>
       </li>
-      <li class="list-inline-item">
-        <time class="m-1 text-muted">
-          <i class="fas fa-calendar-alt"></i>
+      <li class="list-inline-item text-muted">
+        <i class="fas fa-calendar-alt"></i>
+        <time class="m-1" datetime="{{ post.created_on }}">
           {{ post.created_on|date:"M d, Y" }}
         </time>
       </li>
