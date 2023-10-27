@@ -1,6 +1,18 @@
 # Table of Contents
 
 - [User Story Testing](#user-story-testing)
+- [Code Validation](#code-validation)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JavaScript](#JavaScript)
+  - [Python](#python)
+- [Responsiveness](#Responsiveness)
+- [Browser Testing](#browser-testing)
+- [Device Testing](#device-testing)
+- [Lighthouse](#Lighthouse)
+- [Manual Testing](#manual-testing)
+  - [Site Navigation](#site-navigation)
+  - [Home Page](#home-page)
 
 ## User Story Testing
 
@@ -57,3 +69,43 @@ Test Results CSS <mark>PASS<mark>
 Test Results JavaScript <mark>PASS<mark>
 
 ### Python
+
+## Responsiveness
+
+During development each page was tested using dev tools in Google Chrome. The strategy involved ensuring that every page would adapt to various screen sizes beyond a width of 320px, as opposed to relying on fixed device-specific widths.
+Further testing was done on mobile to confirm all is working as expected.
+
+| Device | Screen Size |     Pass/Fail     |               Comment                |
+| ------ | :---------: | :---------------: | :----------------------------------: |
+| Pro    |   3480px    | <mark>PASS</mark> | All elements are displayed correctly |
+
+## Browser Testing
+
+- The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.
+
+## Device Testing
+
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8, iPhoneXR and iPad to ensure responsiveness on various screen sizes in both portrait and landscape mode. The website performed as intended. The responsive design was also checked using Chrome developer tools across multiple devices with structural integrity holding for the various sizes.
+
+### Lighthouse
+
+Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. At first I received the warning _'Background and foreground colors do not have a sufficient contrast ratio'_ in relation to buttons where I had used the Bootstrap class `btn-info`. After I updated the button styling I received the below scores.
+
+| Page        | Performance | Accessibility | Best Practices | SEO |
+| ----------- | :---------: | :-----------: | :------------: | :-: |
+|             |             |               |                |     |
+| **Desktop** |             |               |                |     |
+| Home        |     100     |      100      |      100       | 100 |
+|             |             |               |                |     |
+| **Mobile**  |             |               |                |     |
+| Home        |     100     |      100      |      100       | 100 |
+
+## Manual Testing
+
+### Site Navigation
+
+### Home Page
+
+| Element               | Action | Expected Result   | Pass/Fail |
+| --------------------- | ------ | ----------------- | --------- |
+| Hero 'Sign Up' Button | Click  | Open Sign up page | Pass      |
