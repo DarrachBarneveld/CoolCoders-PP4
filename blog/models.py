@@ -3,8 +3,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-from cloudinary.models import CloudinaryField
 from django.urls import reverse
+from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
@@ -12,7 +12,8 @@ from django.urls import reverse
 
 class Profile(models.Model):
     """
-    Model to represent extend auth User Class to add addition profile information.
+    Model to represent extend auth User Class to add addition
+    profile information.
 
     """
 
@@ -33,12 +34,14 @@ class Profile(models.Model):
         return self.level
 
 
-def create_user_profile(sender, instance, created, **kwargs):
+def create_user_profile(instance, created):
     """
-    Signal handler function to create a user profile when a new user is created.
+    Signal handler function to create a user profile when a
+    new user is created.
 
     This function is connected to the User model's post_save signal.
-    It creates a user profile with a slug based on the user's username when a new user is created.
+    It creates a user profile with a slug based on the user's
+    username when a new user is created.
     """
     if created:
         Profile.objects.create(user=instance)
@@ -61,6 +64,8 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
     def __str__(self):
+        """Return a string representation of the object (the post's title)."""
+
         return f"{self.title}"
 
 
@@ -68,8 +73,8 @@ class Post(models.Model):
     """
     Model to represent a blog article.
 
-    This model represents a blog article with various attributes such as title, author,
-    content, and likes.
+    This model represents a blog article with various
+    attributes such as title, author, content, and likes.
     """
 
     title = models.CharField(max_length=200, unique=True)
@@ -81,11 +86,13 @@ class Post(models.Model):
     excerpt = models.CharField(
         max_length=200,
     )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=None)
+    category = models.ForeignKey(
+        Category, on_delete=models.CASCADE, default=None)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
-    likes = models.ManyToManyField(User, related_name="blogpost_like", blank=True)
+    likes = models.ManyToManyField(
+        User, related_name="blogpost_like", blank=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
@@ -94,6 +101,8 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
+        """Return a string representation of the object (the post's title)."""
+
         return f"{self.title}"
 
     def number_of_likes(self):
@@ -102,9 +111,12 @@ class Post(models.Model):
 
     def total_comments(self):
         """To calculate the total comments on a post"""
+
         return self.comments.filter(approved=True).count()
 
     def get_absolute_url(self):
+        """Return the absolute URL for editing this post."""
+
         return reverse("edit_post", args=[str(self.pk)])
 
     def save(self, *args, **kwargs):
@@ -118,8 +130,10 @@ class Comment(models.Model):
     Represents a comment on a blog post.
     """
 
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
-    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
+    name = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="comments")
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -131,4 +145,6 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
+        """Return a string representation of the object (the post's title)."""
+
         return f"Comment {self.body} by {self.name}"

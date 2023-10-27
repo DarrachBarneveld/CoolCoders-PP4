@@ -1,8 +1,8 @@
 """Forms"""
 from django import forms
 from django.contrib.auth.models import User
-from django_summernote.widgets import SummernoteWidget
 from django.contrib.auth.forms import UserChangeForm
+from django_summernote.widgets import SummernoteWidget
 from .models import Post, Profile, Comment
 
 

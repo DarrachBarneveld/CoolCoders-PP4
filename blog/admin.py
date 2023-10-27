@@ -1,3 +1,5 @@
+"""Admin"""
+
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django_summernote.admin import SummernoteModelAdmin
@@ -77,7 +79,7 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     summernote_fields = ("content",)
 
-    def approve_posts(self, request, queryset):
+    def approve_posts(self, queryset):
         """
         Approve selected posts.
 
@@ -99,7 +101,7 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ("name", "email", "body")
     actions = ["approve_comments"]
 
-    def approve_comments(self, request, queryset):
+    def approve_comments(self, queryset):
         """
         Approve selected comments.
 
