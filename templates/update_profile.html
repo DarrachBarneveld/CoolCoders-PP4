@@ -1,13 +1,13 @@
 {% extends 'base.html' %} 
 
+{% block title %} CoolCoders | Settings{% endblock %}
+
 {% block content %} 
 
 {% load crispy_forms_tags %}
 <section id="profile" class="container text-center p-4">
-
     <h1 class='display-5 text-green fw-bolder'>Edit Your User Information</h1>
     <div class="custom-form p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-light text-center my-3">
-      <h>
       <form method="post" class="mb-5">
         {% csrf_token %}
         {{ user_form | crispy }}
@@ -38,7 +38,4 @@
       <h2 class='text-danger fw-bold mb-5 text-decoration-underline'>Delete your account</h2>
       {% include "includes/modal.html" %}
       {% endblock content %}
-
-
-
 </section>
