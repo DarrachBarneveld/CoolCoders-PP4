@@ -33,10 +33,10 @@ class UserAdmin(admin.ModelAdmin):
     """
     Admin model configuration for user accounts.
 
-    This class defines the admin panel configuration for user accounts, allowing
-    administrators to manage user information such as username, first name, last name,
-    and email. It also includes an inline representation of user profiles using the
-    `ProfileInline` class
+    This class defines the admin panel configuration for user accounts,
+    allowing administrators to manage user information such as username,
+    first name, last name, and email. It also includes an inline
+    representation of user profiles using the `ProfileInline` class
 
     Example:
         To use this admin configuration for user accounts:
@@ -83,8 +83,8 @@ class PostAdmin(SummernoteModelAdmin):
         """
         Approve selected posts.
 
-        This method is a custom action that allows administrators to approve selected
-        posts by updating their "approved" field to True.
+        This method is a custom action that allows administrators
+        to approve selected posts by updating their "approved" field to True.
         """
         queryset.update(approved=True)
 
@@ -105,7 +105,7 @@ class CommentAdmin(admin.ModelAdmin):
         """
         Approve selected comments.
 
-        This method is a custom action that allows administrators to approve selected
-        comments by updating their "approved" field to True.
+        This method is a custom action that allows administrators to
+        approve selected comments by updating their "approved" field to True.
         """
         queryset.update(approved=True)

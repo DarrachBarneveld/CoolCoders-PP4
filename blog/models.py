@@ -22,9 +22,12 @@ class Profile(models.Model):
     level = models.IntegerField(default=1)
 
     def __str__(self):
+        """Return a string representation of the object (the post's title)."""
         return str(self.user)
 
     def get_level(self):
+        """To get a users current level based on post count"""
+
         post_count = self.user.blog_posts.count()
         new_level = (post_count // 3) + 1
 
@@ -148,3 +151,4 @@ class Comment(models.Model):
         """Return a string representation of the object (the post's title)."""
 
         return f"Comment {self.body} by {self.name}"
+        

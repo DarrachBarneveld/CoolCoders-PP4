@@ -35,9 +35,10 @@ class HomePageView(generic.View):
             .first()
         )
 
-        trending_posts = all_posts.annotate(like_count=Count("likes")).order_by(
-            "-like_count"
-        )[:3]
+        trending_posts = (
+            all_posts.annotate(like_count=Count("likes"))
+            .order_by("-like_count")[:3]
+            )
 
         editors_pick = get_object_or_404(
             Post, slug="ais-influence-on-tech-shaping-the-future"
@@ -133,9 +134,10 @@ class PostDetailPage(generic.View):
         Returns:
         - QuerySet: A queryset of related Post objects.
         """
-        posts = Post.objects.filter(category=post.category, approved=True).exclude(
-            pk=post.id
-        )[:3]
+        posts = (
+            Post.objects.filter(category=post.category, approved=True)
+            .exclude(pk=post.id)[:3]
+            )
         return posts
 
     def get(self, request, slug):
@@ -177,16 +179,21 @@ class PostDetailPage(generic.View):
             comment.post = post
             comment.save()
             messages.success(
-                self.request, "Comment created successfully! Review in progress!"
+                self.request,
+                "Comment created successfully! Review in progress!"
             )
 
         if "delete_item" in request.POST:
             comment_id = request.POST.get("item_id")
             comment = Comment.objects.get(id=comment_id)
             comment.delete()
-            messages.success(self.request, "Comment deleted successfully!")
+            messages.success(
+                self.request,
+                "Comment deleted successfully!")
         else:
-            messages.error(self.request, "There was an error. Action not registered!")
+            messages.error(
+                self.request,
+                "There was an error. Action not registered!")
 
         return render(request, self.template_name, context)
 
@@ -210,13 +217,15 @@ class PostLike(generic.View):
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
             messages.error(
-                self.request, "Post unliked successfully! Removed from your favourites!"
+                self.request,
+                "Post unliked successfully! Removed from your favourites!"
             )
 
         else:
             post.likes.add(request.user)
             messages.success(
-                self.request, "Post liked successfully! Added to your favourites!"
+                self.request,
+                "Post liked successfully! Added to your favourites!"
             )
 
         return HttpResponseRedirect(reverse("post-detail", args=[slug]))
@@ -242,16 +251,21 @@ class AddPostPage(LoginRequiredMixin, generic.CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         response = super().form_valid(form)
-        messages.success(self.request, "Post created successfully! Review in progress!")
+        messages.success(
+            self.request,
+            "Post created successfully! Review in progress!")
         return response
 
     def form_invalid(self, form):
         response = super().form_invalid(form)
-        messages.error(self.request, "Post creation failed. Please check your input.")
+        messages.error(
+            self.request,
+            "Post creation failed. Please check your input.")
         return response
 
 
-class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
+class EditPostPage(LoginRequiredMixin, UserPassesTestMixin,
+                   generic.UpdateView):
     """
     Allows a logged-in user to edit an existing blog post.
 
@@ -285,7 +299,8 @@ class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
                 return redirect("/")
 
             messages.error(
-                request, "There was an error with your request, please try again."
+                request,
+                "There was an error with your request, please try again."
             )
 
         return super().post(request, *args, **kwargs)
@@ -307,11 +322,15 @@ class EditPostPage(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
         - HttpResponse: Redirects to the success URL after saving the post.
         """
         form.instance.approved = False
-        messages.success(self.request, "Post edited successfully! Review in progress!")
+        messages.success(
+            self.request,
+            "Post edited successfully! Review in progress!")
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        messages.error(self.request, "Post editing failed. Please check your input.")
+        messages.error(
+            self.request,
+            "Post editing failed. Please check your input.")
         return super().form_invalid(form)
 
 
@@ -352,7 +371,10 @@ class ProfilePageView(generic.DetailView):
         favourites = user.blogpost_like.filter(approved=True)
 
         # Generate total number of comments on authors posts
-        total_comments = Comment.objects.filter(post__in=posts, approved=True).count()
+        total_comments = (
+            Comment.objects.filter(post__in=posts, approved=True)
+            .count()
+            )
 
         # Generate total number of likes of all posts
         total_likes = sum(post.number_of_likes() for post in posts)
@@ -395,7 +417,8 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
         """
         user = self.request.user
         context = {
-            "user_form": kwargs.get("user_form", self.user_form_class(instance=user)),
+            "user_form": kwargs.get("user_form",
+                                    self.user_form_class(instance=user)),
             "password_form": kwargs.get(
                 "password_form", self.password_form_class(user)
             ),
@@ -458,9 +481,17 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
 
         """
         context = self.get_context_data()
-        user_form = self.user_form_class(request.POST, instance=request.user)
-        bio_form = self.bio_form_class(request.POST, instance=request.user.profile)
-        password_form = self.password_form_class(request.user, request.POST)
+
+        user_form = self.user_form_class(
+            request.POST,
+            instance=request.user)
+        bio_form = self.bio_form_class(
+            request.POST,
+            instance=request.user.profile)
+
+        password_form = self.password_form_class(
+            request.user,
+            request.POST)
 
         if "bio_form" in request.POST:
             return self.process_form(request, bio_form, "bio_form")
@@ -478,8 +509,12 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
                 user.delete()
                 messages.success(request, "Account Deleted.")
                 return redirect("home")
-            except Exception as e: # pylint: disable=broad-except
-                messages.error(request, f"There was an error deleting your account.{e}")
+
+            except Exception as e:  # pylint: disable=broad-except
+
+                messages.error(
+                    request,
+                    f"There was an error deleting your account.{e}")
 
             return redirect("home")
 

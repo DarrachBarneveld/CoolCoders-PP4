@@ -63,12 +63,24 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 ### CSS
 
 Test Results CSS <mark>PASS<mark>
+<img src="./documentation/testing/validation/css/cssvalidation.png">
 
 ### JavaScript
 
 Test Results JavaScript <mark>PASS<mark>
 
 ### Python
+
+| File     | Validator                                                                                                              | Result            |
+| -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Models   | <details><summary>Models</summary><img src="./documentation/testing/validation/python/modelspython.png"></details>     | <mark>PASS</mark> |
+| Views    | <details><summary>Views</summary><img src="./documentation/testing/validation/python/viewspython.png"></details>       | <mark>PASS</mark> |
+| Forms    | <details><summary>Forms</summary><img src="./documentation/testing/validation/python/formspython.png"></details>       | <mark>PASS</mark> |
+| Urls     | <details><summary>Urls</summary><img src="./documentation/testing/validation/python/urlpython.png.png"></details>      | <mark>PASS</mark> |
+| Admin    | <details><summary>Admin</summary><img src="./documentation/testing/validation/python/adminpython.png"></details>       | <mark>PASS</mark> |
+| Settings | <details><summary>Settings</summary><img src="./documentation/testing/validation/python/settingspython.png"></details> | <mark>PASS</mark> |
+
+Settings.py validation errors of line to line are as a result of the original django configuration set up and not custom code.
 
 ## Responsiveness
 
