@@ -37,14 +37,14 @@ class Profile(models.Model):
         return self.level
 
 
-def create_user_profile(instance, created):
+def create_user_profile(instance, created, *args, **kwargs):
     """
     Signal handler function to create a user profile when a
     new user is created.
 
     This function is connected to the User model's post_save signal.
-    It creates a user profile with a slug based on the user's
-    username when a new user is created.
+    kwargs are required for dispatch signals
+
     """
     if created:
         Profile.objects.create(user=instance)
