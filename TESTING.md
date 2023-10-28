@@ -49,6 +49,7 @@
 | As a Developer, I want to ensure the styling and theme of the website are consistent, free from CSS errors, and provide an intuitive and easy-to-use UI/UX so that users easily digest content and perform all actions with ease. | <details><summary>Navigation Bar</summary><img src="./documentation/images/features/navauth.png"></details> | <mark>PASS<mark> |
 | As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community.                                                            | <details><summary>Navigation Bar</summary><img src="./documentation/images/features/navauth.png"></details> | <mark>PASS<mark> |
 | As a User, I can delete my account so that I can remove myself, details and all content from the live website                                                                                                                     | <details><summary>Navigation Bar</summary><img src="./documentation/images/features/navauth.png"></details> | <mark>PASS<mark> |
+| As a developer, I can show custom error pages redirect the user to the home page, so that I have a consistent experience even when encountering errors on the website.                                                            | <details><summary>Navigation Bar</summary><img src="./documentation/images/features/navauth.png"></details> | <mark>PASS<mark> |
 
 ## Code Validation
 

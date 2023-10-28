@@ -65,6 +65,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 6. As a Site Owner, I can delete user profiles and all associated content from the platform so I can minimise harmful users. [#28](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/28)
 7. As the Site Owner, I can view users and their profiles/content through the website's admin interface, allowing me to manage site users. [#29](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/29)
 8. As a Developer, I want to ensure the styling and theme of the website are consistent, free from CSS errors, and provide an intuitive and easy-to-use UI/UX so that users easily digest content and perform all actions with ease. [#34](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/34)
+9. As a Developer, I can show custom error pages redirect the user to the home page, so that I have a consistent experience even when encountering errors on the website. [#40](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/40)
 
 ### Site Goals
 
