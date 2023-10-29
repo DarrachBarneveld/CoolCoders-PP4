@@ -83,7 +83,7 @@ Test Results CSS <mark>PASS<mark>
 
 ### JavaScript
 
-Test Results JavaScript <mark>PASS<mark>
+The only JS used in this project was refactored from Code Institute's I Think Therefore I Blog project into a seperate JS file.
 
 ### Python
 
@@ -100,12 +100,13 @@ Settings.py validation errors of line to line are as a result of the original dj
 
 ## Responsiveness
 
-During development each page was tested using dev tools in Google Chrome. The strategy involved ensuring that every page would adapt to various screen sizes beyond a width of 320px, as opposed to relying on fixed device-specific widths.
-Further testing was done on mobile to confirm all is working as expected.
+Throughout the development process, each page underwent testing using Google Chrome's developer tools. The approach focused on verifying that every page would seamlessly adjust to a variety of screen sizes wider than 320px, rather than being limited by predetermined, device-specific widths.
 
-| Device         | Screen Size |     Pass/Fail     |               Comment                |
-| -------------- | :---------: | :---------------: | :----------------------------------: |
-| Huawei p30 pro |   3480px    | <mark>PASS</mark> | All elements are displayed correctly |
+Further testing was done on a real mobile device to confirm all is working as expected.
+
+| Device         |     Pass/Fail     |               Comment                |
+| -------------- | :---------------: | :----------------------------------: |
+| Huawei p30 pro | <mark>PASS</mark> | All elements are displayed correctly |
 
 ## Browser Testing
 
