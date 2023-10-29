@@ -129,6 +129,24 @@ form label {
   border-radius: 10px;
 }
 
+/* ARTICLE PREVIEW CARD */
+
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 /* POST DETAIL */
 .btn-like {
   border: none;
@@ -160,6 +178,11 @@ form label {
   border-radius: 100%;
   background: linear-gradient(270deg, #000000, #434343);
   height: 100px;
+}
+
+/* ALL AUTH FORM */
+#hint_id_password1 {
+  display: none;
 }
 
 /* ADD/EDIT POST FORM */

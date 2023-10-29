@@ -2,7 +2,7 @@
 
  <!-- Reusable Preview Card For Post Renders -->
 
-<article class="card m-1 text-dark fade-in text-center">
+<article class="card m-1 text-dark fade-in text-center align-items-stretch">
   {% if "placeholder" in post.featured_image.url %}
   <img
     class="card-img-top"
@@ -14,7 +14,7 @@
   article image" >
   {% endif %}
   <div class="card-body p-2">
-    <h3 class="h5 mb-3">
+    <h3 class="h5 mb-3 card-title">
       <strong class="text-uppercase"
         ><a class='text-decoration-none' href="{% url 'post-detail' slug=post.slug %}"
           >{{post.title}}</a
@@ -50,7 +50,9 @@
       </li>
     </ul>
 
-    <p class="mt-2">{{post.excerpt}}</p>
+    <p class="mt-2 excerpt">{{post.excerpt}}</p>
+  </div>
+  <div class='mb-2'>
     <a
       href="{% url 'post-detail' slug=post.slug %}"
       class="btn btn-outline-primary"
@@ -61,5 +63,5 @@
       ><i class="fa-solid fa-pen-to-square"></i>Edit</a
     >
     {% endif %}
-  </div>
+    </div>
 </article>
