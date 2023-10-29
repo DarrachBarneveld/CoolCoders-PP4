@@ -11,6 +11,7 @@
     Like To Read Today?
   </h1>
 
+  <!-- Add widget navigation -->
   {% include "includes/widgets.html" %}
 
 
@@ -20,6 +21,7 @@
         <strong><em>Editors Pick</em></strong>
       </h2>
       {% for post in editors_pick %} 
+       <!-- Render Editors Pick Post Card -->
       {% include "includes/post-preview.html" %}
       {% endfor %}
     </div>
@@ -29,6 +31,7 @@
         <strong><em>Trending Posts</em></strong>
       </h2>
       {% for post in trending_posts %} 
+       <!-- Render Trending Post Cards -->
       {% include "includes/post-snippet.html" %}
       {% endfor %}
     </div>
@@ -39,6 +42,7 @@
         <strong><em>Popular Post</em></strong>
       </h2>
       {% for post in popular_post %} 
+      <!-- Render Popular Post Card -->
       {% include "includes/post-preview.html" %}
       {% endfor %}
     </div>
