@@ -109,18 +109,32 @@ Further testing was done on mobile to confirm all is working as expected.
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. At first I received the warning _'Background and foreground colors do not have a sufficient contrast ratio'_ in relation to buttons where I had used the Bootstrap class `btn-info`. After I updated the button styling I received the below scores.
 
-| Page        | Performance | Accessibility | Best Practices | SEO |
-| ----------- | :---------: | :-----------: | :------------: | :-: |
-|             |             |               |                |     |
-| **Desktop** |             |               |                |     |
-| Home        |     98      |      100      |      100       | 100 |
-| Category    |     99      |      100      |      100       | 100 |
-| Profile     |     99      |      100      |      100       | 100 |
-
-| | | | | |
-| **Mobile** | | | | |
-| Home | 97 | 100 | 100 | 100 |
-| Category | 93 | 100 | 100 | 100 |
+| Page           | Performance | Accessibility | Best Practices | SEO |
+| -------------- | :---------: | :-----------: | :------------: | :-: |
+|                |             |               |                |     |
+| **Desktop**    |             |               |                |     |
+| Home           |     98      |      100      |      100       | 100 |
+| Category       |     98      |      100      |      100       | 100 |
+| Post Detail    |     97      |      100      |      100       | 100 |
+| Profile        |     96      |      100      |      100       | 100 |
+| Add Post       |     99      |      96       |      100       | 100 |
+| Edit Post      |     99      |      96       |      100       | 100 |
+| Update Profile |     100     |      100      |      100       | 100 |
+| Sign Up        |     99      |      100      |      100       | 100 |
+| Sign In        |     100     |      100      |      100       | 100 |
+| Sign Out       |     100     |      100      |      100       | 100 |
+|                |             |               |                |     |
+| **Mobile**     |             |               |                |     |
+| Home           |     90      |      100      |      100       | 100 |
+| Category       |     91      |      100      |      100       | 100 |
+| Post Detail    |     95      |      100      |      100       | 100 |
+| Profile        |     90      |      100      |      100       | 100 |
+| Add Post       |     86      |      95       |      100       | 100 |
+| Edit Post      |     87      |      95       |      100       | 100 |
+| Update Profile |     98      |      100      |      100       | 100 |
+| Sign Up        |     98      |      100      |      100       | 100 |
+| Sign In        |     98      |      100      |      100       | 100 |
+| Sign Out       |     98      |      100      |      100       | 100 |
 
 ## Manual Testing
 
