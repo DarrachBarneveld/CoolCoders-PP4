@@ -13,6 +13,16 @@
 - [Manual Testing](#manual-testing)
   - [Site Navigation](#site-navigation)
   - [Home Page](#home-page)
+  - [Category Page](#category-page)
+  - [Article Preview Card](#article-preview-card)
+  - [Add Post Page](#add-post-page)
+  - [Edit Post Page](#edit-post-page)
+  - [Delete Confirmation Modal](#delete-confirmation-modal)
+  - [Profile Page](#profile-page)
+  - [Update Profile Page](#update-profile-page)
+  - [Sign Up Page](#sign-up-page)
+  - [Sign In Page](#sign-in-page)
+  - [Log Out Page](#log-out-page)
 
 ## User Story Testing
 
@@ -93,17 +103,17 @@ Settings.py validation errors of line to line are as a result of the original dj
 During development each page was tested using dev tools in Google Chrome. The strategy involved ensuring that every page would adapt to various screen sizes beyond a width of 320px, as opposed to relying on fixed device-specific widths.
 Further testing was done on mobile to confirm all is working as expected.
 
-| Device | Screen Size |     Pass/Fail     |               Comment                |
-| ------ | :---------: | :---------------: | :----------------------------------: |
-| Pro    |   3480px    | <mark>PASS</mark> | All elements are displayed correctly |
+| Device         | Screen Size |     Pass/Fail     |               Comment                |
+| -------------- | :---------: | :---------------: | :----------------------------------: |
+| Huawei p30 pro |   3480px    | <mark>PASS</mark> | All elements are displayed correctly |
 
 ## Browser Testing
 
-- The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.
+The Website was tested on Google Chrome, Firefox, Safari and Chrome Canary browsers with no issues noted.
 
 ## Device Testing
 
-- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8, iPhoneXR and iPad to ensure responsiveness on various screen sizes in both portrait and landscape mode. The website performed as intended. The responsive design was also checked using Chrome developer tools across multiple devices with structural integrity holding for the various sizes.
+The website was tested on a variety of devices, including Desktop, Laptop, Huawei P30 Pro, and Samsung tablet, to ensure that it displayed well on screens of different sizes, both in portrait and landscape orientations. The website functioned as expected, and its responsive design was validated using Chrome developer tools on various devices, ensuring that the layout remained structurally sound across different screen dimensions.
 
 ### Lighthouse
 
