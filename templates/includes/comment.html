@@ -2,21 +2,20 @@
 
 <li class="row clearfix">
   <div class="col-md-2 col-4">
-    <div
-      class="user-icon"
-    >
-    {% include 'includes/trophy.html' with level=post.name.profile.get_level %}
-
-    </div>
+    <a class="user-icon" href="{% url 'profile' post.name.username %}">
+      {% include 'includes/trophy.html' with level=post.name.profile.get_level%}
+    </a>
   </div>
   <div class="text-box col-md-10 col-8">
-    <h5 class="m-b-0 text-capitalize">{{post.name}}</h5>
+    <a
+      href="{% url 'profile' post.name.username %}"
+      class="h5 m-b-0 text-capitalize text-decoration-none"
+      >{{post.name}}</a
+    >
     {{post.body | linebreaks}}
-    <label class="list-inline text-primary"> {{post.created_on}} </label> 
+    <label class="list-inline text-primary"> {{post.created_on}} </label>
     {% if user.is_authenticated and user.id == post.name.id %}
     <!-- Comment Delete Modal  -->
-    {% include "includes/modal.html" %}
-    {% endif %} 
+    {% include "includes/modal.html" %} {% endif %}
   </div>
-
 </li>

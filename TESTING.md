@@ -80,6 +80,8 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 | Sign Up      | <details><summary>Sign Up</summary><img src="./documentation/testing/validation/html/signuphtml.png"></details>                       | <mark>PASS</mark>   |
 | Log out      | <details><summary>Log Out</summary><img src="./documentation/testing/validation/html/logouthtml.png"></details>                       | <mark>PASS</mark>   |
 
+The HTML validation errors are attributed to the integration of two components: the Summernote widget and the rendering of Django password forms with Crispy Forms. These errors, while minor, are challenging to address without uninstalling these packages. Given functionality remains as intended and these packages provide significant value, functionality and usability is prioritised over resolving these specific HTML validation issues.
+
 ### CSS
 
 Test Results CSS <mark>PASS<mark>
@@ -197,17 +199,61 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ### Article Preview Card
 
-| Element        | Action      | Expected Result                           | Pass/Fail         |
-| -------------- | ----------- | ----------------------------------------- | ----------------- |
-| Title Link     | Click       | Redirect to post detail page              | <mark>Pass</mark> |
-| Explore Button | Click       | Redirect to post detail page              | <mark>Pass</mark> |
-| Author Link    | Click       | Redirect to authors profile page          | <mark>Pass</mark> |
-| Edit Button    | Click       | Redirect to edit post page profile page   | <mark>Pass</mark> |
-| Edit Button    | Display     | Render for only authneticated post author | <mark>Pass</mark> |
-| Title Link     | Hover/Focus | Darken Text                               | <mark>Pass</mark> |
-| Author Link    | Hover/Focus | Darken Text                               | <mark>Pass</mark> |
-| Explore Button | Hover/Focus | Background blue, text white               | <mark>Pass</mark> |
-| Edit Button    | Hover/Focus | Darken Background                         | <mark>Pass</mark> |
+| Element        | Action      | Expected Result                                    | Pass/Fail         |
+| -------------- | ----------- | -------------------------------------------------- | ----------------- |
+| Content        | Display     | Render the article title, excerpt, author and date | <mark>Pass</mark> |
+| Statistics     | Display     | Render the amount of likes, comments and category  | <mark>Pass</mark> |
+| Title Link     | Click       | Redirect to post detail page                       | <mark>Pass</mark> |
+| Explore Button | Click       | Redirect to post detail page                       | <mark>Pass</mark> |
+| Author Link    | Click       | Redirect to authors profile page                   | <mark>Pass</mark> |
+| Edit Button    | Click       | Redirect to edit post page profile page            | <mark>Pass</mark> |
+| Edit Button    | Display     | Render for only authneticated post author          | <mark>Pass</mark> |
+| Title Link     | Hover/Focus | Darken Text                                        | <mark>Pass</mark> |
+| Author Link    | Hover/Focus | Darken Text                                        | <mark>Pass</mark> |
+| Explore Button | Hover/Focus | Background blue, text white                        | <mark>Pass</mark> |
+| Edit Button    | Hover/Focus | Darken Background                                  | <mark>Pass</mark> |
+
+### Post Detail Page
+
+| Element               | Action      | Expected Result                                     | Pass/Fail         |
+| --------------------- | ----------- | --------------------------------------------------- | ----------------- |
+| Article               | Display     | The articles title/content and author are displayed | <mark>Pass</mark> |
+| Author Link           | Click       | Redirect to authors profile page                    | <mark>Pass</mark> |
+| Edit Button           | Click       | Redirect to edit post page profile page             | <mark>Pass</mark> |
+| Edit Button           | Display     | Render for only authneticated post author           | <mark>Pass</mark> |
+| Like Button           | Display     | Render Thumbs up toggle if authenticated            | <mark>Pass</mark> |
+| Like Button           | Display     | If Liked render a blue thumbs up button             | <mark>Pass</mark> |
+| Like Button           | Display     | If not liked render an outliked thumbs up button    | <mark>Pass</mark> |
+| Like Button           | Click       | Toggle the users liked status in the database       | <mark>Pass</mark> |
+| Like Button           | Click       | Refresh the page with the current like status       | <mark>Pass</mark> |
+| Heart Button          | Display     | Render if user is not authenicated                  | <mark>Pass</mark> |
+| Heart Button          | Click       | Redirected user to sign in page                     | <mark>Pass</mark> |
+| Likes Count           | Display     | Display the total amount of likes of the article    | <mark>Pass</mark> |
+| Comments              | Display     | Render All Comments                                 | <mark>Pass</mark> |
+| Comment Form          | Display     | Render Comment Form to authenticated users          | <mark>Pass</mark> |
+| Comment Form(Valid)   | Submit      | Send the comment to the DB for approval             | <mark>Pass</mark> |
+| Comment Form(Valid)   | Submit      | Toast notification displayed                        | <mark>Pass</mark> |
+| Comment Form(Invalid) | Submit      | Render error context to the UI                      | <mark>Pass</mark> |
+| Comment Form(Invalid) | Submit      | Toast error notification displayed                  | <mark>Pass</mark> |
+| Comment Form Login    | Display     | Render login button to non authenticated users      | <mark>Pass</mark> |
+| Comment Form Login    | Click       | Redirected user to sign in page                     | <mark>Pass</mark> |
+| Popular Posts         | Display     | 3 popular posts of the same category are displayed  | <mark>Pass</mark> |
+| Author Link           | Hover/Focus | Darken Text                                         | <mark>Pass</mark> |
+| Edit Button           | Hover/Focus | Darken Background                                   | <mark>Pass</mark> |
+| Like Button           | Hover/Focus | Cursor Pointer                                      | <mark>Pass</mark> |
+| Comment Submit Button | Hover/Focus | Darken Background                                   | <mark>Pass</mark> |
+
+### Comment
+
+| Element       | Action      | Expected Result                             | Pass/Fail         |
+| ------------- | ----------- | ------------------------------------------- | ----------------- |
+| Comment       | Display     | Render the comment content, author and date | <mark>Pass</mark> |
+| Author Link   | Click       | Redirect to authors profile page            | <mark>Pass</mark> |
+| Author Icon   | Click       | Redirect to authors profile page            | <mark>Pass</mark> |
+| Delete Button | Display     | Render if authenticated author              | <mark>Pass</mark> |
+| Delete Button | Click       | Delete Confirmation Modal appears           | <mark>Pass</mark> |
+| Author Link   | Hover/Focus | Darken Text                                 | <mark>Pass</mark> |
+| Delete Button | Hover/Focus | Darken Background                           | <mark>Pass</mark> |
 
 ### Add Post Page
 
@@ -300,6 +346,10 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Password Submit (Invalid) | Submit         | Error context rendered to UI                  | <mark>Pass</mark> |
 | Password Submit (Invalid) | Submit         | Toast notification error message received     | <mark>Pass</mark> |
 | Delete Account Button     | Click          | Delete confirmation modal displayed           | <mark>Pass</mark> |
+| Update User Button        | Hover/Focus    | Darken Background                             | <mark>Pass</mark> |
+| Update Bio Button         | Hover/Focus    | Darken Background                             | <mark>Pass</mark> |
+| Update Password Button    | Hover/Focus    | Darken Background                             | <mark>Pass</mark> |
+| Delete Account Button     | Hover/Focus    | Darken Background                             | <mark>Pass</mark> |
 
 ### Sign Up Page
 
@@ -311,6 +361,8 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>Pass</mark> |
 | Form(Invalid) | Submit         | Error Notification received                 | <mark>Pass</mark> |
 | Login Link    | Click          | Redirect to Login Page                      | <mark>Pass</mark> |
+| Form Button   | Hover/Focus    | Darken Background                           | <mark>Pass</mark> |
+| Login Link    | Hover/Focus    | Darken Text                                 | <mark>Pass</mark> |
 
 ### Sign In Page
 
@@ -322,6 +374,8 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>Pass</mark> |
 | Form(Invalid) | Submit         | Error Notification received                 | <mark>Pass</mark> |
 | Register Link | Click          | Redirect to Sign In Page                    | <mark>Pass</mark> |
+| Form Button   | Hover/Focus    | Darken Background                           | <mark>Pass</mark> |
+| Register Link | Hover/Focus    | Darken Text                                 | <mark>Pass</mark> |
 
 ### Log Out Page
 
@@ -330,3 +384,4 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Page          | Authentication | Un-authenticated users redirected to Home page | <mark>Pass</mark> |
 | Logout Button | Click          | User session is Logged out                     | <mark>Pass</mark> |
 | Logout Button | Click          | Redirected to Home page                        | <mark>Pass</mark> |
+| Form Button   | Hover/Focus    | Darken Background                              | <mark>Pass</mark> |

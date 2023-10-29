@@ -178,6 +178,7 @@ form label {
   border-radius: 100%;
   background: linear-gradient(270deg, #000000, #434343);
   height: 100px;
+  text-decoration: none;
 }
 
 /* ALL AUTH FORM */
