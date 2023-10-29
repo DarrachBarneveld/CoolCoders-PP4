@@ -62,6 +62,7 @@
 | As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community.                                                            | <details><summary>Level Up</summary><img src="./documentation/images/features/level.png"></details>                     | <mark>PASS<mark> |
 | As a User, I can delete my account so that I can remove myself, details and all content from the live website                                                                                                                     | <details><summary>Delete Account</summary><img src="./documentation/images/features/deleteaccount.png"></details>       | <mark>PASS<mark> |
 | As a developer, I can show custom error pages redirect the user to the home page, so that I have a consistent experience even when encountering errors on the website.                                                            | <details><summary>Error Page</summary><img src="./documentation/images/features/errorpage.png"></details>               | <mark>PASS<mark> |
+| As a User, I can click on the footer contact social links so I can find out more information about the brand                                                                                                                      | <details><summary>Footer</summary><img src="./documentation/images/features/footer.png></details>                       | <mark>PASS<mark> |
 
 ## Code Validation
 
@@ -154,6 +155,10 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Sign Up        |     98      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signupmobile.png"></details>                |
 | Sign In        |     99      |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signinmobile.png"></details>                |
 | Sign Out       |     98      |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutmobile.png"></details>              |
+
+Lighthouse Iframe summernote widget error. This error dropped the accessibilty score of some pages and was due to the summernote external package. The error was left unresolved.
+
+<details><summary>IFrame Error</summary><img src="./documentation/testing/lighthouse/iframeerror.png"></details>
 
 ## Manual Testing
 

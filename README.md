@@ -90,6 +90,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 4. As a User, I can view my favourites on my profile detail page so that I can reread my favourite articles [#20](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/20)
 5. As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community. [#36](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/36)
 6. As a User, I can delete my account so that I can remove myself, details and all content from the live website [#39](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/39)
+7. As a User, I can click on the footer contact social links so I can find out more information about the brand [#43](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/39)
 
 #### Website Owner/Developer
 
@@ -519,17 +520,13 @@ The "Toggle Favorites" button allows authenticated users to quickly add or remov
 
 Custom Error pages are rendered to show the user what went wrong with their request. These error pages allow the user to redirect to the home page.
 
-<details><summary>400</summary>
-<img src="./documentation/images/features/commentform.png">
-</details>
+Examples below are 403, 404
+
 <details><summary>403</summary>
-<img src="./documentation/images/features/commentform.png">
+<img src="./documentation/images/features/403error.png">
 </details>
 <details><summary>404</summary>
-<img src="./documentation/images/features/commentform.png">
-</details>
-<details><summary>500</summary>
-<img src="./documentation/images/features/commentform.png">
+<img src="./documentation/images/features/404error.png">
 </details>
 
 ## Future Features
