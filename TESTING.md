@@ -67,16 +67,18 @@
 
 All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
 
-| Page        | Validator                                                                                                                  | Result              |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| Home        | <details><summary>Home Page</summary><img src="./documentation/testing/validation/html/homehtml.png"></details>            | <mark>PASS</mark>   |
-| Category    | <details><summary>Category Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>    | <mark>PASS</mark>   |
-| Post Detail | <details><summary>Post Detail Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details> | <mark>PASS</mark>   |
-| Add Post    | <details><summary>Add Post Page</summary><img src="./documentation/testing/validation/html/addposterror.png"></details>    | <mark>ERRORS</mark> |
-| Edit Post   | <details><summary>Edit Post Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>   | <mark>ERRORS</mark> |
-| Profile     | <details><summary>Profile Page</summary><img src="./documentation/testing/validation/html/profilehtml.png"></details>      | <mark>PASS</mark>   |
-| Sign In     | <details><summary>Sign In</summary><img src="./documentation/testing/validation/html/loginhtml.png"></details>             | <mark>PASS</mark>   |
-| Sign Up     | <details><summary>Sign Up</summary><img src="./documentation/testing/validation/html/signuphtml.png"></details>            | <mark>PASS</mark>   |
+| Page         | Validator                                                                                                                             | Result              |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| Home         | <details><summary>Home Page</summary><img src="./documentation/testing/validation/html/homehtml.png"></details>                       | <mark>PASS</mark>   |
+| Category     | <details><summary>Category Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>               | <mark>PASS</mark>   |
+| Post Detail  | <details><summary>Post Detail Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>            | <mark>PASS</mark>   |
+| Add Post     | <details><summary>Add Post Page</summary><img src="./documentation/testing/validation/html/addposterror.png"></details>               | <mark>ERRORS</mark> |
+| Edit Post    | <details><summary>Edit Post Page</summary><img src="./documentation/testing/validation/html/editposterror.png"></details>             | <mark>ERRORS</mark> |
+| Profile      | <details><summary>Profile Page</summary><img src="./documentation/testing/validation/html/profilehtml.png"></details>                 | <mark>PASS</mark>   |
+| Edit Profile | <details><summary>Edit Profile Page</summary><img src="./documentation/testing/validation/html/updateprofileerror.png.png"></details> | <mark>Errors</mark> |
+| Sign In      | <details><summary>Sign In</summary><img src="./documentation/testing/validation/html/loginhtml.png"></details>                        | <mark>PASS</mark>   |
+| Sign Up      | <details><summary>Sign Up</summary><img src="./documentation/testing/validation/html/signuphtml.png"></details>                       | <mark>PASS</mark>   |
+| Log out      | <details><summary>Log Out</summary><img src="./documentation/testing/validation/html/logouthtml.png"></details>                       | <mark>PASS</mark>   |
 
 ### CSS
 
