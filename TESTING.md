@@ -133,16 +133,32 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Edit Post      |     87      |      95       |      100       | 100 |
 | Update Profile |     98      |      100      |      100       | 100 |
 | Sign Up        |     98      |      100      |      100       | 100 |
-| Sign In        |     98      |      100      |      100       | 100 |
+| Sign In        |     99      |      100      |      100       | 100 |
 | Sign Out       |     98      |      100      |      100       | 100 |
 
 ## Manual Testing
 
 ### Site Navigation
 
-| Element               | Action | Expected Result   | Pass/Fail |
-| --------------------- | ------ | ----------------- | --------- |
-| Hero 'Sign Up' Button | Click  | Open Sign up page | Pass      |
+| Element                | Action      | Expected Result                                         | Pass/Fail         |
+| ---------------------- | ----------- | ------------------------------------------------------- | ----------------- |
+| Logo                   | Click       | Redirect to Home page                                   | <mark>Pass</mark> |
+| Home Link              | Click       | Redirect to Home page                                   | <mark>Pass</mark> |
+| Category Button        | Click       | Render a dropdown menu of all categories                | <mark>Pass</mark> |
+| Category Dropdown Link | Click       | Redirect to selected category page                      | <mark>Pass</mark> |
+| Add Post Link          | Click       | Redirect to selected add post page                      | <mark>Pass</mark> |
+| Register Link          | Click       | Redirect to sign up page                                | <mark>Pass</mark> |
+| Log in Link            | Click       | Redirect to sign in page                                | <mark>Pass</mark> |
+| Log out Link           | Click       | Redirect to log out page                                | <mark>Pass</mark> |
+| Profile Link           | Click       | Redirect to profile page                                | <mark>Pass</mark> |
+| Hamburger Menu         | Click       | Render a dropdown menu of all links                     | <mark>Pass</mark> |
+| Footer Socials         | Click       | Redirect in a new tab to all respective media platforms | <mark>Pass</mark> |
+| Register Link          | Display     | Render for non authenticated users                      | <mark>Pass</mark> |
+| Log in Link            | Display     | Render for non authenticated users                      | <mark>Pass</mark> |
+| Add Post Link          | Display     | Render only if user is authenticated                    | <mark>Pass</mark> |
+| Log out Link           | Display     | Render only if user is authenticated                    | <mark>Pass</mark> |
+| Profile Link           | Display     | Render only if user is authenticated                    | <mark>Pass</mark> |
+| Nav Link               | Hover/Focus | Display a green underline border, lighten text          | <mark>Pass</mark> |
 
 ### Home Page
 
