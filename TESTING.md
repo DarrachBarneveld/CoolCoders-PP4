@@ -15,6 +15,8 @@
   - [Home Page](#home-page)
   - [Category Page](#category-page)
   - [Article Preview Card](#article-preview-card)
+  - [Post Detail Page](#post-detail-page)
+  - [Comment](#comment)
   - [Add Post Page](#add-post-page)
   - [Edit Post Page](#edit-post-page)
   - [Delete Confirmation Modal](#delete-confirmation-modal)

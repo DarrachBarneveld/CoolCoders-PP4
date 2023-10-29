@@ -24,6 +24,40 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
     - [User Stories Issues](#user-stories---issues)
     - [MoSCoW prioritization](#moscow-prioritization)
     - [GitHub Projects](#github-projectskanban)
+- [Features](#features)
+  - [Navigation Header](#navigation-header)
+  - [Footer](#footer)
+  - [Home Page](#home-page)
+  - [Post Detail Page](#post-detail-page)
+  - [Profile Page](#profile-page)
+  - [Edit/Add Post Page](#addedit-post-page)
+  - [Edit Profile Page](#edit-profile-page)
+  - [Sign Up Page](#sign-up-page)
+  - [Sign In Page](#sign-in-page)
+  - [Sign Out Page](#sign-out-page)
+  - [Article Preview Card](#article-preview-card)
+  - [Notification Messages](#notification-messages)
+  - [Confirmation Modal](#category-model)
+  - [Toggle Favourites](#toggle-favourites)
+  - [Comment Card](#comment-card)
+  - [Comment Form](#comment-form)
+  - [Future Features](#future-features)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Technologies and Languages](#technologies-and-languages)
+  - [Languages](#languages-used)
+  - [Python Modules](#python-modules-imported)
+  - [Technologies and programs](#technologies-and-programs)
+- [Deployment](#deployment)
+  - [Pre Deployment](#pre-deployment)
+  - [Deploying on Heroku](#deploying-on-heroku)
+  - [Fork the Repository](#fork-the-repository)
+  - [Clone the Repository](#clone-the-repository)
+  - [Run the Repository Locally](#run-the-repository-locally)
+- [Credits](#credits)
+  - [Media](#media)
+  - [Code](#code)
+  - [Acknowledgements](#acknowledgements)
 
 ## User Experience
 
@@ -622,6 +656,8 @@ The hidden variables are as follows
 - [Abacus](https://www.wnyc.org/story/tools-of-the-trade-the-abacus/)
 
 ### Code
+
+Credit to [ByteGrad](https://www.youtube.com/watch?v=Jdkvmq8MtJY) for helping my css knowledge for making text appear with ellipse after a certain line to allow my article cards to be uniform in size and appearance.
 
 Credit to [Dayana-N](https://github.com/Dayana-N/AutoMarket-PP4) for the well structured and coherent README which was used as a template to create my own.
 
