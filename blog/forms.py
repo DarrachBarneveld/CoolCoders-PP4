@@ -1,7 +1,7 @@
 """Forms"""
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django_summernote.widgets import SummernoteWidget
 from .models import Post, Profile, Comment
 
@@ -67,3 +67,25 @@ class CommentForm(forms.ModelForm):
 
         model = Comment
         fields = ("body",)
+
+
+class CustomPasswordChangeForm(PasswordChangeForm):
+    """
+    A customized form for changing a user's password.
+
+    This form inherits from Django's built-in PasswordChangeForm and provides 
+    some custom modifications:
+
+    """
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Remove autofocus attribute from the old password field
+        self.fields["old_password"].widget.attrs.pop("autofocus", None)
+
+        # Remove autofocus attribute from the new password1 field
+        self.fields["new_password1"].widget.attrs.pop("autofocus", None)
+
+        # Remove autofocus attribute from the new password2 field
+        self.fields["new_password2"].widget.attrs.pop("autofocus", None)

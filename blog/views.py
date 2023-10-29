@@ -9,10 +9,15 @@ from django.db.models import Count
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
-from django.contrib.auth.forms import PasswordChangeForm
 from django.views import generic
 from .models import Post, Comment, Category
-from .forms import PostForm, UpdateUserForm, UpdateBioForm, CommentForm
+from .forms import (
+    PostForm,
+    UpdateUserForm,
+    UpdateBioForm,
+    CommentForm,
+    CustomPasswordChangeForm
+)
 
 
 class HomePageView(generic.View):
@@ -406,7 +411,7 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
 
     template_name = "update_profile.html"
     user_form_class = UpdateUserForm
-    password_form_class = PasswordChangeForm
+    password_form_class = CustomPasswordChangeForm
     bio_form_class = UpdateBioForm
 
     def get_context_data(self, **kwargs):
