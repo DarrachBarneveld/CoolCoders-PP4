@@ -109,32 +109,32 @@ Further testing was done on mobile to confirm all is working as expected.
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. At first I received the warning _'Background and foreground colors do not have a sufficient contrast ratio'_ in relation to buttons where I had used the Bootstrap class `btn-info`. After I updated the button styling I received the below scores.
 
-| Page           | Performance | Accessibility | Best Practices | SEO |
-| -------------- | :---------: | :-----------: | :------------: | :-: |
+| Page           | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
+| -------------- | :---------: | :-----------: | :------------: | :-: | --------------------------------------------------------------------------------------------------------------------------- |
 |                |             |               |                |     |
 | **Desktop**    |             |               |                |     |
-| Home           |     98      |      100      |      100       | 100 |
-| Category       |     98      |      100      |      100       | 100 |
-| Post Detail    |     97      |      100      |      100       | 100 |
-| Profile        |     96      |      100      |      100       | 100 |
-| Add Post       |     99      |      96       |      100       | 100 |
-| Edit Post      |     99      |      96       |      100       | 100 |
-| Update Profile |     100     |      100      |      100       | 100 |
-| Sign Up        |     99      |      100      |      100       | 100 |
-| Sign In        |     100     |      100      |      100       | 100 |
-| Sign Out       |     100     |      100      |      100       | 100 |
+| Home           |     98      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homedesktop.png"></details>                    |
+| Category       |     98      |      100      |      100       | 100 | <details><summary>Category</summary><img src="./documentation/testing/lighthouse/categorydesktop.png"></details>            |
+| Post Detail    |     97      |      100      |      100       | 100 | <details><summary>Post Detail </summary><img src="./documentation/testing/lighthouse/postdetaildesktop.png"></details>      |
+| Profile        |     96      |      100      |      100       | 100 | <details><summary>Profile</summary><img src="./documentation/testing/lighthouse/profiledesktop.png"></details>              |
+| Add Post       |     99      |      96       |      100       | 100 | <details><summary>Add Post</summary><img src="./documentation/testing/lighthouse/addpostdesktop.png"></details>             |
+| Edit Post      |     99      |      96       |      100       | 100 | <details><summary>Edit Post</summary><img src="./documentation/testing/lighthouse/editpostdesktop.png"></details>           |
+| Update Profile |     100     |      100      |      100       | 100 | <details><summary>Update Profile</summary><img src="./documentation/testing/lighthouse/updateprofiledesktop.png"></details> |
+| Sign Up        |     99      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
+| Sign In        |     100     |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
+| Sign Out       |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutdesktop.png"></details>             |
 |                |             |               |                |     |
 | **Mobile**     |             |               |                |     |
-| Home           |     90      |      100      |      100       | 100 |
-| Category       |     91      |      100      |      100       | 100 |
-| Post Detail    |     95      |      100      |      100       | 100 |
-| Profile        |     90      |      100      |      100       | 100 |
-| Add Post       |     86      |      95       |      100       | 100 |
-| Edit Post      |     87      |      95       |      100       | 100 |
-| Update Profile |     98      |      100      |      100       | 100 |
-| Sign Up        |     98      |      100      |      100       | 100 |
-| Sign In        |     99      |      100      |      100       | 100 |
-| Sign Out       |     98      |      100      |      100       | 100 |
+| Home           |     90      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homemobile.png"></details>                     |
+| Category       |     91      |      100      |      100       | 100 | <details><summary>Category</summary><img src="./documentation/testing/lighthouse/categorymobile.png"></details>             |
+| Post Detail    |     95      |      100      |      100       | 100 | <details><summary>Post Detail</summary><img src="./documentation/testing/lighthouse/postdetailmobile.png"></details>        |
+| Profile        |     90      |      100      |      100       | 100 | <details><summary>Profile</summary><img src="./documentation/testing/lighthouse/profilemobile.png"></details>               |
+| Add Post       |     86      |      95       |      100       | 100 | <details><summary>Add Post</summary><img src="./documentation/testing/lighthouse/addpostmobile.png"></details>              |
+| Edit Post      |     87      |      95       |      100       | 100 | <details><summary>Edit Post</summary><img src="./documentation/testing/lighthouse/editpostdesktop.png"></details>           |
+| Update Profile |     98      |      100      |      100       | 100 | <details><summary>Update Profile</summary><img src="./documentation/testing/lighthouse/updateprofilemobile.png"></details>  |
+| Sign Up        |     98      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signupmobile.png"></details>                |
+| Sign In        |     99      |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signinmobile.png"></details>                |
+| Sign Out       |     98      |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutmobile.png"></details>              |
 
 ## Manual Testing
 
@@ -172,13 +172,13 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ### Category Page
 
-| Element          | Action      | Expected Result                                                            | Pass/Fail         |
-| ---------------- | ----------- | -------------------------------------------------------------------------- | ----------------- |
-| Category Widgets | Click       | Redirect to selected category page                                         | <mark>Pass</mark> |
-| Article Cards    | Display     | All Category Post Cards Rendered in grid layout                            | <mark>Pass</mark> |
-| Article Cards    | Pagination  | Pagination occurs on over 6 cards to a page                                | <mark>Pass</mark> |
-| Paginator        | Click       | First/Next/Previous/Last buttons all redirect to correct paginated results | <mark>Pass</mark> |
-| Category Widgets | Hover/Focus | Background turns green, text turns white                                   | <mark>Pass</mark> |
+| Element          | Action      | Expected Result                                               | Pass/Fail         |
+| ---------------- | ----------- | ------------------------------------------------------------- | ----------------- |
+| Category Widgets | Click       | Redirect to selected category page                            | <mark>Pass</mark> |
+| Article Cards    | Display     | All Category Post Cards Rendered in grid layout               | <mark>Pass</mark> |
+| Article Cards    | Pagination  | Pagination occurs on over 6 cards to a page                   | <mark>Pass</mark> |
+| Paginator        | Click       | All navigations buttons redirect to correct paginated results | <mark>Pass</mark> |
+| Category Widgets | Hover/Focus | Background turns green, text turns white                      | <mark>Pass</mark> |
 
 ### Article Preview Card
 
@@ -244,22 +244,22 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ### Profile Page
 
-| Element              | Action      | Expected Result                                                            | Pass/Fail         |
-| -------------------- | ----------- | -------------------------------------------------------------------------- | ----------------- |
-| Page                 | Display     | All User Profile Details Rendered                                          | <mark>Pass</mark> |
-| Settings Button      | Click       | Redirect to update profile page                                            | <mark>Pass</mark> |
-| Settings Button      | Display     | Render only if authenticated user is the profile page owner                | <mark>Pass</mark> |
-| Settings Button      | Hover/Focus | Lighten Background                                                         | <mark>Pass</mark> |
-| Statistics           | Display     | All User Statisitics Details Rendered                                      | <mark>Pass</mark> |
-| User Posts           | Display     | All User Posts Rendered                                                    | <mark>Pass</mark> |
-| User Favourites      | Display     | All User Favourites Rendered                                               | <mark>Pass</mark> |
-| User Posts           | Pagination  | Pagination occurs on over 4 cards to a list                                | <mark>Pass</mark> |
-| User Favourites      | Pagination  | Pagination occurs on over 4 cards to a list                                | <mark>Pass</mark> |
-| Posts Paginator      | Click       | First/Next/Previous/Last buttons all redirect to correct paginated results | <mark>Pass</mark> |
-| Favourites Paginator | Click       | First/Next/Previous/Last buttons all redirect to correct paginated results | <mark>Pass</mark> |
-| Posts                | Display     | If no post render No Posts UI                                              | <mark>Pass</mark> |
-| Favourites           | Display     | If no favourites render No Favourites UI                                   | <mark>Pass</mark> |
-| Article Cards        | Links       | All rendered Article Cards are correctly linked                            | <mark>Pass</mark> |
+| Element              | Action      | Expected Result                                               | Pass/Fail         |
+| -------------------- | ----------- | ------------------------------------------------------------- | ----------------- |
+| Page                 | Display     | All User Profile Details Rendered                             | <mark>Pass</mark> |
+| Settings Button      | Click       | Redirect to update profile page                               | <mark>Pass</mark> |
+| Settings Button      | Display     | Render only if authenticated user is the profile page owner   | <mark>Pass</mark> |
+| Settings Button      | Hover/Focus | Lighten Background                                            | <mark>Pass</mark> |
+| Statistics           | Display     | All User Statisitics Details Rendered                         | <mark>Pass</mark> |
+| User Posts           | Display     | All User Posts Rendered                                       | <mark>Pass</mark> |
+| User Favourites      | Display     | All User Favourites Rendered                                  | <mark>Pass</mark> |
+| User Posts           | Pagination  | Pagination occurs on over 4 cards to a list                   | <mark>Pass</mark> |
+| User Favourites      | Pagination  | Pagination occurs on over 4 cards to a list                   | <mark>Pass</mark> |
+| Posts Paginator      | Click       | All navigations buttons redirect to correct paginated results | <mark>Pass</mark> |
+| Favourites Paginator | Click       | All navigations buttons redirect to correct paginated results | <mark>Pass</mark> |
+| Posts                | Display     | If no post render No Posts UI                                 | <mark>Pass</mark> |
+| Favourites           | Display     | If no favourites render No Favourites UI                      | <mark>Pass</mark> |
+| Article Cards        | Links       | All rendered Article Cards are correctly linked               | <mark>Pass</mark> |
 
 ### Update Profile Page
 
