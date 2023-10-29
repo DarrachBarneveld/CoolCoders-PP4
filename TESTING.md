@@ -162,6 +162,156 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ### Home Page
 
-| Element               | Action | Expected Result   | Pass/Fail |
-| --------------------- | ------ | ----------------- | --------- |
-| Hero 'Sign Up' Button | Click  | Open Sign up page | Pass      |
+| Element          | Action      | Expected Result                          | Pass/Fail         |
+| ---------------- | ----------- | ---------------------------------------- | ----------------- |
+| Category Widgets | Click       | Redirect to selected category page       | <mark>Pass</mark> |
+| Editors Pick     | Display     | Editors Pick Post Card viewable          | <mark>Pass</mark> |
+| Trending         | Display     | Trending Post Snippets viewable          | <mark>Pass</mark> |
+| Popular Post     | Display     | Popular Post Post Card viewable          | <mark>Pass</mark> |
+| Category Widgets | Hover/Focus | Background turns green, text turns white | <mark>Pass</mark> |
+
+### Category Page
+
+| Element          | Action      | Expected Result                                                            | Pass/Fail         |
+| ---------------- | ----------- | -------------------------------------------------------------------------- | ----------------- |
+| Category Widgets | Click       | Redirect to selected category page                                         | <mark>Pass</mark> |
+| Article Cards    | Display     | All Category Post Cards Rendered in grid layout                            | <mark>Pass</mark> |
+| Article Cards    | Pagination  | Pagination occurs on over 6 cards to a page                                | <mark>Pass</mark> |
+| Paginator        | Click       | First/Next/Previous/Last buttons all redirect to correct paginated results | <mark>Pass</mark> |
+| Category Widgets | Hover/Focus | Background turns green, text turns white                                   | <mark>Pass</mark> |
+
+### Article Preview Card
+
+| Element        | Action      | Expected Result                           | Pass/Fail         |
+| -------------- | ----------- | ----------------------------------------- | ----------------- |
+| Title Link     | Click       | Redirect to post detail page              | <mark>Pass</mark> |
+| Explore Button | Click       | Redirect to post detail page              | <mark>Pass</mark> |
+| Author Link    | Click       | Redirect to authors profile page          | <mark>Pass</mark> |
+| Edit Button    | Click       | Redirect to edit post page profile page   | <mark>Pass</mark> |
+| Edit Button    | Display     | Render for only authneticated post author | <mark>Pass</mark> |
+| Title Link     | Hover/Focus | Darken Text                               | <mark>Pass</mark> |
+| Author Link    | Hover/Focus | Darken Text                               | <mark>Pass</mark> |
+| Explore Button | Hover/Focus | Background blue, text white               | <mark>Pass</mark> |
+| Edit Button    | Hover/Focus | Darken Background                         | <mark>Pass</mark> |
+
+### Add Post Page
+
+| Element               | Action         | Expected Result                                    | Pass/Fail         |
+| --------------------- | -------------- | -------------------------------------------------- | ----------------- |
+| Page                  | Authentication | Unauthneticated users routed to sign in page       | <mark>Pass</mark> |
+| Text Input Required   | None           | On Submit: Warning appears, form won't submit      | <mark>Pass</mark> |
+| Image Input           | Click          | Open device file storage                           | <mark>Pass</mark> |
+| Image Input           | Selected       | Display selected image name                        | <mark>Pass</mark> |
+| Image Input           | None           | Placeholder image selected                         | <mark>Pass</mark> |
+| Submit Input(Invalid) | Click          | Form is not submitted and error messages appear    | <mark>Pass</mark> |
+| Submit Input(Invalid) | Click          | Toast notification error message appears           | <mark>Pass</mark> |
+| Submit Input(Valid)   | Click          | Form is submitted and notification message appears | <mark>Pass</mark> |
+| Submit Input(Valid)   | Click          | User is redirected to home page                    | <mark>Pass</mark> |
+| Post Title            | Click          | No duplicated titles are allowed                   | <mark>Pass</mark> |
+| Error Context         | Submit         | If user forces submit error contexts are displayed | <mark>Pass</mark> |
+| Submit Button         | Hover/Focus    | Darken Background                                  | <mark>Pass</mark> |
+
+### Edit Post Page
+
+| Element               | Action         | Expected Result                                    | Pass/Fail         |
+| --------------------- | -------------- | -------------------------------------------------- | ----------------- |
+| Page                  | Authentication | Unauthneticated users routed to sign in page       | <mark>Pass</mark> |
+| Page                  | Authentication | Non Authour users show 403 page                    | <mark>Pass</mark> |
+| Page                  | Display        | Post content is rendered to the UI                 | <mark>Pass</mark> |
+| Text Input Required   | None           | On Submit: Warning appears, form won't submit      | <mark>Pass</mark> |
+| Image Input           | Click          | Open device file storage                           | <mark>Pass</mark> |
+| Image Input           | Selected       | Display selected image name                        | <mark>Pass</mark> |
+| Image Input           | None           | Current image selected                             | <mark>Pass</mark> |
+| Current Image         | None           | Current image link is displayed                    | <mark>Pass</mark> |
+| Submit Input(Invalid) | Click          | Form is not submitted and error messages appear    | <mark>Pass</mark> |
+| Submit Input(Invalid) | Click          | Toast notification error message appears           | <mark>Pass</mark> |
+| Submit Input(Valid)   | Click          | Form is submitted and notification message appears | <mark>Pass</mark> |
+| Submit Input(Valid)   | Click          | User is redirected to home page                    | <mark>Pass</mark> |
+| Delete Button         | Click          | Delete Confirmation Modal appears                  | <mark>Pass</mark> |
+| Post Title            | Click          | No duplicated titles are allowed                   | <mark>Pass</mark> |
+| Error Context         | Submit         | If user forces submit error contexts are displayed | <mark>Pass</mark> |
+| Submit Button         | Hover/Focus    | Darken Background                                  | <mark>Pass</mark> |
+| Delete Button         | Hover/Focus    | Darken Background                                  | <mark>Pass</mark> |
+
+### Delete Confirmation Modal
+
+| Element               | Action      | Expected Result                       | Pass/Fail         |
+| --------------------- | ----------- | ------------------------------------- | ----------------- |
+| Close Button          | Click       | Modal and opacic background disappear | <mark>Pass</mark> |
+| Confirm Delete Button | Click       | Context item is delete from database  | <mark>Pass</mark> |
+| Close Button          | Hover/Focus | Darken Background                     | <mark>Pass</mark> |
+| Confirm Delete Button | Hover/Focus | Darken Background                     | <mark>Pass</mark> |
+
+### Profile Page
+
+| Element              | Action      | Expected Result                                                            | Pass/Fail         |
+| -------------------- | ----------- | -------------------------------------------------------------------------- | ----------------- |
+| Page                 | Display     | All User Profile Details Rendered                                          | <mark>Pass</mark> |
+| Settings Button      | Click       | Redirect to update profile page                                            | <mark>Pass</mark> |
+| Settings Button      | Display     | Render only if authenticated user is the profile page owner                | <mark>Pass</mark> |
+| Settings Button      | Hover/Focus | Lighten Background                                                         | <mark>Pass</mark> |
+| Statistics           | Display     | All User Statisitics Details Rendered                                      | <mark>Pass</mark> |
+| User Posts           | Display     | All User Posts Rendered                                                    | <mark>Pass</mark> |
+| User Favourites      | Display     | All User Favourites Rendered                                               | <mark>Pass</mark> |
+| User Posts           | Pagination  | Pagination occurs on over 4 cards to a list                                | <mark>Pass</mark> |
+| User Favourites      | Pagination  | Pagination occurs on over 4 cards to a list                                | <mark>Pass</mark> |
+| Posts Paginator      | Click       | First/Next/Previous/Last buttons all redirect to correct paginated results | <mark>Pass</mark> |
+| Favourites Paginator | Click       | First/Next/Previous/Last buttons all redirect to correct paginated results | <mark>Pass</mark> |
+| Posts                | Display     | If no post render No Posts UI                                              | <mark>Pass</mark> |
+| Favourites           | Display     | If no favourites render No Favourites UI                                   | <mark>Pass</mark> |
+| Article Cards        | Links       | All rendered Article Cards are correctly linked                            | <mark>Pass</mark> |
+
+### Update Profile Page
+
+| Element                   | Action         | Expected Result                               | Pass/Fail         |
+| ------------------------- | -------------- | --------------------------------------------- | ----------------- |
+| Page                      | Authentication | Unauthneticated users routed to sign in page  | <mark>Pass</mark> |
+| Page                      | Display        | User Information Rendered to Inputs           | <mark>Pass</mark> |
+| Text Input Required       | None           | On Submit: Warning appears, form won't submit | <mark>Pass</mark> |
+| Username Title            | Submit         | No duplicated usernames are allowed           | <mark>Pass</mark> |
+| User Submit (Valid)       | Submit         | Information updated in database               | <mark>Pass</mark> |
+| User Submit (Valid)       | Submit         | Toast notification message received           | <mark>Pass</mark> |
+| User Submit (Valid)       | Submit         | Redirected to profile page                    | <mark>Pass</mark> |
+| User Submit (Invalid)     | Submit         | Error context rendered to UI                  | <mark>Pass</mark> |
+| User Submit (Invalid)     | Submit         | Toast notification error message received     | <mark>Pass</mark> |
+| Bio Submit (Valid)        | Submit         | Information updated in database               | <mark>Pass</mark> |
+| Bio Submit (Valid)        | Submit         | Toast notification message received           | <mark>Pass</mark> |
+| Bio Submit (Valid)        | Submit         | Redirected to profile page                    | <mark>Pass</mark> |
+| Bio Submit (Invalid)      | Submit         | Error context rendered to UI                  | <mark>Pass</mark> |
+| Bio Submit (Invalid)      | Submit         | Toast notification error message received     | <mark>Pass</mark> |
+| Password Submit (Valid)   | Submit         | Information updated in database               | <mark>Pass</mark> |
+| Password Submit (Valid)   | Submit         | Toast notification message received           | <mark>Pass</mark> |
+| Password Submit (Valid)   | Submit         | Redirected to profile page                    | <mark>Pass</mark> |
+| Password Submit (Invalid) | Submit         | Error context rendered to UI                  | <mark>Pass</mark> |
+| Password Submit (Invalid) | Submit         | Toast notification error message received     | <mark>Pass</mark> |
+| Delete Account Button     | Click          | Delete confirmation modal displayed           | <mark>Pass</mark> |
+
+### Sign Up Page
+
+| Element       | Action         | Expected Result                             | Pass/Fail         |
+| ------------- | -------------- | ------------------------------------------- | ----------------- |
+| Page          | Authentication | Authenticated users redirected to Home page | <mark>Pass</mark> |
+| Form(Valid)   | Submit         | Redirected to Home page                     | <mark>Pass</mark> |
+| Form(Valid)   | Submit         | Sign up in Notification received            | <mark>Pass</mark> |
+| Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>Pass</mark> |
+| Form(Invalid) | Submit         | Error Notification received                 | <mark>Pass</mark> |
+| Login Link    | Click          | Redirect to Login Page                      | <mark>Pass</mark> |
+
+### Sign In Page
+
+| Element       | Action         | Expected Result                             | Pass/Fail         |
+| ------------- | -------------- | ------------------------------------------- | ----------------- |
+| Page          | Authentication | Authenticated users redirected to Home page | <mark>Pass</mark> |
+| Form(Valid)   | Submit         | Redirected to Home page                     | <mark>Pass</mark> |
+| Form(Valid)   | Submit         | Sign up in Notification received            | <mark>Pass</mark> |
+| Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>Pass</mark> |
+| Form(Invalid) | Submit         | Error Notification received                 | <mark>Pass</mark> |
+| Register Link | Click          | Redirect to Sign In Page                    | <mark>Pass</mark> |
+
+### Log Out Page
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Page          | Authentication | Un-authenticated users redirected to Home page | <mark>Pass</mark> |
+| Logout Button | Click          | User session is Logged out                     | <mark>Pass</mark> |
+| Logout Button | Click          | Redirected to Home page                        | <mark>Pass</mark> |
