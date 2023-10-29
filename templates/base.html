@@ -45,11 +45,14 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
+
+            <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
               <div class="dropdown">
                 <button
@@ -119,7 +122,7 @@
       </nav>
     </header>
 
-    <!-- Message Notifications -->
+    <!-- Message Notifications - Code Institute's I Think Therefore I Blog Source -->
     <div class="flex container-sm my-2">
       {% for message in messages %}
       <div
@@ -148,7 +151,7 @@
         >
           <path
             d="M1 123.043C67.2858 167.865 259.022 257.325 549.762 188.784C764.181 125.427 967.75 112.601 1200.42 169.707C1347.76 205.869 1901.91 374.562 2201 1"
-            stroke-width="10"
+            stroke-width="25"
           ></path>
         </svg>
       </div>

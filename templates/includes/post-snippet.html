@@ -1,5 +1,7 @@
 {% load static %}
 
+ <!-- Reusable Snippet Card For Post Renders -->
+
 <article class="card mb-4 text-start fade-in">
     <div class="d-flex p-2">
       {% if "placeholder" in post.featured_image.url %}
@@ -19,7 +21,7 @@
         </h3>
         <ul class="list-inline">
           <li class="list-inline-item mb-1">
-            <i class="fa-solid fa-user text-info"></i>
+            <i class="fa-solid fa-user text-danger"></i>
             <a href="{% url 'profile' post.author.username %}">
               <strong class="text-capitalize"> {{post.author}}</strong>
             </a>

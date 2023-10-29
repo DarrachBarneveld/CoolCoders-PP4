@@ -11,6 +11,7 @@
     <strong class='text-uppercase text-green'>{{category.title}}</strong>
   </h1>
 
+  <!-- Add widget navigation -->
   {% include "includes/widgets.html" %}
 
   <h2 class="mt-2 text-light border-bottom">
@@ -19,6 +20,8 @@
     <div class="row p-3">
       {% for post in posts %}
       <div class="col-md-4 g-3 mt-3 mb-3">
+        <!-- Render Preview Post Cards -->
+
         {% include "includes/post-preview.html" %}
       </div>
 

@@ -1,6 +1,8 @@
 {% load static %}
 
-<article class="card m-1 text-dark fade-in">
+ <!-- Reusable Preview Card For Post Renders -->
+
+<article class="card m-1 text-dark fade-in text-center">
   {% if "placeholder" in post.featured_image.url %}
   <img
     class="card-img-top"
@@ -21,7 +23,7 @@
     </h3>
     <ul class="list-inline mb-1">
       <li class="list-inline-item">
-        <i class="fa-solid fa-user text-info"></i>
+        <i class="fa-solid fa-user text-danger"></i>
         <a href="{% url 'profile' post.author.username %}">
           <strong class="text-capitalize">{{post.author}}</strong>
         </a>

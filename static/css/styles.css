@@ -23,7 +23,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(270deg, #000000, #434343);
+  background: linear-gradient(360deg, #000000, #434343);
 }
 
 img {
@@ -156,7 +156,7 @@ img {
 /* ADD/EDIT POST FORM */
 
 .custom-form {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -252,14 +252,16 @@ img {
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
-  animation-duration: 500ms;
+  animation-duration: 300ms;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
