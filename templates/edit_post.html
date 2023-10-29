@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}CoolCoders | Edit Post}{% endblock %}
+{% block title %}CoolCoders | Edit Post{% endblock %}
 
 
 {% load crispy_forms_tags %}
@@ -10,10 +10,12 @@
 <h1 class='pt-3 display-6 fw-bolder text-center'>
   <strong class='text-uppercase text-green'>Edit Post</strong>
 </h1>
+{% load cloudinary %}
+
   <form
     method="post"
     enctype="multipart/form-data"
-    class='custom-form p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-light text-center my-3'
+    class='custom-form p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-white text-center my-3'
   >
     {{ form | crispy }}
 

@@ -113,10 +113,14 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | ----------- | :---------: | :-----------: | :------------: | :-: |
 |             |             |               |                |     |
 | **Desktop** |             |               |                |     |
-| Home        |     100     |      100      |      100       | 100 |
-|             |             |               |                |     |
-| **Mobile**  |             |               |                |     |
-| Home        |     100     |      100      |      100       | 100 |
+| Home        |     98      |      100      |      100       | 100 |
+| Category    |     99      |      100      |      100       | 100 |
+| Profile     |     99      |      100      |      100       | 100 |
+
+| | | | | |
+| **Mobile** | | | | |
+| Home | 97 | 100 | 100 | 100 |
+| Category | 93 | 100 | 100 | 100 |
 
 ## Manual Testing
 

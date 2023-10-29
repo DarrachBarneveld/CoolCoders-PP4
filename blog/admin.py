@@ -79,7 +79,7 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     summernote_fields = ("content",)
 
-    def approve_posts(self, queryset):
+    def approve_posts(self, request, queryset):
         """
         Approve selected posts.
 
@@ -101,7 +101,7 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ("name", "email", "body")
     actions = ["approve_comments"]
 
-    def approve_comments(self, queryset):
+    def approve_comments(self, request, queryset):
         """
         Approve selected comments.
 

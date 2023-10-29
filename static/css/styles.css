@@ -164,11 +164,15 @@ img {
 .custom-form textarea,
 .custom-form select {
   border: 1px solid var(--primary-black);
+  margin-block: 0.5rem;
 }
 
 .custom-form label {
   color: var(--primary-black);
   font-weight: bold;
+  margin-block: 0.5rem;
+  font-size: 1.2rem;
+  text-align: start;
 }
 
 /* FOOTER  SOCIAL ICONS */
@@ -245,7 +249,7 @@ img {
 
 /* ANIMATIONS */
 
-/* .fade-in {
+.fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   animation-duration: 500ms;
@@ -258,4 +262,4 @@ img {
   100% {
     opacity: 1;
   }
-} */
+}

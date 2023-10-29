@@ -12,7 +12,7 @@
           <div class="d-flex flex-column align-items-center text-center">
             {% include 'includes/trophy.html' with level=profile.profile.get_level %}
             <div class="mt-3">
-              <h4 class="text-capitalize">{{profile.username}}</h4>
+              <h1 class="text-capitalize">{{profile.username}}</h1>
                 {% include 'includes/level.html' with level=profile.profile.get_level %}
               <p class="text-secondary mb-1">
                 Joined: {{profile.date_joined|date:"F d, Y" }}
@@ -30,7 +30,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">First Name</h6>
+              <p class="mb-0">First Name</p>
             </div>
             <div class="col-sm-9 text-secondary text-capitalize">
               {{profile.first_name}}
@@ -40,7 +40,7 @@
 
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Last Name</h6>
+              <p class="mb-0">Last Name</p>
             </div>
             <div class="col-sm-9 text-secondary text-capitalize">
               {{profile.last_name}}
@@ -49,14 +49,14 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Email</h6>
+              <p class="mb-0">Email</p>
             </div>
             <div class="col-sm-9 text-secondary">{{profile.email}}</div>
           </div>
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Bio</h6>
+              <p class="mb-0">Bio</p>
             </div>
             <div class="col-sm-9 text-secondary">{{profile.profile.bio}}</div>
           </div>
