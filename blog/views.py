@@ -68,7 +68,7 @@ class CategoryPage(generic.ListView):
     """
 
     template_name = "category.html"
-    paginate_by = 3
+    paginate_by = 6
     model = Category
     context_object_name = "posts"
 
