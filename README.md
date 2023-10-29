@@ -41,6 +41,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
   - [Toggle Favourites](#toggle-favourites)
   - [Comment Card](#comment-card)
   - [Comment Form](#comment-form)
+  - [Error Pages](#comment-form)
   - [Future Features](#future-features)
 - [Testing](#testing)
 - [Bugs](#bugs)
@@ -55,6 +56,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
   - [Clone the Repository](#clone-the-repository)
   - [Run the Repository Locally](#run-the-repository-locally)
 - [Credits](#credits)
+  - [Content](#content)
   - [Media](#media)
   - [Code](#code)
   - [Acknowledgements](#acknowledgements)
@@ -513,6 +515,23 @@ The "Toggle Favorites" button allows authenticated users to quickly add or remov
 <img src="./documentation/images/features/commentform.png">
 </details>
 
+### Error Pages
+
+Custom Error pages are rendered to show the user what went wrong with their request. These error pages allow the user to redirect to the home page.
+
+<details><summary>400</summary>
+<img src="./documentation/images/features/commentform.png">
+</details>
+<details><summary>403</summary>
+<img src="./documentation/images/features/commentform.png">
+</details>
+<details><summary>404</summary>
+<img src="./documentation/images/features/commentform.png">
+</details>
+<details><summary>500</summary>
+<img src="./documentation/images/features/commentform.png">
+</details>
+
 ## Future Features
 
 1. I would like to include an API that can check the reg plate of a vehicle and get all the data for that vehicle. This way the users won't have to fill a very long form and it will improve the overall user experience.
@@ -649,11 +668,23 @@ The hidden variables are as follows
 
 ## Credits
 
+### Content
+
+All websites articles are written by me with the aid of promting CHATGPT. The AI Assisted in quickly outputting articles so the website was fleshed out.
+
 ### Media
 
 - [Placeholder](https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg)
 - [AI Image](https://www.risknet.de/en/topics/news-details/if-chat-gpt-becomes-superintelligent/)
 - [Abacus](https://www.wnyc.org/story/tools-of-the-trade-the-abacus/)
+- [Women in Tech](https://women-in-tech.org/)
+- [Web vs App](https://www.linkedin.com/pulse/mobile-developer-vs-web-choose-right-career-mircea-turcanu/)
+- [OOP](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP)
+- [Sleep and Code](https://medium.com/codex/sleep-more-code-more-aafa217fcb94)
+- [Portable Monitor](https://www.pcworld.com/article/609831/fopos-triple-laptop-monitor-is-a-crazy-cool-road-warriors-tool.html)
+- [Blue Light Glasses](https://edition.cnn.com/2023/08/17/health/blue-light-glasses-study-wellness/index.html)
+- [Beer and Code](https://www.eventbrite.com/o/show-me-your-code-beer-bratislava-28116838723)
+- [Hackathons](https://edison365.com/how-do-hackathons-work/)
 
 ### Code
 
