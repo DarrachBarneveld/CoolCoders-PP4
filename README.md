@@ -90,7 +90,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 4. As a User, I can view my favourites on my profile detail page so that I can reread my favourite articles [#20](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/20)
 5. As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community. [#36](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/36)
 6. As a User, I can delete my account so that I can remove myself, details and all content from the live website [#39](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/39)
-7. As a User, I can click on the footer contact social links so I can find out more information about the brand [#43](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/39)
+7. As a User, I can click on the footer contact social links so I can find out more information about the brand [#43](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/43)
 
 #### Website Owner/Developer
 
