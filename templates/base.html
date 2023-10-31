@@ -123,14 +123,15 @@
     </header>
 
     <!-- Message Notifications - Code Institute's I Think Therefore I Blog Source -->
-    <div class="flex container-sm my-2">
-      {% for message in messages %}
+    <div class="flex position-relative m-2">
+      {% comment %} {% for message in messages %} {% endcomment %}
       <div
-        class="alert {{ message.tags }} alert-info alert-dismissible fade show"
+        class="alert-fixed alert {{ message.tags }} alert-info alert-dismissible fade show"
         id="msg"
         role="alert"
       >
-        {{ message | safe }}
+        {% comment %} {{ message | safe }} {% endcomment %}
+        Comment created successfully! Review in progress!
         <button
           type="button"
           class="btn-close"
@@ -138,7 +139,7 @@
           aria-label="Close"
         ></button>
       </div>
-      {% endfor %}
+      {% comment %} {% endfor %} {% endcomment %}
     </div>
 
     <!-- Styling Banner background wavy line -->

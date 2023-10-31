@@ -155,6 +155,14 @@ form label {
   transform: scale(1.05);
 }
 
+/* MESSAGES */
+
+.alert-fixed {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+
 /* BANNER */
 .banner-border {
   position: absolute;

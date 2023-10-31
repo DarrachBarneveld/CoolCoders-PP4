@@ -177,7 +177,15 @@ class PostDetailPage(generic.View):
         post = get_object_or_404(Post, slug=slug)
         context = self.get_context_data(slug=slug)
 
-        if comment_form.is_valid():
+        if "delete_item" in request.POST:
+            comment_id = request.POST.get("item_id")
+            comment = Comment.objects.get(id=comment_id)
+            comment.delete()
+            messages.success(
+                self.request,
+                "Comment deleted successfully!")
+
+        elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user
             comment = comment_form.save(commit=False)
@@ -187,14 +195,6 @@ class PostDetailPage(generic.View):
                 self.request,
                 "Comment created successfully! Review in progress!"
             )
-
-        if "delete_item" in request.POST:
-            comment_id = request.POST.get("item_id")
-            comment = Comment.objects.get(id=comment_id)
-            comment.delete()
-            messages.success(
-                self.request,
-                "Comment deleted successfully!")
         else:
             messages.error(
                 self.request,
