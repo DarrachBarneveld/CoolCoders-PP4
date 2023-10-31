@@ -464,12 +464,12 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
                 self.request, "Profile update failed, please check your input"
             )
 
-        if form_name == "bio_form":
+        if form_name == "Biography":
             context["bio_form"] = form
-        elif form_name == "password_form":
+        elif form_name == "Password":
             context["password_form"] = form
             update_session_auth_hash(self.request, self.request.user)
-        elif form_name == "user_form":
+        elif form_name == "User details":
             context["user_form"] = form
 
         return render(request, self.template_name, context)
@@ -499,20 +499,20 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
             request.POST)
 
         if "bio_form" in request.POST:
-            return self.process_form(request, bio_form, "bio_form")
+            return self.process_form(request, bio_form, "Biography")
 
         if "password_form" in request.POST:
-            return self.process_form(request, password_form, "password_form")
+            return self.process_form(request, password_form, "Password")
 
         if "user_form" in request.POST:
-            return self.process_form(request, user_form, "user_form")
+            return self.process_form(request, user_form, "User details")
 
         # Delete user from database
         if "delete_item" in request.POST:
             try:
                 user = request.user
                 user.delete()
-                messages.success(request, "Account Deleted.")
+                messages.error(request, "Account Deleted.")
                 return redirect("home")
 
             except Exception as e:  # pylint: disable=broad-except
