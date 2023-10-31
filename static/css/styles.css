@@ -148,9 +148,11 @@ form label {
 }
 
 /* POST DETAIL */
-.btn-like {
-  border: none;
-  background: transparent;
+
+.btn-like:hover,
+.btn-like:focus {
+  filter: brightness(0.9);
+  transform: scale(1.05);
 }
 
 /* BANNER */
