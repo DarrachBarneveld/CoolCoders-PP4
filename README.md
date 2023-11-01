@@ -542,6 +542,8 @@ In depth testing documentation can be found [here.](./TESTING.md)
 
 ## Bugs
 
+Here is a list of all the major bugs encountered throughout development. Links to specific issues provide a more in depth analysis of how they were identified and resolved. This can also be found documented in [TESTING.md](./TESTING.md)
+
 | Bug                                                                                                                        | Status |
 | -------------------------------------------------------------------------------------------------------------------------- | ------ |
 | [Profile routing based on slug errors #31](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/31)                   | Closed |

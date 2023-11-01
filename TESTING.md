@@ -25,6 +25,7 @@
   - [Sign Up Page](#sign-up-page)
   - [Sign In Page](#sign-in-page)
   - [Log Out Page](#log-out-page)
+- [Bugs](#bugs)
 
 ## User Story Testing
 
@@ -392,3 +393,15 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Logout Button | Click          | User session is Logged out                     | <mark>Pass</mark> |
 | Logout Button | Click          | Redirected to Home page                        | <mark>Pass</mark> |
 | Form Button   | Hover/Focus    | Darken Background                              | <mark>Pass</mark> |
+
+## Bugs
+
+| Bug                                                                                                                        | Status |
+| -------------------------------------------------------------------------------------------------------------------------- | ------ |
+| [Profile routing based on slug errors #31](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/31)                   | Closed |
+| [UpdateView Profile throwing errors with multiple forms #32](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/32) | Closed |
+| [Content creating widget not responsive #37](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/37)                 | Closed |
+| [Pagination on profile page renders only first results #38](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/38)  | Closed |
+| [Lighthouse Performance Scores #41](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/41)                          | Closed |
+| [User Edit Profile Form Autofocus #42](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/42)                       | Closed |
+| [UX/UI Final Sweep #44](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/44)                                      | Closed |
