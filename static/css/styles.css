@@ -26,11 +26,6 @@ body {
   background: linear-gradient(360deg, #000000, #434343);
 }
 
-img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
 form input,
 form button {
   margin-block: 1rem;
@@ -43,6 +38,18 @@ form label {
 .card-img-sm {
   width: 100px;
   height: 100px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.post-detail-image {
+  object-fit: cover;
+  width: 100%;
 }
 
 .text-purple {
