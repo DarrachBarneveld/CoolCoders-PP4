@@ -550,6 +550,7 @@ In depth testing documentation can be found [here.](./TESTING.md)
 | [Pagination on profile page renders only first results #38](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/38)  | Closed |
 | [Lighthouse Performance Scores #41](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/41)                          | Closed |
 | [User Edit Profile Form Autofocus #42](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/42)                       | Closed |
+| [UX/UI Final Sweep #44](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/44)                                      | Closed |
 
 ## Technologies And Languages
 
@@ -695,9 +696,7 @@ Credit to [Codemy.com](https://www.youtube.com/watch?v=H8MmNqDyra8&t=556s) for h
 
 Credit to [Maximilian Schwarzmüller](https://www.udemy.com/course/python-django-the-practical-guide/) for helping me understand django based view classes to a much higher degree.
 
-Credit to [Dr Angela Yu](https://www.udemy.com/course/python-django-the-practical-guide/) for assisting my knowledge in python basics such as list comprehension
-
-Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for providing the modal component
+Credit to [Dr Angela Yu](https://www.udemy.com/course/100-days-of-code/) for assisting my knowledge in python basics such as list comprehension
 
 Credit to [Stackoverflow](https://stackoverflow.com/questions/10511873/can-django-pagination-do-multiple-paginations-per-page) for understand the correct approach for implementing multiple pagination on a single view class.
 
@@ -706,5 +705,5 @@ Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for p
 ### Acknowledgements
 
 - A huge thanks to my mentor AntonioRodriguez who really helped me understand the MVC architechture seen in this project and giving me support above and beyond what was expected.
-- Stef Cruz, Shane Donlon, Tanguy L'Alexandre and Alan Bushell for manually testing and finding any potential errors before submission
+- Stef Cruz, Shane Donlon, Tanguy L'Alexandre, Callum Dennis and Alan Bushell for manually testing and finding any potential errors before submission
 - The Codu community for providing inspiration and motivation to continue my learning.
