@@ -91,6 +91,8 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 5. As a User, I can level up based on the number of posts I have contributed, so that I can be recognised for my active participation and contributions to the community. [#36](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/36)
 6. As a User, I can delete my account so that I can remove myself, details and all content from the live website [#39](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/39)
 7. As a User, I can click on the footer contact social links so I can find out more information about the brand [#43](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/43)
+8. As a User, I can view my posts that are pending approval on my profile page so that I can track the status of my submitted content. [#45](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/45)
+9. As a User, I want to see a user-friendly interface when I have no posts or favourites on my profile page. Additionally, I want to have an option to easily add new content. [#46](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/46)
 
 #### Website Owner/Developer
 
@@ -531,10 +533,31 @@ Examples below are 403, 404
 
 ## Future Features
 
-1. I would like to include an API that can check the reg plate of a vehicle and get all the data for that vehicle. This way the users won't have to fill a very long form and it will improve the overall user experience.
-2. I would like to update the database with car models for the Irish market. The models currently loaded are for the USA market.
-3. I would like to expand the application by adding inbox feature and the option for the users to send and reply to messages.
-4.
+Implementing future features is essential to maintain website growth and user retention because they not only keep the platform relevant and competitive but also provide added value to users, enticing them to return and engage with fresh, exciting content and functionalities.
+
+### Search Feature
+
+Implement a search bar in the navigation menu to allow users to search for specific users or articles by entering text, enhancing content discoverability.
+
+### Password Reset with Email Validation
+
+Introduce a secure and user-friendly password reset system that relies on email validation, making it easier for users to regain access to their accounts.
+
+### Messaging System/Ticket System
+
+- Develop a messaging system that enables users to send direct messages to each other, fostering user interaction.
+- Alternatively, create a ticket system where users can contact the developer for technical issues or support, providing a more organized and responsive channel for communication. This is especially important because the current contact method is limited to an email in the footer, which may not be as user-friendly.
+
+### Article Sharing
+
+4. Add a share button to articles, allowing users to effortlessly share content on their social media platforms, increasing the website's visibility and user engagement.
+
+These features have been added to the Agile Project Board in the unresolved column so they can be implemented at a later date.
+
+[Search Feature](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/48)
+[Password Reset with Email Validation](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/49)
+[Messaging System/Ticket System](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/50)
+[Article Sharing](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/51)
 
 ## Testing
 
@@ -553,6 +576,7 @@ Here is a list of all the major bugs encountered throughout development. Links t
 | [Lighthouse Performance Scores #41](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/41)                          | Closed |
 | [User Edit Profile Form Autofocus #42](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/42)                       | Closed |
 | [UX/UI Final Sweep #44](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/44)                                      | Closed |
+| [Refresh Routing on changed Username #47](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/47)                    | Open   |
 
 ## Technologies And Languages
 
