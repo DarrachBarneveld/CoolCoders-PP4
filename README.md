@@ -1,5 +1,7 @@
 # CoolCoders-PP4
 
+[(Developer: Darrach Barneveld)](https://github.com/DarrachBarneveld)
+
 [Link to deployed site](https://coolcoders-b69260c4617a.herokuapp.com/)
 
 <hr>
@@ -657,6 +659,8 @@ To guarantee the proper deployment of the application on Heroku, it's essential 
 
 Secondly a Procfile is required to allow Heroku deployment to be properly configured to a gunicorn web app.
 
+Thirdly in settings.py configure the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost'], make sure all static files and directorys are configured correctly.
+
 Finally all environment variables on the env.py which gitignored on the repo must be configured correctly with the database url, storage url and secret key.
 
 The hidden variables are as follows
@@ -664,6 +668,7 @@ The hidden variables are as follows
 - SECRET_KEY
 - DATABASE_URL
 - CLOUDINARY_URL
+- PORT
 
 ### Deploying on Heroku
 

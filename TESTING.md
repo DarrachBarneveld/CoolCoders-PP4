@@ -89,6 +89,9 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 
 The HTML validation errors are attributed to the integration of two components: the Summernote widget and the rendering of Django password forms with Crispy Forms. These errors, while minor, are challenging to address without uninstalling these packages. Given functionality remains as intended and these packages provide significant value, functionality and usability is prioritised over resolving these specific HTML validation issues.
 
+SummerNote HTML Issues
+<img src="./documentation/testing/validation/html/htmlsummernote.png">
+
 ### CSS
 
 Test Results CSS <mark>PASS<mark>
