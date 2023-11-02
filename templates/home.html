@@ -16,7 +16,7 @@
 
 
   <div class="row pt-md-5">
-    <div class="col-lg-4 mb-5">
+    <section class="col-lg-4 mb-5">
       <h2 class="bg-green rounded-3 text-black text-uppercase fw-bolder">
         <strong><em>Editors Pick</em></strong>
       </h2>
@@ -24,9 +24,9 @@
        <!-- Render Editors Pick Post Card -->
       {% include "includes/post-preview.html" %}
       {% endfor %}
-    </div>
+    </section>
 
-    <div class="col-lg-4 mb-5">
+    <section class="col-lg-4 mb-5">
       <h2 class="bg-green rounded-3 text-black text-uppercase fw-bolder">
         <strong><em>Trending Posts</em></strong>
       </h2>
@@ -34,10 +34,10 @@
        <!-- Render Trending Post Cards -->
       {% include "includes/post-snippet.html" %}
       {% endfor %}
-    </div>
+    </section>
 
 
-    <div class="col-lg-4 mb-5">
+    <section class="col-lg-4 mb-5">
       <h2 class="bg-green rounded-3 text-black text-uppercase fw-bolder">
         <strong><em>Popular Post</em></strong>
       </h2>
@@ -45,7 +45,7 @@
       <!-- Render Popular Post Card -->
       {% include "includes/post-preview.html" %}
       {% endfor %}
-    </div>
+    </section>
   </div>
 </div>
 
