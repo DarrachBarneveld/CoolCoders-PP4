@@ -94,6 +94,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 7. As a User, I can click on the footer contact social links so I can find out more information about the brand [#43](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/43)
 8. As a User, I can view my posts that are pending approval on my profile page so that I can track the status of my submitted content. [#45](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/45)
 9. As a User, I want to see a user-friendly interface when I have no posts or favourites on my profile page. Additionally, I want to have an option to easily add new content. [#46](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/46)
+10. As a User, I want to see a user-friendly interface when I have no posts or favourites on my profile page. Additionally, I want to have an option to easily add new content. [#52](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/52)
 
 #### Website Owner/Developer
 
