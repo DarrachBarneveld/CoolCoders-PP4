@@ -393,12 +393,16 @@ class ProfilePageView(generic.DetailView):
         posts_page = posts_paginator.get_page(posts_page_number)
         favourites_page = favourites_paginator.get_page(favourites_page_number)
 
+        pending_posts = Post.objects.filter(author=user, approved=False)
+
         context["total_posts"] = total_posts
         context["total_comments"] = total_comments
         context["favourites"] = favourites
         context["total_likes"] = total_likes
         context["posts_page"] = posts_page
         context["favourites_page"] = favourites_page
+        context["pending_posts"] = pending_posts
+
 
         return context
 
