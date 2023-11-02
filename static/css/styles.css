@@ -42,6 +42,13 @@ form label {
   object-fit: cover;
 }
 
+.card-img-pending {
+  width: 100%;
+  height: 100px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .card-img-top {
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -82,6 +89,10 @@ form label {
 
 .bg-green {
   background: var(--neon-green);
+}
+
+.border-green {
+  border: 3px solid var(--neon-green) !important;
 }
 
 /* NAVIGATION */
@@ -137,7 +148,6 @@ form label {
 }
 
 /* ARTICLE PREVIEW CARD */
-
 .card-title {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -152,6 +162,19 @@ form label {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+/* PENDING POST CARD */
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* POST DETAIL */
