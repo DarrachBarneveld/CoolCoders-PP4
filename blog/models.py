@@ -28,7 +28,7 @@ class Profile(models.Model):
     def get_level(self):
         """To get a users current level based on post count"""
 
-        post_count = self.user.blog_posts.count()
+        post_count = self.user.blog_posts.filter(approved=True).count()
         new_level = (post_count // 3) + 1
 
         self.level = new_level
@@ -39,7 +39,7 @@ class Profile(models.Model):
     def get_progress(self):
         """To get a users progress to the next level"""
 
-        post_count = self.user.blog_posts.count()
+        post_count = self.user.blog_posts.filter(approved=True).count()
         progress = (post_count % 3) / 3 * 100
 
         if self.level == 4:
