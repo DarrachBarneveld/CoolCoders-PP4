@@ -190,6 +190,20 @@ Benefits of key features and the EPIC Milestone Approach:
 
 ## Design
 
+The primary design goal of the Coolcoders was to focus of ease of navigation for users. The main purpose was not only the content of the website but the users/community.
+
+The primary objective of our website design was to ensure an incredibly user-friendly and efficient navigation experience. A strong emphasis on user-centricity and content accessibility. This entailed making user profile pages, posts, and comments easily reachable, thus simplifying the overall navigation process.
+
+I wanted to minimize page transitions and streamline actions by introducing a versatile, reusable confirm-delete modal.
+
+I wanted for all forms within the update profile page to provide users with a comprehensive and straightforward interface on a single page without further navigation required similarly seen on other sites. This proved to be one of the most challenging aspects of the project.
+
+Similar to this I wanted all user posts/favourites to be displayed on a single profile page so multiple pagination options was needed. This feature allows users to seamlessly browse through their posts and favorites without the hassle of switching pages, especially when dealing with a significant amount of content.
+
+Various navigation methods and post previews and on post detail pages, ensuring that our users had a rich, engaging experience with our content.
+
+This commitment to intuitive navigation and user-focused design principles remained at the forefront of our project's development.
+
 ### Colour Scheme
 
 The website adopts a soothing and polished color scheme, mirroring the iconic colors of the MacBook Pro. These are black, light gray and white. This palette creates an overall professional and user-friendly ambiance, utilizing subtle variations in shade and transparency to direct user attention and elevate the website's visual allure. A hint of glassmorphism can be scene on article cards to futher the illusion of browsing on a tech item.
