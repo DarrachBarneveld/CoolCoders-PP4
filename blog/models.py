@@ -36,6 +36,17 @@ class Profile(models.Model):
 
         return self.level
 
+    def get_progress(self):
+        """To get a users progress to the next level"""
+
+        post_count = self.user.blog_posts.count()
+        progress = (post_count % 3) / 3 * 100
+
+        if self.level == 4:
+            return 100
+
+        return int(progress)
+
 
 def create_user_profile(instance, created, *args, **kwargs):
     """

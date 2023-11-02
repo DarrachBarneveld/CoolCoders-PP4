@@ -75,12 +75,24 @@ form label {
   color: var(--silver);
 }
 
+.bg-silver {
+  background-color: var(--silver);
+}
+
 .gold {
   color: var(--gold);
 }
 
+.bg-gold {
+  background-color: var(--gold);
+}
+
 .platinum {
   color: var(--platinum);
+}
+
+.bg-platinum {
+  background-color: var(--platinum);
 }
 
 .bg-purple {

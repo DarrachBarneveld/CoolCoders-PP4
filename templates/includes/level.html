@@ -1,9 +1,24 @@
 {% if level == 1 %}
-    <p class='bronze bg-dark p-1 m-1 rounded-2'>Bronze User</p>
+    <p class='bronze bg-dark p-1 my-1 rounded-2 w-100'>Bronze User</p>
+    <div class="progress w-100 border" style='height:22px'>
+        <span class='bg-transparent position-absolute text-capitalize' >{{progress}}% to silver</span>
+        <div class="progress-bar progress-bar-striped bg-silver" role="progressbar" style="width: {{progress}}%;" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
 {% elif level == 2 %}
-    <p class='silver bg-dark p-1 m-1 rounded-2'>Silver Member</p>
+    <p class='silver bg-dark p-1 my-1 rounded-2 w-100'>Silver Member</p>
+    <div class="progress w-100 border" style='height:22px'>
+        <span class='bg-transparent position-absolute text-capitalize' >{{progress}}% to gold</span>
+        <div class="progress-bar progress-bar-striped bg-gold" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100">{{progress}}</div>
+    </div>
 {% elif level == 3 %}
-    <p class='gold bg-dark p-1 m-1 rounded-2'>Gold Member</p>
+    <p class='gold bg-dark p-1 my-1 rounded-2 w-100'>Gold Member</p>
+    <span class='bg-transparent position-absolute text-capitalize' >{{progress}}% to platinum</span>
+    <div class="progress w-100 border" style='height:22px'>
+        <div class="progress-bar progress-bar-striped bg-platinum" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
 {% elif level >= 4 %}
-    <p class='platinum bg-dark p-1 m-1 rounded-2'>Platinum Member</p>
+    <p class='platinum bg-dark p-1 my-1 rounded-2 w-100'>Platinum Member</p>
+    <div class="progress w-100 border" style='height:22px'>
+        <div class="progress-bar progress-bar-striped bg-platinum" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
 {% endif %}
