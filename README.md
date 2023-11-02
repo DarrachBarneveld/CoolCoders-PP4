@@ -39,7 +39,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
   - [Sign Out Page](#sign-out-page)
   - [Article Preview Card](#article-preview-card)
   - [Notification Messages](#notification-messages)
-  - [Confirmation Modal](#category-model)
+  - [Confirmation Modal](#confirmation-modal)
   - [Toggle Favourites](#toggle-favourites)
   - [Comment Card](#comment-card)
   - [Comment Form](#comment-form)

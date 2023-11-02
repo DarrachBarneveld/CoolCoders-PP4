@@ -102,7 +102,7 @@ class PostDetailPage(generic.View):
 
     """
 
-    template_name = "post-detail.html"
+    template_name = "post_detail.html"
 
     def get_context_data(self, **kwargs):
         """
@@ -394,8 +394,6 @@ class ProfilePageView(generic.DetailView):
         favourites_page = favourites_paginator.get_page(favourites_page_number)
 
         pending_posts = Post.objects.filter(author=user, approved=False)
-
-        print(pending_posts)
 
         context["total_posts"] = total_posts
         context["total_comments"] = total_comments
