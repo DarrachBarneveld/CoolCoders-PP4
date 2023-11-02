@@ -131,7 +131,7 @@ The website was tested on a variety of devices, including Desktop, Laptop, Huawe
 
 ### Lighthouse
 
-Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. At first I received the warning _'Background and foreground colors do not have a sufficient contrast ratio'_ in relation to buttons where I had used the Bootstrap class `btn-info`. After I updated the button styling I received the below scores.
+Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance.
 
 | Page           | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
 | -------------- | :---------: | :-----------: | :------------: | :-: | --------------------------------------------------------------------------------------------------------------------------- |
@@ -241,7 +241,7 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | --------------------- | ----------- | --------------------------------------------------- | ----------------- |
 | Article               | Display     | The articles title/content and author are displayed | <mark>Pass</mark> |
 | Author Link           | Click       | Redirect to authors profile page                    | <mark>Pass</mark> |
-| Edit Button           | Click       | Redirect to edit post page profile page             | <mark>Pass</mark> |
+| Edit Button           | Click       | Redirect to edit post page                          | <mark>Pass</mark> |
 | Edit Button           | Display     | Render for only authneticated post author           | <mark>Pass</mark> |
 | Like Button           | Display     | Render Thumbs up toggle if authenticated            | <mark>Pass</mark> |
 | Like Button           | Display     | If Liked render a blue thumbs up button             | <mark>Pass</mark> |
@@ -261,6 +261,7 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Comment Form Login    | Click       | Redirected user to sign in page                     | <mark>Pass</mark> |
 | Popular Posts         | Display     | 3 popular posts of the same category are displayed  | <mark>Pass</mark> |
 | Like Button           | Hover/Focus | Darken Text and increase scale                      | <mark>Pass</mark> |
+| Heart Button          | Hover/Focus | Increase scale                                      | <mark>Pass</mark> |
 | Author Link           | Hover/Focus | Darken Text                                         | <mark>Pass</mark> |
 | Edit Button           | Hover/Focus | Darken Background                                   | <mark>Pass</mark> |
 | Like Button           | Hover/Focus | Cursor Pointer                                      | <mark>Pass</mark> |
@@ -291,7 +292,8 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Submit Input(Invalid) | Click          | Toast notification error message appears           | <mark>Pass</mark> |
 | Submit Input(Valid)   | Click          | Form is submitted and notification message appears | <mark>Pass</mark> |
 | Submit Input(Valid)   | Click          | User is redirected to home page                    | <mark>Pass</mark> |
-| Post Title            | Click          | No duplicated titles are allowed                   | <mark>Pass</mark> |
+| Submit Input(Valid)   | Submit         | Post sent to DB for approval                       | <mark>Pass</mark> |
+| Post Title            | Submit         | No duplicated titles are allowed                   | <mark>Pass</mark> |
 | Error Context         | Submit         | If user forces submit error contexts are displayed | <mark>Pass</mark> |
 | Submit Button         | Hover/Focus    | Darken Background                                  | <mark>Pass</mark> |
 
@@ -307,12 +309,14 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Image Input           | Selected       | Display selected image name                        | <mark>Pass</mark> |
 | Image Input           | None           | Current image selected                             | <mark>Pass</mark> |
 | Current Image         | None           | Current image link is displayed                    | <mark>Pass</mark> |
+| Current Image         | Click          | Redirected to image display                        | <mark>Pass</mark> |
 | Submit Input(Invalid) | Click          | Form is not submitted and error messages appear    | <mark>Pass</mark> |
 | Submit Input(Invalid) | Click          | Toast notification error message appears           | <mark>Pass</mark> |
 | Submit Input(Valid)   | Click          | Form is submitted and notification message appears | <mark>Pass</mark> |
 | Submit Input(Valid)   | Click          | User is redirected to home page                    | <mark>Pass</mark> |
+| Submit Input(Valid)   | Submit         | Post sent to DB for approval                       | <mark>Pass</mark> |
 | Delete Button         | Click          | Delete Confirmation Modal appears                  | <mark>Pass</mark> |
-| Post Title            | Click          | No duplicated titles are allowed                   | <mark>Pass</mark> |
+| Post Title            | Submit         | No duplicated titles are allowed                   | <mark>Pass</mark> |
 | Error Context         | Submit         | If user forces submit error contexts are displayed | <mark>Pass</mark> |
 | Submit Button         | Hover/Focus    | Darken Background                                  | <mark>Pass</mark> |
 | Delete Button         | Hover/Focus    | Darken Background                                  | <mark>Pass</mark> |
