@@ -73,7 +73,7 @@ class CustomPasswordChangeForm(PasswordChangeForm):
     """
     A customized form for changing a user's password.
 
-    This form inherits from Django's built-in PasswordChangeForm and provides 
+    This form inherits from Django's built-in PasswordChangeForm and provides
     some custom modifications:
 
     """

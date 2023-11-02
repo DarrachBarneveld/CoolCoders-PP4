@@ -151,4 +151,3 @@ class Comment(models.Model):
         """Return a string representation of the object (the post's title)."""
 
         return f"Comment {self.body} by {self.name}"
-        

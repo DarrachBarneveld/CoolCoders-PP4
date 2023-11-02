@@ -405,7 +405,6 @@ class ProfilePageView(generic.DetailView):
         context["favourites_page"] = favourites_page
         context["pending_posts"] = pending_posts
 
-
         return context
 
 
