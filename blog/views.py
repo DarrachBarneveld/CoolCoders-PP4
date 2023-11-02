@@ -395,6 +395,8 @@ class ProfilePageView(generic.DetailView):
 
         pending_posts = Post.objects.filter(author=user, approved=False)
 
+        print(pending_posts)
+
         context["total_posts"] = total_posts
         context["total_comments"] = total_comments
         context["favourites"] = favourites

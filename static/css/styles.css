@@ -167,7 +167,7 @@ form label {
 /* PENDING POST CARD */
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
   display: flex;
