@@ -101,6 +101,11 @@ Test Results CSS <mark>PASS<mark>
 
 The only JS used in this project was refactored from Code Institute's I Think Therefore I Blog project into a seperate JS file.
 
+Global bootstrap variable acheived through use of the bootstrap cdn script tag in base.html template
+
+Test Results JS <mark>PASS<mark>
+<img src="./documentation/testing/validation/js/jshint.png">
+
 ### Python
 
 | File     | Validator                                                                                                              | Result            |
