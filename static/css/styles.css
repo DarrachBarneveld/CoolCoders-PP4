@@ -262,6 +262,19 @@ form label {
 
 /* FOOTER  SOCIAL ICONS */
 
+.email:hover,
+.email:focus {
+  transition: all 0.2s;
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  cursor: pointer;
+  color: white !important;
+  background-color: #6c33a3;
+  background: -moz-linear-gradient(top, #8241b8, #6c33a3);
+  background: -ms-linear-gradient(top, #8241b8, #6c33a3);
+  background: -webkit-linear-gradient(top, #8241b8, #6c33a3);
+}
+
 .github:hover,
 .github:focus {
   transition: all 0.2s;

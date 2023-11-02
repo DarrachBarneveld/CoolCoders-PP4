@@ -41,6 +41,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
   - [Toggle Favourites](#toggle-favourites)
   - [Comment Card](#comment-card)
   - [Comment Form](#comment-form)
+  - [Pending Post](#pending-post)
   - [Error Pages](#comment-form)
   - [Future Features](#future-features)
 - [Testing](#testing)
@@ -171,6 +172,12 @@ The project's scope is to create and maintain "Cool Coders," an online platform 
 - Admins can perform all CRUD operations on site content from an admin portal
 - Admins must approve user created content before it is live
 - Admins can delete and modify users accounts from the administration portal
+
+8. [EPIC - Enchancements:](https://github.com/DarrachBarneveld/CoolCoders-PP4/milestone/10)
+
+- Improvements to UI design to simulate more emotional responses
+- Increased navigation capabilities to improve UX
+- Possible additional future features for better UX/UI
 
 Benefits of key features and the EPIC Milestone Approach:
 
@@ -518,6 +525,14 @@ The "Toggle Favorites" button allows authenticated users to quickly add or remov
 <img src="./documentation/images/features/commentform.png">
 </details>
 
+### Pending Post
+
+The pending post card shows users their pending post approvals in one convenient card for quick and easy management. The can edit the post by clicking on the overlay
+
+<details><summary>Pending Post</summary>
+<img src="./documentation/images/features/pending-post.png">
+</details>
+
 ### Error Pages
 
 Custom Error pages are rendered to show the user what went wrong with their request. These error pages allow the user to redirect to the home page.
@@ -554,10 +569,10 @@ Introduce a secure and user-friendly password reset system that relies on email 
 
 These features have been added to the Agile Project Board in the unresolved column so they can be implemented at a later date.
 
-[Search Feature](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/48)
-[Password Reset with Email Validation](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/49)
-[Messaging System/Ticket System](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/50)
-[Article Sharing](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/51)
+- [Search Feature](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/48)
+- [Password Reset with Email Validation](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/49)
+- [Messaging System/Ticket System](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/50)
+- [Article Sharing](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/51)
 
 ## Testing
 
