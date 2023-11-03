@@ -526,3 +526,9 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
             return redirect("home")
 
         return render(request, self.template_name, context)
+
+
+class CodeOfConductView(generic.TemplateView):
+    template_name = 'code_of_conduct.html'
+
+    

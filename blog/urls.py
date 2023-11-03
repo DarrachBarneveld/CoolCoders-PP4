@@ -7,7 +7,7 @@ urlpatterns = [
     path("", views.HomePageView.as_view(), name="home"),
     path("add-post/", views.AddPostPage.as_view(), name="add-post"),
     path(
-        "edit_post/<slug:slug>/",
+        "edit-post/<slug:slug>/",
         views.EditPostPage.as_view(),
         name="edit_post"),
     path(
@@ -15,11 +15,11 @@ urlpatterns = [
         views.ProfilePageView.as_view(),
         name="profile"),
     path(
-        "update_profile/",
+        "update-profile/",
         views.UpdateProfileView.as_view(),
         name="update_profile"),
     path(
-        "<slug:slug>/",
+        "category/<slug:slug>/",
         views.CategoryPage.as_view(),
         name="index"),
     path(
@@ -27,4 +27,9 @@ urlpatterns = [
         views.PostDetailPage.as_view(),
         name="post-detail"),
     path("like/<slug:slug>", views.PostLike.as_view(), name="post_like"),
+    path(
+        'code-of-conduct/',
+        views.CodeOfConductView.as_view(),
+        name='code_of_conduct'
+        )
 ]
