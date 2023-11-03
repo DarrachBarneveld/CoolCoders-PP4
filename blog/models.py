@@ -7,9 +7,6 @@ from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 
-# Create your models here.
-
-
 class Profile(models.Model):
     """
     Model to represent extend auth User Class to add addition
@@ -126,7 +123,7 @@ class Post(models.Model):
     def total_comments(self):
         """To calculate the total comments on a post"""
 
-        return self.comments.filter(approved=True).count()
+        return self.comments.count()
 
     def get_absolute_url(self):
         """Return the absolute URL for editing this post."""
@@ -151,7 +148,6 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
 
     class Meta:
         """To display the comments by created_on in ascending order"""

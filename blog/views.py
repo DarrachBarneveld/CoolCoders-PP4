@@ -117,7 +117,7 @@ class PostDetailPage(generic.View):
 
         slug = kwargs.get("slug")
         post = get_object_or_404(Post, slug=slug)
-        comments = post.comments.filter(approved=True)
+        comments = post.comments
         context = {
             "post": post,
             "comments": comments.order_by("-created_on"),
@@ -193,7 +193,7 @@ class PostDetailPage(generic.View):
             comment.save()
             messages.success(
                 self.request,
-                "Comment created successfully! Review in progress!"
+                "Comment created successfully!"
             )
         else:
             messages.error(
@@ -377,8 +377,7 @@ class ProfilePageView(generic.DetailView):
 
         # Generate total number of comments on authors posts
         total_comments = (
-            Comment.objects.filter(post__in=posts, approved=True)
-            .count()
+            Comment.objects.filter(post__in=posts).count()
             )
 
         # Generate total number of likes of all posts
