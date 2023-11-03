@@ -529,6 +529,6 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
 
 
 class CodeOfConductView(generic.TemplateView):
-    template_name = 'code_of_conduct.html'
+    """A view for the "Code of Conduct" page."""
 
-    
+    template_name = 'code_of_conduct.html'

@@ -34,6 +34,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
   - [Profile Page](#profile-page)
   - [Edit/Add Post Page](#addedit-post-page)
   - [Edit Profile Page](#edit-profile-page)
+  - [Code of Conduct Page](#code-of-conduct-page)
   - [Sign Up Page](#sign-up-page)
   - [Sign In Page](#sign-in-page)
   - [Sign Out Page](#sign-out-page)
@@ -109,6 +110,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
 7. As the Site Owner, I can view users and their profiles/content through the website's admin interface, allowing me to manage site users. [#29](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/29)
 8. As a Developer, I want to ensure the styling and theme of the website are consistent, free from CSS errors, and provide an intuitive and easy-to-use UI/UX so that users easily digest content and perform all actions with ease. [#34](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/34)
 9. As a Developer, I can show custom error pages redirect the user to the home page, so that I have a consistent experience even when encountering errors on the website. [#40](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/40)
+10. As a Website Owner, I can have a "Code of Conduct" page with a list of conduct rules, so that users understand and adhere to the community guidelines. [#53](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/53)
 
 ### Site Goals
 
@@ -266,6 +268,9 @@ The font used in this project is Segoe UI Roboto, which compliments the techical
 <details><summary>Edit Profile</summary>
 <img src="./documentation/images/wireframes/desktop/editprofilepage-desktop.png">
 </details>
+<details><summary>Code Of Conduct</summary>
+<img src="./documentation/images/wireframes/desktop/codeofconduct-desktop.png">
+</details>
 <details><summary>Login/Register</summary>
 <img src="./documentation/images/wireframes/desktop/login-register-desktop.png">
 </details>
@@ -289,6 +294,9 @@ The font used in this project is Segoe UI Roboto, which compliments the techical
 </details>
 <details><summary>Edit Profile</summary>
 <img src="./documentation/images/wireframes/mobile/editprofilepage-mobile.png">
+</details>
+<details><summary>Code Of Conduct</summary>
+<img src="./documentation/images/wireframes/mobile/codeofconductpage-mobile.png.png">
 </details>
 <details><summary>Navbar</summary>
 <img src="./documentation/images/wireframes/mobile/navbar-mobile.png">
@@ -460,6 +468,20 @@ The Edit User Profile Page ensures a personalized and adaptable user experience,
 <img src="./documentation/images/features/editprofile.png">
 </details>
 
+### Code of Conduct Page
+
+The Code of Conduct Page on Cool Coders is a fundamental resource that outlines the community's behavioral guidelines and expectations. Here's what this page covers:
+
+1. Understanding Community Rules: Users can review and familiarise themselves with the rules and expectations set forth by Cool Coders. This knowledge is essential for maintaining a positive and respectful online environment.
+2. Promoting Respectful Interaction: The code of conduct emphasises the importance of respectful communication and interactions within the Cool Coders community, fostering a welcoming atmosphere.
+3. Consequences of Non-Compliance: Users will find information regarding the consequences of not adhering to the established guidelines. This may include warnings, suspensions, or account bans in extreme cases.
+
+The Code of Conduct Page serves as a critical reference point for all members, ensuring a harmonious and inclusive environment within the Cool Coders community.
+
+<details><summary>Code of Conduct</summary>
+<img src="./documentation/images/features/codeofconduct.png">
+</details>
+
 ### Sign Up page
 
 This page comprises a form with fields for entering a username and password. Beneath the form is the sign up button which submits the form. Below the form is a redirect to the register page if the user does not have an account. Click the remember me checkbox to remain logged in as a session.
@@ -470,7 +492,7 @@ This page comprises a form with fields for entering a username and password. Ben
 
 ### Sign In page
 
-It features a form with fields for inputting name, email, username, password, and password confirmation. Underneath the form, there is a link to log in for users with existing accounts, followed by the signup button. After signup, users receive a welcome email at the provided email address and are then directed to the profile page update form, where they can personalize their profiles.
+It features a form with fields for inputting name, email, username, password, and password confirmation. Underneath the form, there is a link to log in for users with existing accounts, followed by the signup button. After signup, users receive a welcome email at the provided email address and are then directed to the profile page update form, where they can personalise their profiles.
 
 <details><summary>Sign In</summary>
 <img src="./documentation/images/features/signin.png">
