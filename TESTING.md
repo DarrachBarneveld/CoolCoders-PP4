@@ -11,6 +11,7 @@
 - [Device Testing](#device-testing)
 - [Lighthouse](#Lighthouse)
 - [Manual Testing](#manual-testing)
+
   - [Site Navigation](#site-navigation)
   - [Home Page](#home-page)
   - [Category Page](#category-page)
@@ -25,6 +26,8 @@
   - [Sign Up Page](#sign-up-page)
   - [Sign In Page](#sign-in-page)
   - [Log Out Page](#log-out-page)
+  - [Code of Conduct Page](#code-of-conduct-page)
+
 - [Bugs](#bugs)
 
 ## User Story Testing
@@ -157,7 +160,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Sign Up         |     99      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
 | Sign In         |     100     |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
 | Sign Out        |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutdesktop.png"></details>             |
-| Code of Conduct |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutdesktop.png"></details>             |
+| Code of Conduct |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/codeofconductdesktop.png"></details>       |
 |                 |             |               |                |     |
 | **Mobile**      |             |               |                |     |
 | Home            |     90      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homemobile.png"></details>                     |
@@ -170,6 +173,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Sign Up         |     98      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signupmobile.png"></details>                |
 | Sign In         |     99      |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signinmobile.png"></details>                |
 | Sign Out        |     98      |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutmobile.png"></details>              |
+| Code of Conduct |     98      |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/codeofconductmobie.png"></details>         |
 
 Lighthouse Iframe summernote widget error. This error dropped the accessibilty score of some pages and was due to the summernote external package. The error was left unresolved.
 

@@ -26,6 +26,7 @@ Cool Coders is your go-to hub for all things tech, offering a wealth of insightf
     - [User Stories Issues](#user-stories---issues)
     - [MoSCoW prioritization](#moscow-prioritization)
     - [GitHub Projects](#github-projectskanban)
+    - [Late Design Changes](#late-design-changes)
 - [Features](#features)
   - [Navigation Header](#navigation-header)
   - [Footer](#footer)
@@ -224,7 +225,7 @@ The User model is an integral component of Django Allauth, featuring pre-establi
 
 #### Profile Model
 
-Profile Model: The Profile Model provides a snapshot of each user's presence on the platform, encapsulating their information, activities, and preferences. It often includes fields for user-specific data such as name, bio and slug. It is has a one to one relationship with the auth User Model
+Profile Model: The Profile Model provides a snapshot of each user's presence on the platform, encapsulating their information, activities, and preferences. It often includes fields for user-specific data such as name, bio and level as well as custom methods. It is has a one to one relationship with the auth User Model
 
 #### Category Model
 
@@ -349,6 +350,10 @@ The project adopted a basic Kanban Board structure, which was divided into colum
 <details><summary>Kanban</summary>
 <img src="./documentation/images/kanban.png">
 </details>
+
+#### Late Design Changes
+
+In response to user feedback during alpha testing, I made a change to our comment approval process. Initially, all content needed admin approval, which slowed down user interaction. Now, comments are automatically posted, giving users a form of instant CRUD (Create, Read, Update, Delete) functionality for their comments. Posts still require approval, and a "Code of Conduct" explains content guidelines. Harmful comments may be removed, enhancing user interaction and immediacy.
 
 ## Features
 
