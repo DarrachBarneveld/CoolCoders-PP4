@@ -75,18 +75,19 @@
 
 All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
 
-| Page         | Validator                                                                                                                             | Result              |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| Home         | <details><summary>Home Page</summary><img src="./documentation/testing/validation/html/homehtml.png"></details>                       | <mark>PASS</mark>   |
-| Category     | <details><summary>Category Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>               | <mark>PASS</mark>   |
-| Post Detail  | <details><summary>Post Detail Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>            | <mark>PASS</mark>   |
-| Add Post     | <details><summary>Add Post Page</summary><img src="./documentation/testing/validation/html/addposterror.png"></details>               | <mark>ERRORS</mark> |
-| Edit Post    | <details><summary>Edit Post Page</summary><img src="./documentation/testing/validation/html/editposterror.png"></details>             | <mark>ERRORS</mark> |
-| Profile      | <details><summary>Profile Page</summary><img src="./documentation/testing/validation/html/profilehtml.png"></details>                 | <mark>PASS</mark>   |
-| Edit Profile | <details><summary>Edit Profile Page</summary><img src="./documentation/testing/validation/html/updateprofileerror.png.png"></details> | <mark>Errors</mark> |
-| Sign In      | <details><summary>Sign In</summary><img src="./documentation/testing/validation/html/loginhtml.png"></details>                        | <mark>PASS</mark>   |
-| Sign Up      | <details><summary>Sign Up</summary><img src="./documentation/testing/validation/html/signuphtml.png"></details>                       | <mark>PASS</mark>   |
-| Log out      | <details><summary>Log Out</summary><img src="./documentation/testing/validation/html/logouthtml.png"></details>                       | <mark>PASS</mark>   |
+| Page            | Validator                                                                                                                             | Result              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| Home            | <details><summary>Home Page</summary><img src="./documentation/testing/validation/html/homehtml.png"></details>                       | <mark>PASS</mark>   |
+| Category        | <details><summary>Category Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>               | <mark>PASS</mark>   |
+| Post Detail     | <details><summary>Post Detail Page</summary><img src="./documentation/testing/validation/html/categoryhtml.png"></details>            | <mark>PASS</mark>   |
+| Add Post        | <details><summary>Add Post Page</summary><img src="./documentation/testing/validation/html/addposterror.png"></details>               | <mark>ERRORS</mark> |
+| Edit Post       | <details><summary>Edit Post Page</summary><img src="./documentation/testing/validation/html/editposterror.png"></details>             | <mark>ERRORS</mark> |
+| Profile         | <details><summary>Profile Page</summary><img src="./documentation/testing/validation/html/profilehtml.png"></details>                 | <mark>PASS</mark>   |
+| Edit Profile    | <details><summary>Edit Profile Page</summary><img src="./documentation/testing/validation/html/updateprofileerror.png.png"></details> | <mark>Errors</mark> |
+| Sign In         | <details><summary>Sign In</summary><img src="./documentation/testing/validation/html/loginhtml.png"></details>                        | <mark>PASS</mark>   |
+| Sign Up         | <details><summary>Sign Up</summary><img src="./documentation/testing/validation/html/signuphtml.png"></details>                       | <mark>PASS</mark>   |
+| Log out         | <details><summary>Log Out</summary><img src="./documentation/testing/validation/html/logouthtml.png"></details>                       | <mark>PASS</mark>   |
+| Code of Conduct | <details><summary>Code of Conduct</summary><img src="./documentation/testing/validation/html/codeofconducthtml.png"></details>        | <mark>PASS</mark>   |
 
 The HTML validation errors are attributed to the integration of two components: the Summernote widget and the rendering of Django password forms with Crispy Forms. These errors, while minor, are challenging to address without uninstalling these packages. Given functionality remains as intended and these packages provide significant value, functionality and usability is prioritised over resolving these specific HTML validation issues.
 
@@ -142,32 +143,33 @@ The website was tested on a variety of devices, including Desktop, Laptop, Huawe
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance.
 
-| Page           | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
-| -------------- | :---------: | :-----------: | :------------: | :-: | --------------------------------------------------------------------------------------------------------------------------- |
-|                |             |               |                |     |
-| **Desktop**    |             |               |                |     |
-| Home           |     98      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homedesktop.png"></details>                    |
-| Category       |     98      |      100      |      100       | 100 | <details><summary>Category</summary><img src="./documentation/testing/lighthouse/categorydesktop.png"></details>            |
-| Post Detail    |     97      |      100      |      100       | 100 | <details><summary>Post Detail </summary><img src="./documentation/testing/lighthouse/postdetaildesktop.png"></details>      |
-| Profile        |     96      |      100      |      100       | 100 | <details><summary>Profile</summary><img src="./documentation/testing/lighthouse/profiledesktop.png"></details>              |
-| Add Post       |     99      |      96       |      100       | 100 | <details><summary>Add Post</summary><img src="./documentation/testing/lighthouse/addpostdesktop.png"></details>             |
-| Edit Post      |     99      |      96       |      100       | 100 | <details><summary>Edit Post</summary><img src="./documentation/testing/lighthouse/editpostdesktop.png"></details>           |
-| Update Profile |     100     |      100      |      100       | 100 | <details><summary>Update Profile</summary><img src="./documentation/testing/lighthouse/updateprofiledesktop.png"></details> |
-| Sign Up        |     99      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
-| Sign In        |     100     |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
-| Sign Out       |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutdesktop.png"></details>             |
-|                |             |               |                |     |
-| **Mobile**     |             |               |                |     |
-| Home           |     90      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homemobile.png"></details>                     |
-| Category       |     91      |      100      |      100       | 100 | <details><summary>Category</summary><img src="./documentation/testing/lighthouse/categorymobile.png"></details>             |
-| Post Detail    |     95      |      100      |      100       | 100 | <details><summary>Post Detail</summary><img src="./documentation/testing/lighthouse/postdetailmobile.png"></details>        |
-| Profile        |     90      |      100      |      100       | 100 | <details><summary>Profile</summary><img src="./documentation/testing/lighthouse/profilemobile.png"></details>               |
-| Add Post       |     86      |      95       |      100       | 100 | <details><summary>Add Post</summary><img src="./documentation/testing/lighthouse/addpostmobile.png"></details>              |
-| Edit Post      |     87      |      95       |      100       | 100 | <details><summary>Edit Post</summary><img src="./documentation/testing/lighthouse/editpostdesktop.png"></details>           |
-| Update Profile |     98      |      100      |      100       | 100 | <details><summary>Update Profile</summary><img src="./documentation/testing/lighthouse/updateprofilemobile.png"></details>  |
-| Sign Up        |     98      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signupmobile.png"></details>                |
-| Sign In        |     99      |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signinmobile.png"></details>                |
-| Sign Out       |     98      |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutmobile.png"></details>              |
+| Page            | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
+| --------------- | :---------: | :-----------: | :------------: | :-: | --------------------------------------------------------------------------------------------------------------------------- |
+|                 |             |               |                |     |
+| **Desktop**     |             |               |                |     |
+| Home            |     98      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homedesktop.png"></details>                    |
+| Category        |     98      |      100      |      100       | 100 | <details><summary>Category</summary><img src="./documentation/testing/lighthouse/categorydesktop.png"></details>            |
+| Post Detail     |     97      |      100      |      100       | 100 | <details><summary>Post Detail </summary><img src="./documentation/testing/lighthouse/postdetaildesktop.png"></details>      |
+| Profile         |     96      |      100      |      100       | 100 | <details><summary>Profile</summary><img src="./documentation/testing/lighthouse/profiledesktop.png"></details>              |
+| Add Post        |     99      |      96       |      100       | 100 | <details><summary>Add Post</summary><img src="./documentation/testing/lighthouse/addpostdesktop.png"></details>             |
+| Edit Post       |     99      |      96       |      100       | 100 | <details><summary>Edit Post</summary><img src="./documentation/testing/lighthouse/editpostdesktop.png"></details>           |
+| Update Profile  |     100     |      100      |      100       | 100 | <details><summary>Update Profile</summary><img src="./documentation/testing/lighthouse/updateprofiledesktop.png"></details> |
+| Sign Up         |     99      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
+| Sign In         |     100     |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signindesktop.png"></details>               |
+| Sign Out        |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutdesktop.png"></details>             |
+| Code of Conduct |     100     |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutdesktop.png"></details>             |
+|                 |             |               |                |     |
+| **Mobile**      |             |               |                |     |
+| Home            |     90      |      100      |      100       | 100 | <details><summary>Home</summary><img src="./documentation/testing/lighthouse/homemobile.png"></details>                     |
+| Category        |     91      |      100      |      100       | 100 | <details><summary>Category</summary><img src="./documentation/testing/lighthouse/categorymobile.png"></details>             |
+| Post Detail     |     95      |      100      |      100       | 100 | <details><summary>Post Detail</summary><img src="./documentation/testing/lighthouse/postdetailmobile.png"></details>        |
+| Profile         |     90      |      100      |      100       | 100 | <details><summary>Profile</summary><img src="./documentation/testing/lighthouse/profilemobile.png"></details>               |
+| Add Post        |     86      |      95       |      100       | 100 | <details><summary>Add Post</summary><img src="./documentation/testing/lighthouse/addpostmobile.png"></details>              |
+| Edit Post       |     87      |      95       |      100       | 100 | <details><summary>Edit Post</summary><img src="./documentation/testing/lighthouse/editpostdesktop.png"></details>           |
+| Update Profile  |     98      |      100      |      100       | 100 | <details><summary>Update Profile</summary><img src="./documentation/testing/lighthouse/updateprofilemobile.png"></details>  |
+| Sign Up         |     98      |      100      |      100       | 100 | <details><summary>Sign Up</summary><img src="./documentation/testing/lighthouse/signupmobile.png"></details>                |
+| Sign In         |     99      |      100      |      100       | 100 | <details><summary>Sign In</summary><img src="./documentation/testing/lighthouse/signinmobile.png"></details>                |
+| Sign Out        |     98      |      100      |      100       | 100 | <details><summary>Sign Out</summary><img src="./documentation/testing/lighthouse/signoutmobile.png"></details>              |
 
 Lighthouse Iframe summernote widget error. This error dropped the accessibilty score of some pages and was due to the summernote external package. The error was left unresolved.
 
@@ -190,6 +192,7 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Profile Link           | Click       | Redirect to profile page                                | <mark>Pass</mark> |
 | Hamburger Menu         | Click       | Render a dropdown menu of all links                     | <mark>Pass</mark> |
 | Footer Socials         | Click       | Redirect in a new tab to all respective media platforms | <mark>Pass</mark> |
+| Code of Conduct Link   | Click       | Redirect to code of conduct page                        | <mark>Pass</mark> |
 | Footer Email           | Click       | Open up an email provider with developer email attached | <mark>Pass</mark> |
 | Register Link          | Display     | Render for non authenticated users                      | <mark>Pass</mark> |
 | Log in Link            | Display     | Render for non authenticated users                      | <mark>Pass</mark> |
@@ -198,6 +201,7 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Profile Link           | Display     | Render only if user is authenticated                    | <mark>Pass</mark> |
 | Nav Link               | Hover/Focus | Display a green underline border, lighten text          | <mark>Pass</mark> |
 | Footer Socials         | Hover/Focus | Provide background colour feedback change               | <mark>Pass</mark> |
+| Code of Conduct Link   | Hover/Focus | Text darken                                             | <mark>Pass</mark> |
 
 ### Home Page
 
@@ -262,7 +266,7 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Likes Count           | Display     | Display the total amount of likes of the article    | <mark>Pass</mark> |
 | Comments              | Display     | Render All Comments                                 | <mark>Pass</mark> |
 | Comment Form          | Display     | Render Comment Form to authenticated users          | <mark>Pass</mark> |
-| Comment Form(Valid)   | Submit      | Send the comment to the DB for approval             | <mark>Pass</mark> |
+| Comment Form(Valid)   | Submit      | Post the comment to the post detail page            | <mark>Pass</mark> |
 | Comment Form(Valid)   | Submit      | Toast notification displayed                        | <mark>Pass</mark> |
 | Comment Form(Invalid) | Submit      | Render error context to the UI                      | <mark>Pass</mark> |
 | Comment Form(Invalid) | Submit      | Toast error notification displayed                  | <mark>Pass</mark> |
@@ -431,6 +435,12 @@ Lighthouse Iframe summernote widget error. This error dropped the accessibilty s
 | Logout Button | Click          | User session is Logged out                     | <mark>Pass</mark> |
 | Logout Button | Click          | Redirected to Home page                        | <mark>Pass</mark> |
 | Form Button   | Hover/Focus    | Darken Background                              | <mark>Pass</mark> |
+
+### Code of Conduct Page
+
+| Element | Action | Expected Result                                   | Pass/Fail         |
+| ------- | ------ | ------------------------------------------------- | ----------------- |
+| Page    | Dispay | All context is displayed correctly and responsive | <mark>Pass</mark> |
 
 ## Bugs
 
