@@ -794,5 +794,5 @@ Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for p
 ### Acknowledgements
 
 - A huge thanks to my mentor AntonioRodriguez who really helped me understand the MVC architechture seen in this project and giving me support above and beyond what was expected.
-- Stef Cruz, Shane Donlon, Tanguy L'Alexandre, Callum Dennis and Alan Bushell for manually testing and finding any potential errors before submission
+- Stef Cruz, Shane Donlon, Tanguy L'Alexandre, Callum Dennis, Daisy McGirr and Alan Bushell for manually testing and finding any potential errors before submission
 - The Codu community for providing inspiration and motivation to continue my learning.

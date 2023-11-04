@@ -52,8 +52,8 @@ class UpdateBioForm(forms.ModelForm):
         model = Profile
         fields = ["bio"]
         widgets = {
-            "bio": forms.TextInput(),
-        }
+            'bio': forms.Textarea(attrs={'rows': 4})
+             }
 
 
 class CommentForm(forms.ModelForm):
