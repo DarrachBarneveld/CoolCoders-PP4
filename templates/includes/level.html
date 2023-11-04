@@ -14,8 +14,8 @@
     </div>
 {% elif level == 3 %}
     <p class='gold bg-dark p-1 my-1 rounded-2 w-100'>Gold Member</p>
-    <span class='bg-transparent position-absolute text-capitalize fw-bold' >{{progress}}% to platinum</span>
     <div class="progress w-100 border" style='height:22px'>
+        <span class='bg-transparent position-absolute text-capitalize fw-bold' >{{progress}}% to platinum</span>
         <div class="progress-bar progress-bar-striped bg-platinum" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 {% elif level >= 4 %}

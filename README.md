@@ -555,7 +555,7 @@ The "Toggle Favorites" button allows authenticated users to quickly add or remov
 
 ### Comment Card
 
-The comment card elegantly showcases the user's comment, the author's identity, and the date, encapsulating a meaningful exchange of ideas and perspectives on the article.
+The comment card elegantly showcases the user's comment, the author's identity, and the date, encapsulating a meaningful exchange of ideas and perspectives on the article. Comments can only be created and deleted in similar fashion to Twitter/X.
 
 <details><summary>Comment Card</summary>
 <img src="./documentation/images/features/commentcard.png">
