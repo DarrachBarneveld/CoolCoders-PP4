@@ -473,6 +473,9 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
         else:
             messages.error(self.request, "Profile update failed, please check your input")
 
+        if form_name == "User details":
+            context["user_form"] = form
+
         self.request.user = user
 
         return render(self.request, self.template_name, context)

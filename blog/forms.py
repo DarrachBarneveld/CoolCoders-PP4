@@ -39,6 +39,18 @@ class UpdateUserForm(UserChangeForm):
         fields = ["username", "email", "first_name", "last_name"]
         help_texts = {"username": None}
 
+    def clean_email(self):
+        email = self.cleaned_data["email"]
+
+        if (self.instance.email != email and
+        User.objects.filter(email=email).exists()
+        and email !=''):
+
+            raise forms.ValidationError("A user with this email already exists!")
+
+        return email
+
+
 
 class UpdateBioForm(forms.ModelForm):
     """
