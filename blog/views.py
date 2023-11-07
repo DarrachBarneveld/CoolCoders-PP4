@@ -445,7 +445,7 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
         context = self.get_context_data()
         return render(request, self.template_name, context)
 
-    def process_form(self, request, form, form_name):
+    def process_form(self, user, form, form_name):
         """
         Process and handle form submission within a view.
 
@@ -454,27 +454,28 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
         displays success or error messages, and updates the context
         to include the form for rendering in the template.
 
-
         """
         context = self.get_context_data()
+
 
         if form.is_valid():
             form.save()
             messages.success(self.request, f"{form_name} updated")
+            if form_name == "Biography":
+                context["bio_form"] = form
+            elif form_name == "Password":
+                context["password_form"] = form
+                update_session_auth_hash(self.request, self.request.user)
+            elif form_name == "User details":
+                context["user_form"] = form
+                return render(self.request, self.template_name, context)
+
         else:
-            messages.error(
-                self.request, "Profile update failed, please check your input"
-            )
+            messages.error(self.request, "Profile update failed, please check your input")
 
-        if form_name == "Biography":
-            context["bio_form"] = form
-        elif form_name == "Password":
-            context["password_form"] = form
-            update_session_auth_hash(self.request, self.request.user)
-        elif form_name == "User details":
-            context["user_form"] = form
+        self.request.user = user
 
-        return render(request, self.template_name, context)
+        return render(self.request, self.template_name, context)
 
     def post(self, request):
         """
@@ -488,10 +489,13 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
 
         """
         context = self.get_context_data()
+        user = User.objects.get(id=request.user.id)
+
 
         user_form = self.user_form_class(
             request.POST,
             instance=request.user)
+
         bio_form = self.bio_form_class(
             request.POST,
             instance=request.user.profile)
@@ -501,13 +505,13 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
             request.POST)
 
         if "bio_form" in request.POST:
-            return self.process_form(request, bio_form, "Biography")
+            return self.process_form(user, bio_form, "Biography")
 
         if "password_form" in request.POST:
-            return self.process_form(request, password_form, "Password")
+            return self.process_form(user, password_form, "Password")
 
         if "user_form" in request.POST:
-            return self.process_form(request, user_form, "User details")
+            return self.process_form(user, user_form, "User details")
 
         # Delete user from database
         if "delete_item" in request.POST:
