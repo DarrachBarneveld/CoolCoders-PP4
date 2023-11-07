@@ -636,7 +636,8 @@ Here is a list of all the major bugs encountered throughout development. Links t
 | [User Edit Profile Form Autofocus #42](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/42)                       | Closed |
 | [UX/UI Final Sweep #44](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/44)                                      | Closed |
 | [Refresh Routing on changed Username #47](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/47)                    | Open   |
-| [Env File not properly ignored #54](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/54)                          | Open   |
+| [Env File not properly ignored #54](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/54)                          | Closed |
+| [User Account Updated #55](https://github.com/DarrachBarneveld/CoolCoders-PP4/issues/55)                                   | Closed |
 
 ## Technologies And Languages
 
@@ -790,6 +791,8 @@ Credit to [Dr Angela Yu](https://www.udemy.com/course/100-days-of-code/) for ass
 Credit to [Stackoverflow](https://stackoverflow.com/questions/10511873/can-django-pagination-do-multiple-paginations-per-page) for understand the correct approach for implementing multiple pagination on a single view class.
 
 Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for providing the modal component
+
+Credit to [StackOverflow](https://stackoverflow.com/questions/45467731/django-template-displays-edited-user-context-info-despite-validationerror) for helping me figure out the req.user instance issues when using form validation allowing me to have the nav bar remain consistant when username validation errors occur.
 
 ### Acknowledgements
 

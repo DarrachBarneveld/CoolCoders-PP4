@@ -457,7 +457,6 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
         """
         context = self.get_context_data()
 
-
         if form.is_valid():
             form.save()
             messages.success(self.request, f"{form_name} updated")
@@ -468,16 +467,19 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
                 update_session_auth_hash(self.request, self.request.user)
             elif form_name == "User details":
                 context["user_form"] = form
+                # Return is required to allow context on valid forms
                 return render(self.request, self.template_name, context)
 
         else:
-            messages.error(self.request, "Profile update failed, please check your input")
+            messages.error(self.request,
+                           "Profile update failed, please check your input")
 
         if form_name == "User details":
             context["user_form"] = form
 
+        # Manually manipulate the req.user to stop navbar error issue#55
         self.request.user = user
-
+        
         return render(self.request, self.template_name, context)
 
     def post(self, request):
@@ -493,7 +495,6 @@ class UpdateProfileView(LoginRequiredMixin, generic.View):
         """
         context = self.get_context_data()
         user = User.objects.get(id=request.user.id)
-
 
         user_form = self.user_form_class(
             request.POST,
