@@ -794,6 +794,8 @@ Credit to [Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) for p
 
 Credit to [StackOverflow](https://stackoverflow.com/questions/45467731/django-template-displays-edited-user-context-info-despite-validationerror) for helping me figure out the req.user instance issues when using form validation allowing me to have the nav bar remain consistant when username validation errors occur.
 
+Credit to [StackOverflow](https://stackoverflow.com/questions/34959897/set-favicon-in-django-admin) for showing me how to add a favicon to the admin portal django template
+
 ### Acknowledgements
 
 - A huge thanks to my mentor AntonioRodriguez who really helped me understand the MVC architechture seen in this project and giving me support above and beyond what was expected.
