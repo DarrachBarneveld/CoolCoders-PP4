@@ -57,6 +57,8 @@ def create_user_profile(instance, created, *args, **kwargs):
     if created:
         Profile.objects.create(user=instance)
 
+# Connects profile to user instance with signals
+
 
 models.signals.post_save.connect(create_user_profile, sender=User)
 

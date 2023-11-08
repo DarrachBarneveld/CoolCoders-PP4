@@ -543,4 +543,3 @@ class CodeOfConductView(generic.TemplateView):
     """A view for the "Code of Conduct" page."""
 
     template_name = 'code_of_conduct.html'
-
