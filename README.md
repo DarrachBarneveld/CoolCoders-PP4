@@ -225,11 +225,11 @@ The User model is an integral component of Django Allauth, featuring pre-establi
 
 #### Profile Model
 
-Profile Model: The Profile Model provides a snapshot of each user's presence on the platform, encapsulating their information, activities, and preferences. It often includes fields for user-specific data such as name, bio and level as well as custom methods. It is has a one to one relationship with the auth User Model
+Profile Model: The Profile Model provides a snapshot of each user's presence on the platform, encapsulating their information, activities, and preferences. It includes fields for user-specific data such as user instance, biography and level as well as custom methods. It is has a one to one relationship with the auth User Model
 
 #### Category Model
 
-The Category Model categorizes and organizes posts, ensuring users can easily discover and explore tech topics. It typically includes fields for category name, description, and associations with posts to facilitate content organization and navigation within the platform.
+The Category Model categorizes and organizes posts, ensuring users can easily discover and explore tech topics. It includes fields for category name, description, and associations with posts to facilitate content organization and navigation within the platform.
 
 #### Post Model
 
