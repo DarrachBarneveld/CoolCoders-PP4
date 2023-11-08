@@ -145,7 +145,7 @@ class Comment(models.Model):
         Post, on_delete=models.CASCADE, related_name="comments")
     name = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="comments")
-    email = models.EmailField()
+    email = models.EmailField(blank=True, null=True)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
